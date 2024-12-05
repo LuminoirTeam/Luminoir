@@ -3,85 +3,40 @@ using UnityEngine.InputSystem;
 
 public class LU_CharacterController : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D _rb;
+    [SerializeField] Rigidbody2D rb;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
 
-    [SerializeField] float _playerSpeed;
-    [SerializeField] float _jumpSpeed;
+    private float _playerX;
+    public float PlayerSpeed;
+    public float JumpingForce;
 
-    private Vector2 _moveDirection;
-
-    public InputActionReference MoveAction;
-    public InputActionReference JumpAction;
-
-    private bool _isGrounded;
-    private bool _hasJumped;
-
-    private void Update()
-    {
-        _moveDirection = MoveAction.action.ReadValue<Vector2>();
-    }
 
     private void FixedUpdate()
     {
-        _rb.linearVelocityX = (_moveDirection.x * _playerSpeed * Time.deltaTime);
+        rb.velocity = new Vector2(_playerX * PlayerSpeed, rb.velocity.y);
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (_isGrounded)
-            _rb.linearVelocityY = (Vector2.up.y * _jumpSpeed * Time.deltaTime);
+        if (context.performed && IsGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, JumpingForce);
+        }
+
+        if (context.canceled && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private bool IsGrounded()
     {
-        if (collision.gameObject.CompareTag("Floor"))
-            _isGrounded = true;
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    public void Move(InputAction.CallbackContext context)
     {
-        if (collision.gameObject.CompareTag("Floor"))
-            _isGrounded = false;
+        _playerX = context.ReadValue<Vector2>().x;
     }
-
-    //[SerializeField]
-    //private float _playerSpeed = 2.0f;
-    //[SerializeField]
-    //private float _jumpHeight = 1.0f;
-    //[SerializeField] Rigidbody2D _rb;
-
-    //private Vector3 _playerVelocity;
-    //private bool _isGrounded;
-
-    //private Vector2 _movementInput = Vector2.zero;
-    //private bool _hasJumped;
-
-    //public void OnMove(InputAction.CallbackContext context)
-    //{
-    //    _movementInput = context.ReadValue<Vector2>();
-    //}
-
-    //public void OnJump(InputAction.CallbackContext context)
-    //{
-    //    _hasJumped = context.ReadValue<bool>();
-    //    _hasJumped = context.action.triggered;
-    //}
-
-    //void Update()
-    //{
-    //    if (_isGrounded && _playerVelocity.y < 0)
-    //    {
-    //        _playerVelocity.y = 0f;
-    //    }
-
-    //    Vector2 move = new Vector2(_movementInput.x, 0);
-    //    _rb.linearVelocity = new Vector2(move.x * Time.deltaTime * _playerSpeed, move.y);
-
-    //    //if ((_hasJumped) && _isGrounded)
-    //    //{
-    //    //    _playerVelocity.y += Mathf.Sqrt(_jumpHeight * -3.0f);
-    //    //}
-
-    //    //_controller.Move(_playerVelocity * Time.deltaTime);
-    //}
 }
