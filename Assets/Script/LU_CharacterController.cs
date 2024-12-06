@@ -1,42 +1,51 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class LU_CharacterController : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rb;
-    public Transform groundCheck;
-    public LayerMask groundLayer;
+    private Rigidbody2D rb;
+    private Vector3 groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float _playerSpeed;
+    [SerializeField] private float _jumpingForce;
+    [SerializeField] private Vector2 _sizeOfGroundCheckBox;
+    private InputAction movementAction;
+    private PlayerInput _input;
 
-    private float _playerX;
-    public float PlayerSpeed;
-    public float JumpingForce;
-
-
-    private void FixedUpdate()
+    private void Awake()
     {
-        rb.velocity = new Vector2(_playerX * PlayerSpeed, rb.velocity.y);
+        _input = GetComponent<PlayerInput>();
+        movementAction = _input.actions["Jump"];
+        movementAction.Enable();
+
+        rb = GetComponent<Rigidbody2D>();
+        groundCheck = transform.GetChild(0).position;
+    }
+    private void Update()
+    {
+        Jump();
     }
 
-    public void Jump(InputAction.CallbackContext context)
+    public void Jump()
     {
-        if (context.performed && IsGrounded())
+        if (IsGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, JumpingForce);
-        }
-
-        if (context.canceled && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            rb.AddForce(movementAction.ReadValue<Vector2>(), ForceMode2D.Impulse);
         }
     }
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        groundCheck = transform.GetChild(0).position;
+        Collider2D colliderFound = Physics2D.OverlapBox(groundCheck, _sizeOfGroundCheckBox,0, groundLayer);
+        if (colliderFound == null) { return false; }
+
+        return true;
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        _playerX = context.ReadValue<Vector2>().x;
+        rb.linearVelocityX = context.ReadValue<Vector2>().x * _playerSpeed;
     }
 }
