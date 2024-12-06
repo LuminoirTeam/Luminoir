@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Lever : MonoBehaviour
 {
@@ -21,14 +22,14 @@ public class Lever : MonoBehaviour
     {
         if (!isActivated)
         {
-            //if(other.CompareTag("Player") && interact)
-            //{
+            if(other.CompareTag("Player"))
+            {
                 foreach (GameObject door in doorList)
                 {
                     door.GetComponentInChildren<DoorOpening>().OpenDoor();
                     isActivated = true;
                 }
-            //}
+            }
         }
     }
 }
