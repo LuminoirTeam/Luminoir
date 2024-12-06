@@ -13,6 +13,11 @@ public class LU_CharacterController : MonoBehaviour
     private InputAction movementAction;
     private PlayerInput _input;
 
+    [SerializeField] LU_Power _power;
+
+    //public bool DEBUG_isNoctis;
+
+
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
@@ -25,6 +30,12 @@ public class LU_CharacterController : MonoBehaviour
     private void Update()
     {
         Jump();
+
+        //if (Input.GetKey(KeyCode.Joystick1Button15))
+        //    _power.AttractElement();
+
+        //if (Input.GetKey(KeyCode.Joystick1Button13))
+        //    _power.RepelElement();
     }
 
     public void Jump()
@@ -47,5 +58,15 @@ public class LU_CharacterController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         rb.linearVelocityX = context.ReadValue<Vector2>().x * _playerSpeed;
+    }
+
+    public void CallAttractElement()
+    {
+        _power.AttractElement();
+    }
+
+    public void CallRepelElement()
+    {
+        _power.RepelElement();
     }
 }

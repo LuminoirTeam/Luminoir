@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4844151750079750684}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: lightAttractor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,12 +40,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7867168875624645273}
+  - component: {fileID: 3152456705230709268}
   - component: {fileID: 867792878411454505}
   - component: {fileID: 8293902968625123646}
   - component: {fileID: 4792487251945167082}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: light
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,6 +67,19 @@ Transform:
   - {fileID: 4844151750079750684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3152456705230709268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5145379320912127745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94229fbd91977f649ae59ee9ed8ab5b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _noctis: {fileID: 0}
 --- !u!198 &867792878411454505
 ParticleSystem:
   m_ObjectHideFlags: 0

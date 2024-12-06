@@ -9,12 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 187111988874156710}
+  - component: {fileID: 7400842293281317088}
   - component: {fileID: 2010015167407960980}
   - component: {fileID: 7685679903487916159}
   - component: {fileID: 7712059667235885199}
   m_Layer: 0
   m_Name: shadow
-  m_TagString: Untagged
+  m_TagString: Shadow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34,6 +35,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7400842293281317088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713724095599844816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e210a2f14c81514dbe62d813dfb8318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lumis: {fileID: 0}
+  _shadowMoveSpeed: 5
 --- !u!198 &2010015167407960980
 ParticleSystem:
   m_ObjectHideFlags: 0
