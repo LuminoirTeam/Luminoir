@@ -3,12 +3,12 @@ using UnityEngine;
 public class LU_LightReactToPower : MonoBehaviour
 {
     [SerializeField] GameObject _noctis;
-    private Rigidbody2D _attractorRb;
-    [SerializeField] float _lightMoveSpeed = 2;
+    Rigidbody2D _attractorRb;
+    [SerializeField] float _lightMoveSpeed = 1.5f;
 
     private void Start()
     {
-        _attractorRb = transform.GetChild(0).GetComponent<Rigidbody2D>();
+        _attractorRb = transform.parent.GetChild(1).GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
@@ -24,16 +24,13 @@ public class LU_LightReactToPower : MonoBehaviour
     {
         Vector3 directionAttractor = -(_noctis.transform.position - _attractorRb.transform.position);
         
-
         _attractorRb.AddForce(directionAttractor.normalized * _lightMoveSpeed, ForceMode2D.Impulse);
     }
 
     public void PointAwayFromNoctis()
     {
-        //Vector3 directionAttractor = (_attractorRb.transform.position - transform.position);
+        Vector3 directionAttractor = _noctis.transform.position - _attractorRb.transform.position;
 
-        //transform.LookAt(_attractorRb.transform.position);
-
-        //_attractorRb.AddForce(directionAttractor.normalized * _lightMoveSpeed, ForceMode2D.Impulse);
+        _attractorRb.AddForce(directionAttractor.normalized * _lightMoveSpeed, ForceMode2D.Impulse);
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class LU_ShadowReactToPower : MonoBehaviour
 {
     [SerializeField] GameObject _lumis;
-    [SerializeField] float _shadowMoveSpeed;
+    [SerializeField] float _shadowMoveSpeed = 0.2f;
     
     Rigidbody2D _rb;
 

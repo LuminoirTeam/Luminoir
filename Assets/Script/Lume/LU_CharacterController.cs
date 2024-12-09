@@ -7,13 +7,13 @@ public class LU_CharacterController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector3 groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private float _playerSpeed;
-    [SerializeField] private float _jumpingForce;
-    [SerializeField] private Vector2 _sizeOfGroundCheckBox;
+    [SerializeField] private float _playerSpeed = 8;
+    [SerializeField] private float _jumpingForce = 5;
+    [SerializeField] private Vector2 _sizeOfGroundCheckBox = new Vector2(1, 0.5f);
     private InputAction movementAction;
     private PlayerInput _input;
 
-    [SerializeField] LU_Power _power;
+    [SerializeField] LU_Power _power; //in debug, to change the Dummy's powers, slide the script you want in this SerializeField
 
     private bool _isAttracting = false;
     private bool _isRepelling = false;
