@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e498195-c1a4-44bd-84e6-424ca1c5f23a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Alexander_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Alexander_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LuminoirGit/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuminoirGit/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ressource/Images/BackgroundCredits.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressource/Images/BackgroundCredits.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ressource/Images/BackgroundUI.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressource/Images/BackgroundUI.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,26 +18,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2pnYp2JmrhA6lPthSPmqZ1H3bgq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Feat-UI",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Feat-UI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.29f1\Editor\Unity.exe" />
@@ -83,6 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1733403487585</updated>
       <workItem from="1733403492565" duration="678000" />
+      <workItem from="1733734470075" duration="790000" />
     </task>
     <servers />
   </component>
