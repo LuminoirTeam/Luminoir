@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 19611905}
   - component: {fileID: 19611904}
   - component: {fileID: 19611907}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ Camera:
   m_GameObject: {fileID: 19611903}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -205,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19611903}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
+  m_RenderShadows: 0
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
@@ -232,10 +232,10 @@ MonoBehaviour:
   m_RendererIndex: -1
   m_VolumeLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 246
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -264,17 +264,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 867792878411454505, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 867792878411454505, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 867792878411454505, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
+      propertyPath: CollisionModule.radiusScale
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 867792878411454505, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
+      propertyPath: CollisionModule.collisionMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 867792878411454505, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5145379320912127745, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
       propertyPath: m_Name
       value: light
       objectReference: {fileID: 0}
     - target: {fileID: 7867168875624645273, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6
+      value: -3.03
       objectReference: {fileID: 0}
     - target: {fileID: 7867168875624645273, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1.77
       objectReference: {fileID: 0}
     - target: {fileID: 7867168875624645273, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
       propertyPath: m_LocalPosition.z
@@ -354,7 +374,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -395,7 +415,7 @@ Transform:
   m_GameObject: {fileID: 827816584}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.27, y: -2.91, z: 0}
+  m_LocalPosition: {x: 0.38, y: -3.63, z: 0}
   m_LocalScale: {x: 10, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -637,7 +657,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
