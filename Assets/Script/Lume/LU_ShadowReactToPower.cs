@@ -14,14 +14,14 @@ public class LU_ShadowReactToPower : MonoBehaviour
 
     public void MoveTowardsLumis()
     {
-        Vector3 direction = (_lumis.transform.position - transform.position);
+        Vector3 direction = -(_lumis.transform.position - transform.position);
 
         _rb.AddForce(direction.normalized * _shadowMoveSpeed, ForceMode2D.Impulse);
     }
 
     public void MoveAwayFromLumis()
     {
-        Vector3 direction = -(_lumis.transform.position - transform.position);
+        Vector3 direction = (_lumis.transform.position - transform.position);
 
         _rb.AddForce(direction.normalized * _shadowMoveSpeed, ForceMode2D.Impulse);
     }
