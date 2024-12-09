@@ -6,10 +6,11 @@ public class LU_UIManagement : MonoBehaviour
 {
     public TMP_Text CountdownText;
     public TMP_Text CountupText;
+    public TMP_Text EndCountText;
     public float CountdownTime = 300f; // 5 minutes in seconds
     private float _countupTime = 0f;
     private bool _countdownActive = true;
-
+    
     void Start()
     {
         UpdateCountdownText();
@@ -45,5 +46,6 @@ public class LU_UIManagement : MonoBehaviour
         int minutes = Mathf.FloorToInt(_countupTime / 60);
         int seconds = Mathf.FloorToInt(_countupTime % 60);
         CountupText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        EndCountText.text = CountupText.text;
     }
 }
