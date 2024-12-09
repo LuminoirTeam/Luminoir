@@ -253,6 +253,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &436767850 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1713724095599844816, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
+  m_PrefabInstance: {fileID: 1804012065}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &436767856
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436767850}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &901611088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,10 +539,17 @@ PrefabInstance:
       propertyPath: _lumis
       value: 
       objectReference: {fileID: 1914457043}
+    - target: {fileID: 7400842293281317088, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
+      propertyPath: _shadowMoveSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1713724095599844816, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 436767856}
   m_SourcePrefab: {fileID: 100100000, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
 --- !u!1 &1914457043
 GameObject:
@@ -523,11 +562,11 @@ GameObject:
   - component: {fileID: 1914457050}
   - component: {fileID: 1914457049}
   - component: {fileID: 1914457046}
+  - component: {fileID: 1914457051}
+  - component: {fileID: 1914457044}
   - component: {fileID: 1914457048}
   - component: {fileID: 1914457047}
   - component: {fileID: 1914457045}
-  - component: {fileID: 1914457044}
-  - component: {fileID: 1914457051}
   m_Layer: 0
   m_Name: Dummy
   m_TagString: Player
@@ -801,7 +840,7 @@ Transform:
   m_GameObject: {fileID: 1914457043}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.15, y: -1.71, z: 0}
+  m_LocalPosition: {x: -0.27, y: -1.56, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
