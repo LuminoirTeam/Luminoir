@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5615376030973669094}
   m_Layer: 0
-  m_Name: light
-  m_TagString: Light
+  m_Name: fixlight
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8396740768598244821}
-  - {fileID: 493831131665599139}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8263212623770451779
@@ -42,12 +41,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8396740768598244821}
-  - component: {fileID: 3156665147630321255}
   - component: {fileID: 5922124032762526699}
   - component: {fileID: 494346651164453970}
   - component: {fileID: 6083680855612369028}
-  - component: {fileID: 111271238271340997}
-  - component: {fileID: 4515134617529007834}
   m_Layer: 7
   m_Name: light
   m_TagString: Light
@@ -70,20 +66,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5615376030973669094}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3156665147630321255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3152456705230709268, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
-  m_PrefabInstance: {fileID: 5511128420262534439}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8263212623770451779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94229fbd91977f649ae59ee9ed8ab5b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _noctis: {fileID: 0}
-  _lightMoveSpeed: 1.5
 --- !u!198 &5922124032762526699
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4998,65 +4980,6 @@ PolygonCollider2D:
       - {x: 1.1, y: -2.8}
       - {x: 0.5, y: -1.4}
   m_UseDelaunayMesh: 0
---- !u!1 &8445995450327366854
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 493831131665599139}
-  - component: {fileID: 8730034179362929147}
-  m_Layer: 7
-  m_Name: lightAttractor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &493831131665599139
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445995450327366854}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.512573, y: -2.4029458, z: 0.006679406}
-  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5615376030973669094}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &8730034179362929147
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445995450327366854}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 10
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &5511128420262534439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5065,10 +4988,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5615376030973669094}
     m_Modifications:
-    - target: {fileID: 3152456705230709268, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
-      propertyPath: _attractorRb
-      value: 
-      objectReference: {fileID: 8730034179362929147}
     - target: {fileID: 3152456705230709268, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
       propertyPath: _lightMoveSpeed
       value: 1.5
@@ -5125,62 +5044,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects:
     - {fileID: 3424382579384877503, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5145379320912127745, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 111271238271340997}
-    - targetCorrespondingSourceObject: {fileID: 5145379320912127745, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4515134617529007834}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
---- !u!50 &111271238271340997
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8263212623770451779}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.75
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 3
---- !u!232 &4515134617529007834
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8263212623770451779}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 8730034179362929147}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 0
-  m_Distance: 3.5
-  m_MaxDistanceOnly: 1
