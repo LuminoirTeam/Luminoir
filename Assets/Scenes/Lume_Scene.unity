@@ -119,6 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+
 --- !u!1 &250337098
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +527,7 @@ CapsuleCollider2D:
   m_Direction: 0
 --- !u!114 &1914457046
 MonoBehaviour:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -791,7 +793,9 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1914457050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
 --- !u!1001 &88720734315667050
+
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -799,6 +803,7 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+
     - target: {fileID: 651812249456220271, guid: 144c708293590b742be6190afc4710b8, type: 3}
       propertyPath: m_Name
       value: light
@@ -847,17 +852,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
+
   m_SourcePrefab: {fileID: 100100000, guid: 144c708293590b742be6190afc4710b8, type: 3}
+
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+
   - {fileID: 1914457050}
   - {fileID: 250337101}
   - {fileID: 967670211}
   - {fileID: 1804012065}
   - {fileID: 88720734315667050}
+
