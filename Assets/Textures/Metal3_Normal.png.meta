@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4c824ac23169f8546852e87291552fb3
+guid: 48aad7ba0f640584db3c55e8584a00e4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3588331130192429650
-    second: material_normals_0
+      213: 1668122509999124387
+    second: Metal3_Normal_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: material_normals_0
+      name: Metal3_Normal_0
       rect:
         serializedVersion: 2
-        x: 111
+        x: 0
         y: 0
-        width: 801
+        width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 252889fa6205cc130800000000000000
-      internalID: 3588331130192429650
+      spriteID: 3afa452b59c562710800000000000000
+      internalID: 1668122509999124387
       vertices: []
       indices: 
       edges: []

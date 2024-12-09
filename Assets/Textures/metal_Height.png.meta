@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f713fb2e0142f9d469dd0f83aeb0b6c6
+guid: ecc91fcef8a3c1e44a8d6711e6d96cb2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6790365367708063659
-    second: material_occlusion_0
+      213: 8623685319891619329
+    second: metal_Height_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: material_occlusion_0
+      name: metal_Height_0
       rect:
         serializedVersion: 2
-        x: 111
+        x: 0
         y: 0
-        width: 801
+        width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55865aacca6c3c1a0800000000000000
-      internalID: -6790365367708063659
+      spriteID: 10e04e2bb1c7da770800000000000000
+      internalID: 8623685319891619329
       vertices: []
       indices: 
       edges: []

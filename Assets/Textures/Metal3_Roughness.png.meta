@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 46530d0f8299fc74aa0b2a8f41f1ae79
+guid: b5f84a4fb7907394cb4318efeb3a48b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6869198170409892393
-    second: material_heights_0
+      213: 1387705777958785674
+    second: Metal3_Roughness_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: material_heights_0
+      name: Metal3_Roughness_0
       rect:
         serializedVersion: 2
-        x: 111
+        x: 0
         y: 0
-        width: 801
+        width: 1024
         height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d584f898a4bba0a0800000000000000
-      internalID: -6869198170409892393
+      spriteID: a829dfb7d0f124310800000000000000
+      internalID: 1387705777958785674
       vertices: []
       indices: 
       edges: []
