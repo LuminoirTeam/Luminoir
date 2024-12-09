@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _noctis: {fileID: 0}
+  _lightMoveSpeed: 2
 --- !u!198 &867792878411454505
 ParticleSystem:
   m_ObjectHideFlags: 0

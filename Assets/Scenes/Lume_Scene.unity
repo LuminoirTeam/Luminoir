@@ -248,7 +248,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.27, y: -2.91, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 1}
+  m_LocalScale: {x: 942.39996, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -271,7 +271,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 0.75
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -285,6 +285,58 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &782073740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5145379320912127745, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
+  m_PrefabInstance: {fileID: 901611088}
+  m_PrefabAsset: {fileID: 0}
+--- !u!232 &782073746
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782073740}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 3.5
+  m_MaxDistanceOnly: 1
+--- !u!50 &782073747
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782073740}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0.75
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 3
 --- !u!1001 &901611088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -297,6 +349,14 @@ PrefabInstance:
       propertyPath: _noctis
       value: 
       objectReference: {fileID: 1914457043}
+    - target: {fileID: 4844151750079750684, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844151750079750684, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5145379320912127745, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
       propertyPath: m_Name
       value: light
@@ -344,7 +404,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5145379320912127745, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 782073747}
+    - targetCorrespondingSourceObject: {fileID: 5145379320912127745, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 782073746}
   m_SourcePrefab: {fileID: 100100000, guid: 39ebe1cdb4d3efd42bb9c5101d4e1d73, type: 3}
 --- !u!1 &967670207
 GameObject:
@@ -493,11 +559,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 187111988874156710, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9
+      value: -2.88
       objectReference: {fileID: 0}
     - target: {fileID: 187111988874156710, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.63
+      value: -1.96
       objectReference: {fileID: 0}
     - target: {fileID: 187111988874156710, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -535,13 +601,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: shadow
       objectReference: {fileID: 0}
+    - target: {fileID: 1713724095599844816, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7400842293281317088, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: _lumis
       value: 
       objectReference: {fileID: 1914457043}
     - target: {fileID: 7400842293281317088, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: _shadowMoveSpeed
-      value: 10
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712059667235885199, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -654,7 +728,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1914457049}
         m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
         m_MethodName: Jump
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -690,7 +764,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1914457049}
         m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
         m_MethodName: CallAttractElement
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -706,7 +780,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1914457049}
         m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
         m_MethodName: CallRepelElement
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -830,7 +904,7 @@ MonoBehaviour:
   _playerSpeed: 8
   _jumpingForce: 5
   _sizeOfGroundCheckBox: {x: 1, y: 0.5}
-  _power: {fileID: 1914457044}
+  _power: {fileID: 1914457051}
 --- !u!4 &1914457050
 Transform:
   m_ObjectHideFlags: 0
@@ -898,5 +972,5 @@ SceneRoots:
   - {fileID: 1914457050}
   - {fileID: 250337101}
   - {fileID: 967670211}
-  - {fileID: 901611088}
   - {fileID: 1804012065}
+  - {fileID: 901611088}

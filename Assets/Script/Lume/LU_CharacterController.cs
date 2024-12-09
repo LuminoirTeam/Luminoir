@@ -15,6 +15,9 @@ public class LU_CharacterController : MonoBehaviour
 
     [SerializeField] LU_Power _power;
 
+    private bool _isAttracting = false;
+    private bool _isRepelling = false;
+
     //public bool DEBUG_isNoctis;
 
 
@@ -31,11 +34,11 @@ public class LU_CharacterController : MonoBehaviour
     {
         Jump();
 
-        //if (Input.GetKey(KeyCode.Joystick1Button15))
-        //    _power.AttractElement();
+        if (_isAttracting)
+            _power.AttractElement();
 
-        //if (Input.GetKey(KeyCode.Joystick1Button13))
-        //    _power.RepelElement();
+        if (_isRepelling)
+            _power.RepelElement();
     }
 
     public void Jump()
@@ -60,13 +63,21 @@ public class LU_CharacterController : MonoBehaviour
         rb.linearVelocityX = context.ReadValue<Vector2>().x * _playerSpeed;
     }
 
-    public void CallAttractElement()
+    public void CallAttractElement(InputAction.CallbackContext context) //called on button input
     {
-        _power.AttractElement();
+        if (context.started)
+            _isAttracting = true;
+
+        if (context.canceled)
+            _isAttracting = false;
     }
 
-    public void CallRepelElement()
+    public void CallRepelElement(InputAction.CallbackContext context) //called on button input
     {
-        _power.RepelElement();
+        if (context.started)
+            _isRepelling = true;
+
+        if (context.canceled)
+            _isRepelling = false;
     }
 }
