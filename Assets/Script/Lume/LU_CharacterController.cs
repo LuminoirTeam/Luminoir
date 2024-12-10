@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,8 +19,8 @@ public class LU_CharacterController : MonoBehaviour
     private bool _isAttracting = false;
     private bool _isRepelling = false;
 
-    //public bool DEBUG_isNoctis;
-
+    private List<PlayerInput> players = new List<PlayerInput>();
+    private PlayerInputManager playerInputManager;
 
     private void Awake()
     {
@@ -30,6 +31,16 @@ public class LU_CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundCheck = transform.GetChild(0).position;
     }
+    private void OnEnable()
+    {
+        playerInputManager.onPlayerJoined += AddPlayer;
+    }
+
+    private void OnDisable()
+    {
+        playerInputManager.onPlayerJoined -= AddPlayer;
+    }
+
     private void Update()
     {
         Jump();
@@ -79,5 +90,10 @@ public class LU_CharacterController : MonoBehaviour
 
         if (context.canceled)
             _isRepelling = false;
+    }
+
+    public void AddPlayer(PlayerInput player)
+    {
+        players.Add(player);
     }
 }

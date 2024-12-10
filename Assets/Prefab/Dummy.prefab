@@ -247,16 +247,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 5513633521449468888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea51bf35714ac84aafc3b629027d432, type: 3}
+  m_Script: {fileID: 11500000, guid: faae997050810c14b83e5ea59b7fa27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 6696548486879484927}
-  groundCheck: {fileID: 4525509962450627005}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
-  PlayerSpeed: 5
-  JumpingForce: 5
+    m_Bits: 0
+  _playerSpeed: 8
+  _jumpingForce: 5
+  _sizeOfGroundCheckBox: {x: 1, y: 0.5}
+  _power: {fileID: 0}
 --- !u!1 &7496773791346459382
 GameObject:
   m_ObjectHideFlags: 0
