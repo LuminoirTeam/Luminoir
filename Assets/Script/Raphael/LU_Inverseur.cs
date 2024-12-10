@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LU_Variateur : MonoBehaviour
+public class LU_Inverseur : MonoBehaviour
 {
     string _lightTag = "Light";
     string _shadowTag = "Shadow";

@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class CameraBehaviour : MonoBehaviour
+public class LU_CameraBehaviour : MonoBehaviour
 {
     public GameObject player1;
     public GameObject player2;
@@ -26,7 +25,6 @@ public class CameraBehaviour : MonoBehaviour
     private void Update()
     {
         MoveCamera();
-        BlockPlayerMovements();
     }
 
     private void MoveCamera()
@@ -98,14 +96,6 @@ public class CameraBehaviour : MonoBehaviour
         {
             float leftDiff = bounds.min.x - left;
             cam.transform.position += new Vector3(leftDiff, 0, 0);
-        }
-    }
-
-    private void BlockPlayerMovements()
-    {
-        if (isClamped)
-        {
-
         }
     }
 }
