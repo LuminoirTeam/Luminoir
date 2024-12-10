@@ -1,51 +1,96 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LU_UIManagement : MonoBehaviour
 {
-    public TMP_Text CountdownText;
-    public TMP_Text CountupText;
-    public TMP_Text EndCountText;
-    public float CountdownTime = 300f; // 5 minutes in seconds
-    private float _countupTime = 0f;
-    private bool _countdownActive = true;
-    
-    void Start()
+    [Header("Canvas References")]
+    [SerializeField] private Canvas _pauseCanvas; [Space]
+
+    [Header("Bools")]
+    public bool _isPaused = false; //the HUD Manager needs this
+    public bool _isOnMainMenu;
+
+    private void Start()
     {
-        UpdateCountdownText();
-        UpdateCountupText();
+        if (SceneManager.GetActiveScene().name == "Main Menu")
+            _isOnMainMenu = true;
+
+        _isPaused = false;
+        TogglePause();
     }
 
     void Update()
     {
-        if (_countdownActive)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            CountdownTime -= Time.deltaTime;
-            if (CountdownTime <= 0)
-            {
-                CountdownTime = 0;
-                _countdownActive = false;
-            }
-            UpdateCountdownText();
+            OnControllerPressPause();
         }
-
-        _countupTime += Time.deltaTime;
-        UpdateCountupText();
     }
 
-    void UpdateCountdownText()
+    public void UIButton_Start()
     {
-        int minutes = Mathf.FloorToInt(CountdownTime / 60);
-        int seconds = Mathf.FloorToInt(CountdownTime % 60);
-        CountdownText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        Debug.Log("Start");
+
+        _isOnMainMenu = false;
+        SceneManager.LoadScene("Play");
     }
 
-    void UpdateCountupText()
+    public void UIButton_Quit()
     {
-        int minutes = Mathf.FloorToInt(_countupTime / 60);
-        int seconds = Mathf.FloorToInt(_countupTime % 60);
-        CountupText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-        EndCountText.text = CountupText.text;
+        Debug.Log("Quit");
+
+        Application.Quit();
+    }
+
+    public void UIButton_Retry()
+    {
+        Debug.Log("Retry");
+        _isPaused = false;
+        TogglePause();
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void UIButton_MainMenu()
+    {
+        Debug.Log("Main Menu");
+
+        _isOnMainMenu = true;
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void OnControllerPressPause()
+    {
+        if (!_isOnMainMenu)
+        {
+            Debug.Log("Controller Press Pause");
+
+            if (!_isPaused)
+                _isPaused = true;
+            else
+                _isPaused = false;
+
+            TogglePause();
+        }
+        else
+            Debug.Log("Cannot pause on Main Menu");
+    }
+
+    private void TogglePause()
+    {
+        Debug.Log("Toggle Pause");
+        
+        if (_isPaused)
+        {
+            _pauseCanvas.gameObject.SetActive(true);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            _pauseCanvas.gameObject.SetActive(false);
+            Time.timeScale = 1;
+        }
     }
 }
