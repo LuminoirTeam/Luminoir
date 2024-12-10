@@ -26,7 +26,6 @@ public class CameraBehaviour : MonoBehaviour
     private void Update()
     {
         MoveCamera();
-        BlockPlayerMovements();
     }
 
     private void MoveCamera()
@@ -98,14 +97,6 @@ public class CameraBehaviour : MonoBehaviour
         {
             float leftDiff = bounds.min.x - left;
             cam.transform.position += new Vector3(leftDiff, 0, 0);
-        }
-    }
-
-    private void BlockPlayerMovements()
-    {
-        if (isClamped)
-        {
-
         }
     }
 }

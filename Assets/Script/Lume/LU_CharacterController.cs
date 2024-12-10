@@ -14,13 +14,12 @@ public class LU_CharacterController : MonoBehaviour
     private InputAction movementAction;
     private PlayerInput _input;
 
-    [SerializeField] LU_Power _power; //in debug, to change the Dummy's powers, slide the script you want in this SerializeField
+    public LU_Power power; //in debug, to change the Dummy's powers, slide the script you want in this SerializeField
 
     private bool _isAttracting = false;
     private bool _isRepelling = false;
 
-    private List<PlayerInput> players = new List<PlayerInput>();
-    private PlayerInputManager playerInputManager;
+    public InputDevice _device;
 
     private void Awake()
     {
@@ -31,25 +30,16 @@ public class LU_CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundCheck = transform.GetChild(0).position;
     }
-    private void OnEnable()
-    {
-        playerInputManager.onPlayerJoined += AddPlayer;
-    }
-
-    private void OnDisable()
-    {
-        playerInputManager.onPlayerJoined -= AddPlayer;
-    }
 
     private void Update()
     {
         Jump();
 
         if (_isAttracting)
-            _power.AttractElement();
+            power.AttractElement();
 
         if (_isRepelling)
-            _power.RepelElement();
+            power.RepelElement();
     }
 
     public void Jump()
@@ -90,10 +80,5 @@ public class LU_CharacterController : MonoBehaviour
 
         if (context.canceled)
             _isRepelling = false;
-    }
-
-    public void AddPlayer(PlayerInput player)
-    {
-        players.Add(player);
     }
 }
