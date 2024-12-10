@@ -29,7 +29,7 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
 
     protected void OnTriggerEnter2D(Collider2D collision)
     {
-        if (TryGetComponent<LU_PowerNoctis>(out LU_PowerNoctis noctis))
+        if (collision.TryGetComponent<LU_PowerNoctis>(out LU_PowerNoctis noctis))
         {
             noctis.GetComponent<LU_CharacterDeath>().ReturnToSpawn();
         }

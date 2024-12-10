@@ -36,7 +36,7 @@ public class LU_LightReactToPower : LU_PowerInteraction
 
     protected void OnTriggerEnter2D(Collider2D collision)
     {
-        if (TryGetComponent<LU_PowerLumis>(out LU_PowerLumis lumis))
+        if (collision.TryGetComponent<LU_PowerLumis>(out LU_PowerLumis lumis))
         {
             lumis.GetComponent<LU_CharacterDeath>().ReturnToSpawn();
         }

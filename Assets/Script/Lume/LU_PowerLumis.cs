@@ -7,7 +7,7 @@ public class LU_PowerLumis : LU_Power //Lumis interacts with SHADOW
 {
     public override void AttractElement()
     {
-        List<Collider2D> colliderFound = Physics2D.OverlapCircleAll(transform.position, _powerRadius, 1 << 8).ToList();
+        List<Collider2D> colliderFound = Physics2D.OverlapCircleAll(transform.position, _powerRadius, 1 << 9).ToList();
         foreach (Collider2D collider in colliderFound)
         {
             collider.gameObject.GetComponent<LU_ShadowReactToPower>().MoveTowards();
@@ -16,7 +16,7 @@ public class LU_PowerLumis : LU_Power //Lumis interacts with SHADOW
 
     public override void RepelElement()
     {
-        List<Collider2D> colliderFound = Physics2D.OverlapCircleAll(transform.position, _powerRadius, 1 << 8).ToList();
+        List<Collider2D> colliderFound = Physics2D.OverlapCircleAll(transform.position, _powerRadius, 1 << 9).ToList();
         foreach (Collider2D collider in colliderFound)
         {
             collider.gameObject.GetComponent<LU_ShadowReactToPower>().MoveAwayFrom();
