@@ -12,17 +12,16 @@ GameObject:
   - component: {fileID: 667949829145687622}
   - component: {fileID: 2453858764240552321}
   - component: {fileID: 2498154791606835289}
-  - component: {fileID: 6896990305338073050}
+  - component: {fileID: 4133426648340390621}
   - component: {fileID: 7744282691353238965}
   - component: {fileID: 5602784645251515230}
-  - component: {fileID: 1702884345501455998}
   m_Layer: 0
   m_Name: Noctis
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5934277834820873120
 Transform:
   m_ObjectHideFlags: 0
@@ -158,7 +157,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
---- !u!114 &6896990305338073050
+--- !u!114 &4133426648340390621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -167,7 +166,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4303925043069812653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea51bf35714ac84aafc3b629027d432, type: 3}
+  m_Script: {fileID: 11500000, guid: faae997050810c14b83e5ea59b7fa27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groundLayer:
@@ -217,7 +216,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6896990305338073050}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 1
@@ -233,7 +232,7 @@ MonoBehaviour:
     m_ActionName: 'Player1/Jump[/XInputControllerWindows/buttonSouth]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6896990305338073050}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -253,7 +252,7 @@ MonoBehaviour:
     m_ActionName: 'Player1/Crouch[/XInputControllerWindows/leftStick/down]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6896990305338073050}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
         m_MethodName: CallAttractElement
         m_Mode: 0
@@ -269,7 +268,7 @@ MonoBehaviour:
     m_ActionName: 'Player1/Attract Element[/XInputControllerWindows/buttonWest]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6896990305338073050}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
         m_MethodName: CallRepelElement
         m_Mode: 0
@@ -296,18 +295,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1702884345501455998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303925043069812653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 239cb51c7b7c03b468be90c76815df6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9116386691219776984
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ public class LU_LightReactToPower : LU_PowerInteraction
     {
         if (collision.TryGetComponent<LU_PowerLumis>(out LU_PowerLumis lumis))
         {
-            lumis.GetComponent<LU_CharacterDeath>().ReturnToSpawn();
+            lumis.GetComponent<LU_CharacterController>().ReturnToSpawn();
         }
     }
 }

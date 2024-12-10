@@ -294,6 +294,37 @@ MonoBehaviour:
   zoomFactor: 1.5
   smoothing: 0.1
   isClamped: 1
+--- !u!1 &127004118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 127004119}
+  m_Layer: 0
+  m_Name: audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &127004119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127004118}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &186162280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4303925043069812653, guid: 5045132ee35439c429f647e740e60f26, type: 3}
@@ -539,17 +570,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Noctis
       objectReference: {fileID: 0}
-    - target: {fileID: 4303925043069812653, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Jump
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5934277834820873120, guid: 5045132ee35439c429f647e740e60f26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -590,14 +625,6 @@ PrefabInstance:
     - target: {fileID: 5934277834820873120, guid: 5045132ee35439c429f647e740e60f26, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6896990305338073050, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: _sizeOfGroundCheckBox.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7744282691353238965, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: _powerRadius
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -754,10 +781,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lumis
       objectReference: {fileID: 0}
-    - target: {fileID: 1296425850557146567, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4075481215134232776, guid: b779b37db5503a243baa67976496d26c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.49
@@ -798,10 +821,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6060666916532137482, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: _jumpingForce
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -818,3 +837,4 @@ SceneRoots:
   - {fileID: 6776601243318948561}
   - {fileID: 1905629236}
   - {fileID: 3150885420786380677}
+  - {fileID: 127004119}

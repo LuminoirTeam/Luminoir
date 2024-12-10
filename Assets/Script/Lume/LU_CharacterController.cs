@@ -13,8 +13,9 @@ public class LU_CharacterController : MonoBehaviour
     private InputAction movementAction;
     private PlayerInput _input;
 
-    [SerializeField] internal LU_Power _power; //in debug, to change the Dummy's powers, slide the script you want in this SerializeField
+    [SerializeField] internal LU_Power _power; //The variable to acces character's power script
 
+    private Vector3 _spawnPos;
     private bool _isAttracting = false;
     private bool _isRepelling = false;
 
@@ -30,9 +31,14 @@ public class LU_CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundCheck = transform.GetChild(0).position;
     }
+    private void Start()
+    {
+        _spawnPos = transform.position;
+    }
 
     private void Update()
     {
+        CheckIfOutOfBonds();
         Jump();
 
         if (_isAttracting)
@@ -81,12 +87,29 @@ public class LU_CharacterController : MonoBehaviour
         if (context.canceled) { _isRepelling = false; }
             
     }
+    private void CheckIfOutOfBonds()
+    {
+        if (LU_CameraBehaviour.Left >= transform.position.x)
+        {
+            ReturnToSpawn();
+            return;
+        }
+        if (LU_CameraBehaviour.Right <= transform.position.x)
+        {
+            ReturnToSpawn();
+        }
+    }
+    public void ReturnToSpawn()
+    {
+        transform.position = _spawnPos;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.TryGetComponent<LU_CharacterDeath>(out LU_CharacterDeath anotherCharacter))
+        if (collision.gameObject.TryGetComponent<LU_CharacterController>(out LU_CharacterController anotherCharacter))
         {
             anotherCharacter.ReturnToSpawn();
         }
     }
+
 }
