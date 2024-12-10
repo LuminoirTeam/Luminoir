@@ -13,6 +13,6 @@ public abstract class LU_Power : MonoBehaviour
 
     public void KillCharacter()
     {
-        GetComponent<LU_CharacterDeath>().ReturnToSpawn();
+        GetComponent<LU_CharacterController>().ReturnToSpawn();
     }
 }
