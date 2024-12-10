@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6060666916532137482}
   - component: {fileID: 3966012813800306590}
   - component: {fileID: 2820416664587003027}
-  - component: {fileID: 359166904787306851}
   m_Layer: 0
   m_Name: Lumis
   m_TagString: Player
@@ -167,14 +166,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1296425850557146567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eea51bf35714ac84aafc3b629027d432, type: 3}
+  m_Script: {fileID: 11500000, guid: faae997050810c14b83e5ea59b7fa27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   _playerSpeed: 8
-  _jumpingForce: 5
+  _jumpingForce: 1
   _sizeOfGroundCheckBox: {x: 1, y: 0.5}
   _power: {fileID: 3966012813800306590}
 --- !u!114 &3966012813800306590
@@ -296,18 +295,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &359166904787306851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296425850557146567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 239cb51c7b7c03b468be90c76815df6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1756004212735640419
 GameObject:
   m_ObjectHideFlags: 0

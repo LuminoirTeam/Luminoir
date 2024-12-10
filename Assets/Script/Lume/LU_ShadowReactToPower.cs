@@ -31,7 +31,7 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
     {
         if (collision.TryGetComponent<LU_PowerNoctis>(out LU_PowerNoctis noctis))
         {
-            noctis.GetComponent<LU_CharacterDeath>().ReturnToSpawn();
+            noctis.GetComponent<LU_CharacterController>().ReturnToSpawn();
         }
     }
 
