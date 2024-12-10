@@ -33,4 +33,12 @@ public class LU_LightReactToPower : LU_PowerInteraction
 
         _attractorRb.AddForce(directionAttractor.normalized * _lightMoveSpeed, ForceMode2D.Impulse);
     }
+
+    protected void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (TryGetComponent<LU_PowerLumis>(out LU_PowerLumis lumis))
+        {
+            lumis.GetComponent<LU_CharacterDeath>().ReturnToSpawn();
+        }
+    }
 }

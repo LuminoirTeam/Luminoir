@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class LU_ShadowReactToPower : LU_PowerInteraction
 {
@@ -25,5 +26,13 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
 
         _rb.AddForce(direction.normalized * _shadowMoveSpeed, ForceMode2D.Impulse);
     }
-    
+
+    protected void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (TryGetComponent<LU_PowerNoctis>(out LU_PowerNoctis noctis))
+        {
+            noctis.GetComponent<LU_CharacterDeath>().ReturnToSpawn();
+        }
+    }
+
 }

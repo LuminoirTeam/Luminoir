@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -54,7 +53,7 @@ public class LU_CharacterController : MonoBehaviour
     private bool IsGrounded()
     {
         groundCheck = transform.GetChild(0).position;
-        Collider2D colliderFound = Physics2D.OverlapBox(groundCheck, _sizeOfGroundCheckBox,0, groundLayer);
+        Collider2D colliderFound = Physics2D.OverlapBox(groundCheck, _sizeOfGroundCheckBox, 0, groundLayer);
         if (colliderFound == null) { return false; }
 
         return true;
@@ -81,5 +80,13 @@ public class LU_CharacterController : MonoBehaviour
 
         if (context.canceled)
             _isRepelling = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<LU_CharacterDeath>(out LU_CharacterDeath anotherCharacter))
+        {
+            anotherCharacter.ReturnToSpawn();
+        }
     }
 }
