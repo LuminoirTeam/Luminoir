@@ -10,10 +10,11 @@ public class LU_CharacterController : MonoBehaviour
     [SerializeField] private float _playerSpeed = 8;
     [SerializeField] private float _jumpingForce = 5;
     [SerializeField] private Vector2 _sizeOfGroundCheckBox = new Vector2(1, 0.5f);
+
     private InputAction movementAction;
     private PlayerInput _input;
 
-    [SerializeField] LU_Power _power; //in debug, to change the Dummy's powers, slide the script you want in this SerializeField
+    [SerializeField] internal LU_Power _power; //in debug, to change the Dummy's powers, slide the script you want in this SerializeField
 
     private bool _isAttracting = false;
     private bool _isRepelling = false;
@@ -30,6 +31,7 @@ public class LU_CharacterController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         groundCheck = transform.GetChild(0).position;
     }
+
     private void Update()
     {
         Jump();

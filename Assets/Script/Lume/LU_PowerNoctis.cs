@@ -10,7 +10,7 @@ public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
         List<Collider2D> colliderFound = Physics2D.OverlapCircleAll(transform.position, _powerRadius, 1 << 7).ToList();
         foreach (Collider2D collider in colliderFound)
         {
-            collider.gameObject.GetComponent<LU_LightReactToPower>().PointTowardsNoctis();
+            collider.gameObject.GetComponent<LU_LightReactToPower>().MoveTowards();
         }
     }
 
@@ -19,7 +19,7 @@ public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
         List<Collider2D> colliderFound = Physics2D.OverlapCircleAll(transform.position, _powerRadius, 1 << 7).ToList();
         foreach (Collider2D collider in colliderFound)
         {
-            collider.gameObject.GetComponent<LU_LightReactToPower>().PointAwayFromNoctis();
+            collider.gameObject.GetComponent<LU_LightReactToPower>().MoveAwayFrom();
         }
     }
 }
