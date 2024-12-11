@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class LU_Audio : MonoBehaviour
 {
     [Header("The Key of a sound follow the syntax : \n\nnameofthelist_indexofthesound")]
+
+    [Header("Corresponding channel will be automatically \nchosen when giving the key")]
 
     [Header("\nMusics")]
     [Header("musics_index")]
@@ -30,9 +32,9 @@ public class LU_Audio : MonoBehaviour
     [Header("fx_index")]
     [SerializeField] List<AudioClip> _FXSounds = new();
 
+    static Dictionary<string, AudioSource> _audioChannels = new();
     static Dictionary<string, AudioClip> _sounds = new();
 
-    static AudioSource _audioSource;
     private void Awake()
     {
         for (int i = 0; i < _musics.Count; i++)
@@ -70,14 +72,32 @@ public class LU_Audio : MonoBehaviour
 
     private void Start()
     {
-        _audioSource.GetComponent<AudioSource>();
+        _audioChannels.Add("musics",transform.GetChild(0).GetComponent<AudioSource>());
+        _audioChannels.Add("characters", transform.GetChild(1).GetComponent<AudioSource>());
+        _audioChannels.Add("environment", transform.GetChild(2).GetComponent<AudioSource>());
+        _audioChannels.Add("fx", transform.GetChild(3).GetComponent<AudioSource>());
     }
     public static void PlaySound(string key)
     {
         AudioClip audioToPlay;
         if (_sounds.TryGetValue(key, out audioToPlay))
         {
-            _audioSource.PlayOneShot(audioToPlay);
+            string channelKey = key;
+            channelKey =channelKey.Remove( channelKey.IndexOf('_'));
+
+            if (channelKey.Contains("noctis") || channelKey.Contains("lumis"))
+            {
+                channelKey = channelKey.Replace(channelKey, "characters");
+            }
+
+            if ( _audioChannels.TryGetValue(channelKey, out AudioSource channelToPlay))
+            {
+                channelToPlay.PlayOneShot( audioToPlay );
+            }
+            else
+            {
+                Debug.LogError($"channel non-existent : \n{channelKey}");
+            }
         }
         else 
         {
