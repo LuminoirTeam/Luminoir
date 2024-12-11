@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class LU_UIManagement : MonoBehaviour
 {
     [Header("Canvas References")]
-    [SerializeField] private Canvas _pauseCanvas; [Space]
+    [SerializeField] private Canvas _pauseCanvas; 
+        //this is only used on the play scene, there won't be any bugs if it's unassigned in any other scene
+    [Space]
 
     [Header("Bools")]
     public bool _isPaused = false; //the HUD Manager needs this
@@ -31,8 +33,6 @@ public class LU_UIManagement : MonoBehaviour
 
     public void UIButton_Start()
     {
-        Debug.Log("Start");
-
         _isOnMainMenu = false;
         SceneManager.LoadScene("Play");
     }
@@ -46,7 +46,6 @@ public class LU_UIManagement : MonoBehaviour
 
     public void UIButton_Retry()
     {
-        Debug.Log("Retry");
         _isPaused = false;
         TogglePause();
 
@@ -55,8 +54,6 @@ public class LU_UIManagement : MonoBehaviour
 
     public void UIButton_MainMenu()
     {
-        Debug.Log("Main Menu");
-
         _isOnMainMenu = true;
         SceneManager.LoadScene("Main Menu");
     }
@@ -65,7 +62,6 @@ public class LU_UIManagement : MonoBehaviour
     {
         if (!_isOnMainMenu)
         {
-            Debug.Log("Controller Press Pause");
 
             if (!_isPaused)
                 _isPaused = true;
@@ -74,15 +70,11 @@ public class LU_UIManagement : MonoBehaviour
 
             TogglePause();
         }
-        else
-            Debug.Log("Cannot pause on Main Menu");
     }
 
     private void TogglePause()
     {
-        Debug.Log("Toggle Pause");
-        
-        if (_isPaused)
+        if (_isPaused && _pauseCanvas)
         {
             _pauseCanvas.gameObject.SetActive(true);
             Time.timeScale = 0;
