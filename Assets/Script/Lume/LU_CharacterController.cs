@@ -36,7 +36,7 @@ public class LU_CharacterController : MonoBehaviour
         _spawnPos = transform.position;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         CheckIfOutOfBonds();
         Jump();
@@ -112,4 +112,12 @@ public class LU_CharacterController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Checkpoint"))
+        {
+            Debug.Log("Entered Checkpoint");
+            _spawnPos = collision.transform.position;
+        }
+    }
 }
