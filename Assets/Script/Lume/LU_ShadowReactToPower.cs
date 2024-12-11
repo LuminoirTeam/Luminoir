@@ -34,5 +34,4 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
             noctis.GetComponent<LU_CharacterController>().ReturnToSpawn();
         }
     }
-
 }
