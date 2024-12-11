@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3361079498229089713}
   - component: {fileID: -1960091735364352107}
   m_Layer: 0
-  m_Name: NOCTIS TEMP
+  m_Name: Noctis_Temp
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
