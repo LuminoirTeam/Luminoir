@@ -73,19 +73,19 @@ public class LU_CharacterController : MonoBehaviour
     public void CallAttractElement(InputAction.CallbackContext context) //called on button input
     {
         if (context.started) { _isAttracting = true; }
-            
+
 
         if (context.canceled) { _isAttracting = false; }
-            
+
     }
 
     public void CallRepelElement(InputAction.CallbackContext context) //called on button input
     {
         if (context.started) { _isRepelling = true; }
-            
+
 
         if (context.canceled) { _isRepelling = false; }
-            
+
     }
     private void CheckIfOutOfBonds()
     {
@@ -102,6 +102,11 @@ public class LU_CharacterController : MonoBehaviour
     public void ReturnToSpawn()
     {
         transform.position = _spawnPos;
+    }
+
+    public void EnableOrDisablePlayerInput()
+    {
+        _input.enabled = !_input.enabled;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

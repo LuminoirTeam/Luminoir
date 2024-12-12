@@ -2,11 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class LU_UIManagement : MonoBehaviour
 {
     [Header("Canvas References")]
-    [SerializeField] private Canvas _pauseCanvas; 
+    [SerializeField] private GameObject _menuCanvas; 
         //this is only used on the play scene, there won't be any bugs if it's unassigned in any other scene
     [Space]
 
@@ -21,14 +22,6 @@ public class LU_UIManagement : MonoBehaviour
 
         _isPaused = false;
         TogglePause();
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            OnControllerPressPause();
-        }
     }
 
     public void UIButton_Start()
@@ -58,31 +51,36 @@ public class LU_UIManagement : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
-    public void OnControllerPressPause()
+    public void OnControllerPressPause(InputAction.CallbackContext context)
     {
-        if (!_isOnMainMenu)
+        if (context.started)
         {
+            if (!_isOnMainMenu)
+            {
 
-            if (!_isPaused)
-                _isPaused = true;
-            else
-                _isPaused = false;
+                if (!_isPaused)
+                    _isPaused = true;
+                else
+                    _isPaused = false;
 
-            TogglePause();
+                TogglePause();
+            }
         }
     }
 
     private void TogglePause()
     {
-        if (_isPaused && _pauseCanvas)
+        if (_isPaused && _menuCanvas)
         {
-            _pauseCanvas.gameObject.SetActive(true);
+            _menuCanvas.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
         else
         {
-            _pauseCanvas.gameObject.SetActive(false);
+            _menuCanvas.gameObject.SetActive(false);
+            _menuCanvas.transform.GetChild(1).gameObject.SetActive(false); // option menu
             Time.timeScale = 1;
         }
     }
+
 }
