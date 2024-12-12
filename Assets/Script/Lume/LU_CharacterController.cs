@@ -24,8 +24,8 @@ public class LU_CharacterController : MonoBehaviour
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
-        movementAction = _input.actions["Jump"];
-        movementAction.Enable();
+        //movementAction = _input.actions["Jump"];
+        //movementAction.Enable();
 
         rb = GetComponent<Rigidbody2D>();
         groundCheck = transform.GetChild(0).position;
