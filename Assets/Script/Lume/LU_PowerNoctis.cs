@@ -22,4 +22,8 @@ public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
             collider.gameObject.GetComponent<LU_LightReactToPower>().MoveAwayFrom();
         }
     }
+    public float GetPowerRadius()
+    {
+        return _powerRadius;
+    }
 }
