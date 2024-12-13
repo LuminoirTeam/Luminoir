@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class LU_CharacterController : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class LU_CharacterController : MonoBehaviour
     private void FixedUpdate()
     {
         Jump();
+        CheckIfOutOfBounds();
 
         if (_isAttracting)
             power.AttractElement();
@@ -53,10 +55,26 @@ public class LU_CharacterController : MonoBehaviour
             rb.AddForce(movementAction.ReadValue<Vector2>() * _jumpingForce, ForceMode2D.Impulse);
         }
     }
+    private void CheckIfOutOfBounds()
+    {
+        if(transform.position.x<=LU_CameraBehaviour.Left || transform.position.x >= LU_CameraBehaviour.Right)
+        {
+            if(currentSpawn.transform.position.x <= LU_CameraBehaviour.Left || currentSpawn.transform.position.x >= LU_CameraBehaviour.Right)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            else
+            {
+                ReturnToSpawn();
+            }
+        }
+            
+        
+    }
 
     private bool IsGrounded()
     {
-        groundCheck = transform.GetChild(2).position;
+        groundCheck = transform.GetChild(0).position;
         Collider2D colliderFound = Physics2D.OverlapBox(groundCheck, _sizeOfGroundCheckBox, 0, groundLayer);
         if (colliderFound == null) { return false; }
 
@@ -88,14 +106,7 @@ public class LU_CharacterController : MonoBehaviour
 
     public void ReturnToSpawn()
     {
-        if (_isNoctis)
-        {
-            transform.position = noctisSpawn.transform.position;
-        }
-        else
-        {
-            transform.position = lumisSpawn.transform.position;
-        }
+        transform.position = currentSpawn.transform.position;
     }
 
     public void EnableOrDisablePlayerInput()
@@ -107,7 +118,7 @@ public class LU_CharacterController : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<LU_CharacterController>(out LU_CharacterController anotherCharacter))
         {
-            //anotherCharacter.ReturnToSpawn();
+            anotherCharacter.ReturnToSpawn();
         }
     }
 
@@ -116,9 +127,12 @@ public class LU_CharacterController : MonoBehaviour
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
             Debug.Log("Entered Checkpoint");
+            if (currentSpawn.GetComponent<LU_Checkpoint>().currentCharacterInCheckpoint != null && currentSpawn.GetComponent<LU_Checkpoint>().currentCharacterInCheckpoint.TryGetComponent<LU_CharacterController>(out LU_CharacterController anotherCharacter))
+            {
+                return;
+            }
             currentSpawn = collision.gameObject;
-            noctisSpawn = currentSpawn.GetComponent<LU_Checkpoint>().noctisSpawn;
-            lumisSpawn = currentSpawn.GetComponent <LU_Checkpoint>().lumisSpawn;
+
         }
     }
 }

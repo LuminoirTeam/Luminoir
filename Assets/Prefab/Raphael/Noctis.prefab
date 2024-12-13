@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 2498154791606835289}
   - component: {fileID: 4133426648340390621}
   - component: {fileID: 7744282691353238965}
-  - component: {fileID: 5602784645251515230}
+  - component: {fileID: 807594335728407054}
+  - component: {fileID: 7785586306768583568}
   m_Layer: 0
   m_Name: Noctis
   m_TagString: Player
@@ -189,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _powerRadius: 2
---- !u!114 &5602784645251515230
+--- !u!114 &807594335728407054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,7 +217,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4133426648340390621}
         m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 1
@@ -229,10 +230,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 225b7721-311c-4a40-b25e-983a0bab836d
-    m_ActionName: 'Player1/Jump[/XInputControllerWindows/buttonSouth]'
+    m_ActionName: 'Player1/Jump[/SwitchProControllerHID/buttonSouth]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4133426648340390621}
         m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -245,14 +246,14 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 24d6e735-9681-4011-a853-571443b74ad2
-    m_ActionName: 'Player1/Movement[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+    m_ActionName: 'Player1/Movement[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: ba9737e5-a894-4b65-969c-fd3b8b2091a0
-    m_ActionName: 'Player1/Crouch[/XInputControllerWindows/leftStick/down]'
+    m_ActionName: 'Player1/Crouch[/SwitchProControllerHID/leftStick/down]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4133426648340390621}
         m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
         m_MethodName: CallAttractElement
         m_Mode: 0
@@ -265,10 +266,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: b9758fbc-2dfc-4ae6-b71b-7582c78b7fba
-    m_ActionName: 'Player1/Attract Element[/XInputControllerWindows/buttonWest]'
+    m_ActionName: 'Player1/Attract Element[/SwitchProControllerHID/buttonWest]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4133426648340390621}
         m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
         m_MethodName: CallRepelElement
         m_Mode: 0
@@ -281,20 +282,48 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
     m_ActionId: 97ba2d15-0b5b-40ec-b798-578131e73c25
-    m_ActionName: 'Player1/Repel Element[/XInputControllerWindows/buttonEast]'
+    m_ActionName: 'Player1/Repel Element[/SwitchProControllerHID/buttonEast]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 09292b39-1d6f-451d-82e1-dfe3ffce3e47
-    m_ActionName: 'Player1/Pause[/XInputControllerWindows/start]'
+    m_ActionName: 'Player1/Pause[/SwitchProControllerHID/start]'
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: a020a9e0-6982-41bc-8216-21bab251ec47
-    m_ActionName: 'Player1/Interact[/XInputControllerWindows/buttonNorth]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+    m_ActionName: 'Player1/Interact[/SwitchProControllerHID/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1c202274-9536-47aa-b8a9-4b7f9af839df
+    m_ActionName: 'NavigationUI/Next[/SwitchProControllerHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 35be867e-8a15-4e0d-8ad3-90e5ccce5cbe
+    m_ActionName: 'NavigationUI/Previous[/SwitchProControllerHID/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cbf33c04-c9f3-4abf-bd33-ebf1642c2134
+    m_ActionName: 'NavigationUI/Open/Quit Menu[/SwitchProControllerHID/start]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 499e065a-3740-48e8-8468-38db92b3ae04
+    m_ActionName: 'NavigationUI/Navigate[/SwitchProControllerHID/dpad/up,/SwitchProControllerHID/dpad/down,/SwitchProControllerHID/dpad/left,/SwitchProControllerHID/dpad/right,/SwitchProControllerHID/leftStick/up,/SwitchProControllerHID/leftStick/down,/SwitchProControllerHID/leftStick/left,/SwitchProControllerHID/leftStick/right]'
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Player 1
   m_DefaultActionMap: Player1
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7785586306768583568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303925043069812653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c7924498bbe687468c8bd11405bf87f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9116386691219776984
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,8 +349,8 @@ Transform:
   m_GameObject: {fileID: 9116386691219776984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5934277834820873120}

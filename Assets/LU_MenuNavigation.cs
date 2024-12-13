@@ -21,20 +21,5 @@ public class LU_MenuNavigation : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
-    public void GetMenuToActivate()
-    {
-        //if (_menuToActivate == null)
-        //{
-        //    _menuToActivate = _menuList[0];
-        //}
-        //else 
-        //{
-
-        //}
-    }
-    public void Get0( GameObject menu)
-    {
-
-    }
 
 }
