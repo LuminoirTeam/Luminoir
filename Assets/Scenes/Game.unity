@@ -2617,7 +2617,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648632868}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d30522c98ec54c44b848f06720bf64af, type: 3}
   m_Name: 
@@ -5489,9 +5489,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb25d972f923e2948bc575298e1fea26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lumisSpawn: {fileID: 1487085851}
-  noctisSpawn: {fileID: 25703995}
-  emptyPlayer: {fileID: 5513633521449468888, guid: 7f4003815665e174697017f260518abd, type: 3}
+  _lumisSpawn: {fileID: 1487085851}
+  _noctisSpawn: {fileID: 25703995}
+  _emptyPlayer: {fileID: 5513633521449468888, guid: 7f4003815665e174697017f260518abd, type: 3}
+  _camera: {fileID: 648632873}
 --- !u!114 &1380346959
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CameraBehaviour : MonoBehaviour
 {
@@ -14,13 +13,11 @@ public class CameraBehaviour : MonoBehaviour
     public bool isClamped = true;
 
     private Vector3 velocity = Vector3.zero;
-    public static Camera cam;
+    private static Camera cam;
 
     private void Start()
     {
         cam = GetComponent<Camera>();
-        CharacterController controller1 = player1.GetComponent<CharacterController>();
-        CharacterController controller2 = player2.GetComponent<CharacterController>();
     }
 
     private void Update()
