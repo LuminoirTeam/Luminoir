@@ -10,9 +10,4 @@ public abstract class LU_Power : MonoBehaviour
     public abstract void AttractElement();
 
     public abstract void RepelElement();
-
-    public void KillCharacter()
-    {
-        GetComponent<LU_CharacterController>().ReturnToSpawn();
-    }
 }
