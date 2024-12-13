@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2631641311483292916}
   - component: {fileID: 7685679903487916159}
   - component: {fileID: 2113439955288943187}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: shadow
   m_TagString: Shadow
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e210a2f14c81514dbe62d813dfb8318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lumis: {fileID: 0}
+  _lumis: {fileID: 1296425850557146567, guid: b779b37db5503a243baa67976496d26c, type: 3}
   _shadowMoveSpeed: 0.2
 --- !u!198 &2010015167407960980
 ParticleSystem:

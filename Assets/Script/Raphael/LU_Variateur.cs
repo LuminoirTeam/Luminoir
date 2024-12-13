@@ -2,47 +2,57 @@ using UnityEngine;
 
 public class LU_Variateur : MonoBehaviour
 {
-    string _lightTag = "Light";
-    string _shadowTag = "Shadow";
-    GameObject _createdLight;
-    GameObject _createdLightAttractor;
-    PolygonCollider2D _lightCollider;
-    GameObject _createdShadow;
+    GameObject _lightSource;
+    GameObject _lightAttractor;
+    [SerializeField] Vector2 _minScale;
+    [SerializeField] Vector2 _maxScale;
+    [SerializeField] float _lightInteractionPower = 0.1f;
+    [UnityEngine.Range(0f, 1f)] float percentage;
+    float min = 4;
+    float max = 20;
+    public bool _retracting = false;
+    public bool _dilating = false;
 
-    private void Start()
+    void Start()
     {
-        _createdLight = transform.parent.GetChild(0).gameObject;
-        _createdLightAttractor = _createdLight.transform.GetChild(1).gameObject;
-        _createdShadow = transform.parent.GetChild(1).gameObject;
-        Physics2D.IgnoreCollision(_createdShadow.GetComponent<BoxCollider2D>(), GetComponent<CircleCollider2D>(), true);
-        Physics2D.IgnoreCollision(_createdLight.transform.GetChild(0).GetComponent<PolygonCollider2D>(), GetComponent<CircleCollider2D>(), true);
+        _lightSource = transform.parent.GetChild(1).GetChild(0).gameObject;
+        _lightAttractor = _lightSource.transform.parent.GetChild(1).gameObject;
+        _lightSource.transform.localScale = new Vector3(_minScale.x, _minScale.y, 1);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.CompareTag(_lightTag))
+        if (_retracting)
         {
-            Vector3 attractorPos = collision.GetComponent<DistanceJoint2D>().attachedRigidbody.transform.position;
-            Vector3 attractorDirection = (transform.position - attractorPos).normalized;
-            _createdShadow.transform.position = transform.position + attractorDirection;
-            _createdShadow.SetActive(true);
-            return;
-
+            RetractLight();
         }
-        if (collision.CompareTag(_shadowTag))
+        if (_dilating) 
         {
-            Vector3 shadowPos = collision.transform.position;
-            Vector3 shadowDirection = (transform.position - shadowPos).normalized;
-            _createdLight.SetActive(true);
-
-            _createdLightAttractor.transform.position = transform.position + shadowDirection;
-
-            return;
+            DilateLight();
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+
+    public void RetractLight()
     {
-        _createdLight.SetActive(false);
-        _createdShadow.SetActive(false);
+        // ((input - min) * 100) / (max - min)
+        //((percent * (max - min) / 100) + min
+        //1-1 4-1
+        float xToADD = (_lightSource.transform.localScale.x - _lightInteractionPower) - _minScale.x / _maxScale.x;
+        xToADD = xToADD * Time.deltaTime;
+        float yToADD = (_lightSource.transform.localScale.y + _lightInteractionPower) - _minScale.y / _maxScale.y;
+        yToADD = yToADD * Time.deltaTime;
+        _lightSource.transform.localScale += new Vector3(xToADD, yToADD, 1);
+        _lightSource.transform.localScale = new Vector3(Mathf.Clamp(_lightSource.transform.localScale.x, _minScale.x, _maxScale.x), Mathf.Clamp(_lightSource.transform.localScale.y, _minScale.y, _maxScale.y), 1);
+        //_lightAttractor.transform.position += new Vector3(0, (_lightInteractionPower * Time.deltaTime), 0);
+    }
+    public void DilateLight()
+    {
+        float xToADD = (_lightSource.transform.localScale.x - _lightInteractionPower) - _minScale.x / _maxScale.x;
+        xToADD = xToADD * Time.deltaTime;
+        float yToADD = (_lightSource.transform.localScale.y + _lightInteractionPower) - _minScale.y / _maxScale.y;
+        yToADD = yToADD * Time.deltaTime;
+        _lightSource.transform.localScale -= new Vector3(xToADD, yToADD, 1);
+        _lightSource.transform.localScale = new Vector3(Mathf.Clamp(_lightSource.transform.localScale.x, _minScale.x, _maxScale.x), Mathf.Clamp(_lightSource.transform.localScale.y, _minScale.y, _maxScale.y), 1);
+        //_lightAttractor.transform.position -= new Vector3(0, _lightInteractionPower, 0);
     }
 }

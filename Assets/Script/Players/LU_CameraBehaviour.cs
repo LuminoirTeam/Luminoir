@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraBehaviour : MonoBehaviour
+public class LU_CameraBehaviour : MonoBehaviour
 {
     public GameObject player1;
     public GameObject player2;

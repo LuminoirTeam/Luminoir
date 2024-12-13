@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LU_LightReactToPower : MonoBehaviour
+public class LU_LightReactToPower : LU_PowerInteraction
 {
     [SerializeField] GameObject _noctis;
     Rigidbody2D _attractorRb;
@@ -20,17 +20,25 @@ public class LU_LightReactToPower : MonoBehaviour
         transform.eulerAngles = new Vector3(0, 0, targetAngle - 90);
     }
 
-    public void PointTowardsNoctis()
+    public override void MoveTowards()
     {
         Vector3 directionAttractor = -(_noctis.transform.position - _attractorRb.transform.position);
         
         _attractorRb.AddForce(directionAttractor.normalized * _lightMoveSpeed, ForceMode2D.Impulse);
     }
 
-    public void PointAwayFromNoctis()
+    public override void MoveAwayFrom()
     {
         Vector3 directionAttractor = _noctis.transform.position - _attractorRb.transform.position;
 
         _attractorRb.AddForce(directionAttractor.normalized * _lightMoveSpeed, ForceMode2D.Impulse);
+    }
+
+    protected void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent<LU_PowerLumis>(out LU_PowerLumis lumis))
+        {
+            lumis.GetComponent<LU_CharacterController>().ReturnToSpawn();
+        }
     }
 }
