@@ -10,7 +10,7 @@ public class LU_GameManager : MonoBehaviour
 
     private List<PlayerInput> activePlayers = new List<PlayerInput>();
 
-    public CameraBehaviour _camera;
+    public LU_CameraBehaviour _camera;
 
     private void Awake()
     {

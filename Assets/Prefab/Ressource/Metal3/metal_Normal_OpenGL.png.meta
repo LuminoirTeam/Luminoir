@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      metal_Normal_OpenGL_0: -5175429464471614269
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

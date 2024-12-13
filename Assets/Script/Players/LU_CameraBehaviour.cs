@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LU_CameraBehaviour : MonoBehaviour
@@ -23,6 +24,11 @@ public class LU_CameraBehaviour : MonoBehaviour
     private void Update()
     {
         MoveCamera();
+        if (player1 == null || player2 == null)
+        {
+            Debug.LogWarning("Connect players to play");
+            return;
+        }
     }
 
     private void MoveCamera()
