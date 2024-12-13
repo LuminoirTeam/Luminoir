@@ -26,7 +26,8 @@ public class LU_CharacterController : MonoBehaviour
     private GameObject noctisSpawn;
     private bool _isNoctis;
 
-    public GameObject currentSpawn;
+    private Vector3 _spawnPos;
+
     public LU_Power power; //The variable to access character's power script
 
     private void Awake()
@@ -43,10 +44,13 @@ public class LU_CharacterController : MonoBehaviour
         _isNoctis = GetComponent<LU_SetPlayer>().isNoctis;
     }
 
+    private void Start()
+    {
+        _spawnPos = transform.position;
+    }
     private void FixedUpdate()
     {
         Jump();
-        CheckIfOutOfBounds();
 
         if (_isAttracting)
             power.AttractElement();
@@ -64,26 +68,26 @@ public class LU_CharacterController : MonoBehaviour
             rb.AddForce(movementAction.ReadValue<Vector2>() * _jumpingForce, ForceMode2D.Impulse);
         }
     }
-    private void CheckIfOutOfBounds()
-    {
-        if(transform.position.x<=LU_CameraBehaviour.Left || transform.position.x >= LU_CameraBehaviour.Right)
-        {
-            if(currentSpawn.transform.position.x <= LU_CameraBehaviour.Left || currentSpawn.transform.position.x >= LU_CameraBehaviour.Right)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
-            else
-            {
-                ReturnToSpawn();
-            }
-        }
-            
-        
-    }
+    //private void CheckIfOutOfBounds()
+    //{
+    //    Debug.Log(LU_CameraBehaviour.Left);
+    //    Debug.Log(LU_CameraBehaviour.Right);
+    //    //if (transform.position.x <= LU_CameraBehaviour.Left || transform.position.x >= LU_CameraBehaviour.Right)
+    //    //{
+    //    //    if (_spawnPos.x <= LU_CameraBehaviour.Left || _spawnPos.x >= LU_CameraBehaviour.Right)
+    //    //    {
+    //    //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //    //    }
+    //    //    else
+    //    //    {
+    //    //        ReturnToSpawn();
+    //    //    }
+    //    //}
+    //}
 
     private bool IsGrounded()
     {
-        groundCheck = transform.GetChild(0).position;
+        groundCheck = transform.GetChild(2).position;
         Collider2D colliderFound = Physics2D.OverlapBox(groundCheck, _sizeOfGroundCheckBox, 0, groundLayer);
         if (colliderFound == null) { return false; }
 
@@ -125,7 +129,7 @@ public class LU_CharacterController : MonoBehaviour
 
     public void ReturnToSpawn()
     {
-        transform.position = currentSpawn.transform.position;
+        transform.position = _spawnPos;
     }
 
     public void EnableOrDisablePlayerInput()
@@ -149,11 +153,12 @@ public class LU_CharacterController : MonoBehaviour
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
             Debug.Log("Entered Checkpoint");
-            if (currentSpawn.GetComponent<LU_Checkpoint>().currentCharacterInCheckpoint != null && currentSpawn.GetComponent<LU_Checkpoint>().currentCharacterInCheckpoint.TryGetComponent<LU_CharacterController>(out LU_CharacterController anotherCharacter))
+            if (collision.GetComponent<LU_Checkpoint>().currentCharacterInCheckpoint != null && collision.GetComponent<LU_Checkpoint>().currentCharacterInCheckpoint.TryGetComponent<LU_CharacterController>(out LU_CharacterController anotherCharacter))
             {
                 return;
             }
-            currentSpawn = collision.gameObject;
+            collision.gameObject.GetComponent<LU_Checkpoint>().currentCharacterInCheckpoint = gameObject;
+            _spawnPos=collision.transform.position;
 
         }
     }
