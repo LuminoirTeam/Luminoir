@@ -15,6 +15,7 @@ public class LU_CharacterController : MonoBehaviour
 
     private bool _isAttracting = false;
     private bool _isRepelling = false;
+    private bool _tryInteract = false;
 
     private GameObject lumisSpawn;
     private GameObject noctisSpawn;
@@ -37,7 +38,8 @@ public class LU_CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        CheckIfOutOfBonds();
+        print(_tryInteract);
+
         Jump();
 
         if (_isAttracting)
@@ -87,6 +89,13 @@ public class LU_CharacterController : MonoBehaviour
 
     }
 
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.started) { _tryInteract = true; }
+
+        if (context.canceled) { _tryInteract = false; }
+    }
+
     public void ReturnToSpawn()
     {
         if (_isNoctis)
@@ -120,6 +129,11 @@ public class LU_CharacterController : MonoBehaviour
             currentSpawn = collision.gameObject;
             noctisSpawn = currentSpawn.GetComponent<LU_Checkpoint>().noctisSpawn;
             lumisSpawn = currentSpawn.GetComponent <LU_Checkpoint>().lumisSpawn;
+        }
+
+        if(collision.gameObject.CompareTag("Lever") && _tryInteract)
+        {
+            collision.GetComponent<Lever>().OpenDoor();
         }
     }
 }

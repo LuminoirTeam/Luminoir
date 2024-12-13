@@ -1,8 +1,8 @@
 using UnityEngine;
 
 public class LU_LightReactToPower : LU_PowerInteraction
-{
-    [SerializeField] GameObject _noctis;
+{   
+    public GameObject _noctis;
     Rigidbody2D _attractorRb;
     [SerializeField] float _lightMoveSpeed = 1.5f;
 

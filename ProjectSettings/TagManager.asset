@@ -8,6 +8,9 @@ TagManager:
   - Light
   - Shadow
   - Checkpoint
+  - Lever
+  - LightMob
+  - ShadowMob
   layers:
   - Default
   - TransparentFX

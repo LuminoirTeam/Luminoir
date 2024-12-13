@@ -132,11 +132,59 @@ MonoBehaviour:
     m_ActionId: ba9737e5-a894-4b65-969c-fd3b8b2091a0
     m_ActionName: 'Player1/Crouch[/XInputControllerWindows/leftStick/down]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1874436890632310146}
+        m_TargetAssemblyTypeName: LU_PowerLumis, Assembly-CSharp
+        m_MethodName: AttractElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5282726130491092706}
+        m_TargetAssemblyTypeName: LU_PowerNoctis, Assembly-CSharp
+        m_MethodName: AttractElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b9758fbc-2dfc-4ae6-b71b-7582c78b7fba
     m_ActionName: 'Player1/Attract Element[/XInputControllerWindows/buttonWest]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1874436890632310146}
+        m_TargetAssemblyTypeName: LU_PowerLumis, Assembly-CSharp
+        m_MethodName: RepelElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5282726130491092706}
+        m_TargetAssemblyTypeName: LU_PowerNoctis, Assembly-CSharp
+        m_MethodName: RepelElement
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 97ba2d15-0b5b-40ec-b798-578131e73c25
     m_ActionName: 'Player1/Repel Element[/XInputControllerWindows/buttonEast]'
   - m_PersistentCalls:
@@ -144,7 +192,19 @@ MonoBehaviour:
     m_ActionId: 09292b39-1d6f-451d-82e1-dfe3ffce3e47
     m_ActionName: 'Player1/Pause[/XInputControllerWindows/start]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2920629241352395859}
+        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
+        m_MethodName: Interact
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a020a9e0-6982-41bc-8216-21bab251ec47
     m_ActionName: 'Player1/Interact[/XInputControllerWindows/buttonNorth]'
   - m_PersistentCalls:
@@ -264,7 +324,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _playerSpeed: 8
-  _jumpingForce: 1.2e+10
+  _jumpingForce: 3
   _sizeOfGroundCheckBox: {x: 1, y: 0.2}
   currentSpawn: {fileID: 0}
   power: {fileID: 0}
@@ -325,6 +385,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+--- !u!114 &5282726130491092706 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -1960091735364352107, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+  m_PrefabInstance: {fileID: 3286600365762783607}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6996348511828257455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de14cf25f8871cb4cb42851f8d591784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6996348511828257455 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5513633521449468888, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
@@ -397,6 +468,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
+--- !u!114 &1874436890632310146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3009349139344500241, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
+  m_PrefabInstance: {fileID: 3728995277622176659}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9170543848926603339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b92e5f99362b99449f2d88b40edbe3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8928548617131291525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5199580436458444822, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
