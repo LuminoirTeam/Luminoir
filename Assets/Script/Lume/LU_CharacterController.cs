@@ -37,7 +37,6 @@ public class LU_CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        CheckIfOutOfBonds();
         Jump();
 
         if (_isAttracting)
