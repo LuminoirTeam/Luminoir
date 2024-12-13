@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      noctis-idle0004_0: 5785329236163853876
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
