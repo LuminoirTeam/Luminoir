@@ -2,7 +2,7 @@
     "name": "CharacterController",
     "maps": [
         {
-            "name": "Player1",
+            "name": "Player",
             "id": "785828ad-b77a-4168-aadb-e9cec7cea567",
             "actions": [
                 {
@@ -190,59 +190,191 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "NavigationUI",
+            "id": "0380adc3-9039-40ed-8299-eb0031749c77",
+            "actions": [
+                {
+                    "name": "Next",
+                    "type": "Button",
+                    "id": "1c202274-9536-47aa-b8a9-4b7f9af839df",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Previous",
+                    "type": "Button",
+                    "id": "35be867e-8a15-4e0d-8ad3-90e5ccce5cbe",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Open/Quit Menu",
+                    "type": "Button",
+                    "id": "cbf33c04-c9f3-4abf-bd33-ebf1642c2134",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Navigate",
+                    "type": "Value",
+                    "id": "499e065a-3740-48e8-8468-38db92b3ae04",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "76091bc5-b29f-4ce8-acce-d320c3c73cfb",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Next",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "38d39c86-b953-4b6b-8ab1-2b5b5617a259",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Previous",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b33cb03f-91aa-40de-8542-fc7f81d0757c",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Open/Quit Menu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "2D Vector",
-                    "id": "25ee30c7-c2fe-4f41-9b7f-0def9bcd72b5",
+                    "id": "093e5f61-2b08-4639-acd5-ee09c0054c3b",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "Navigate",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "up",
-                    "id": "5e0c4ee2-9e5e-4b05-8d64-be2042de8ee3",
-                    "path": "<Keyboard>/w",
+                    "id": "6527236a-252c-4e8d-8b4e-425f81214f00",
+                    "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
-                    "id": "05b83088-a7ac-4e87-be50-8dca28701caa",
-                    "path": "<Keyboard>/s",
+                    "id": "d361bd43-befe-46e6-8be7-74e323fe00f6",
+                    "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
-                    "id": "9780da02-ffd2-48ce-814c-03e4750ff676",
-                    "path": "<Keyboard>/a",
+                    "id": "429a7882-ef73-443e-99e1-9cad2467f2a5",
+                    "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-                    "id": "558d8223-b944-4c87-8b25-6850c4cd189c",
-                    "path": "<Keyboard>/d",
+                    "id": "7ff1968f-91d4-46b0-8bac-22d89544dbf0",
+                    "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "2D Vector",
+                    "id": "b9fca5b4-35fe-40b3-b034-938240e6b052",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "d391039e-e36a-45bd-a135-85db963c9574",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "744954f8-a48e-401d-a78b-e37cd08aa614",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "e3937415-41ed-438f-9f5b-aaf1fa723fb4",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "087739f4-17c8-43fc-8bb8-a04a9380338b",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }

@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &664990388939219847
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4942248224654773813}
-  m_Layer: 8
-  m_Name: MonsterSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4942248224654773813
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 664990388939219847}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 187111988874156710}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1713724095599844816
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,8 +14,7 @@ GameObject:
   - component: {fileID: 2631641311483292916}
   - component: {fileID: 7685679903487916159}
   - component: {fileID: 2113439955288943187}
-  - component: {fileID: 2473225562672996810}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: shadow
   m_TagString: Shadow
   m_Icon: {fileID: 0}
@@ -63,10 +31,9 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 4942248224654773813}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7400842293281317088
@@ -81,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e210a2f14c81514dbe62d813dfb8318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lumis: {fileID: 0}
+  _lumis: {fileID: 1296425850557146567, guid: b779b37db5503a243baa67976496d26c, type: 3}
   _shadowMoveSpeed: 0.2
 --- !u!198 &2010015167407960980
 ParticleSystem:
@@ -4840,7 +4807,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.035727978, y: 0.220016}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4850,7 +4817,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.6405897, y: 3.2740295}
+  m_Size: {x: 3, y: 2}
   m_EdgeRadius: 0
 --- !u!199 &7685679903487916159
 ParticleSystemRenderer:
@@ -4955,21 +4922,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &2473225562672996810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713724095599844816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4538f953dc5e2a9408ec9cfea346587b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  containMonster: 0
-  isShadow: 1
-  shadowMonsterPrefab: {fileID: 7314308964329245929, guid: 8d2170d4fb0285441b0d60128cd9514d, type: 3}
-  lightMonsterPrefab: {fileID: 7314308964329245929, guid: e59c7aae37e31fe4485e3067b123c7b9, type: 3}
-  monsterSpawn: {fileID: 664990388939219847}
+  m_Constraints: 4
