@@ -27,7 +27,7 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
         _rb.AddForce(direction.normalized * _shadowMoveSpeed, ForceMode2D.Impulse);
     }
 
-    protected void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<LU_PowerNoctis>(out LU_PowerNoctis noctis))
         {

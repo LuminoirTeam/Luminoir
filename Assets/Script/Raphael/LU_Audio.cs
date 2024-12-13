@@ -86,7 +86,7 @@ public class LU_Audio : MonoBehaviour
         transform.SetParent(null);
         gameObject.SetActive(true);
     }
-    public static void PlaySound(SoundType soundCategory, int index)
+    public static void PlaySound(SoundType soundCategory, int index, float volume=1)
     {
         AudioClip audioToPlay;
         string key = $"{soundCategory}_{index}";
@@ -99,7 +99,7 @@ public class LU_Audio : MonoBehaviour
             {
                 channelKey = channelKey.Replace(channelKey, "characters");
             }
-            _audioChannels[soundCategory].PlayOneShot(audioToPlay);
+            _audioChannels[soundCategory].PlayOneShot(audioToPlay,volume);
         }
         else
         {
