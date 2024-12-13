@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class LU_Power : MonoBehaviour
+public abstract class LU_Power : MonoBehaviour
 {
     [SerializeField] protected float _powerRadius = 0.5f;
 
-    public virtual void AttractElement()
-    {
-        
-        
-    }
+    public abstract void AttractElement();
 
-    public virtual void RepelElement()
-    {
+    public abstract void RepelElement();
 
+    public void KillCharacter()
+    {
+        GetComponent<LU_CharacterController>().ReturnToSpawn();
     }
 }

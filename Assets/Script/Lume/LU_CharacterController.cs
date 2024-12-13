@@ -1,5 +1,7 @@
+
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,11 +13,14 @@ public class LU_CharacterController : MonoBehaviour
     [SerializeField] private float _playerSpeed = 8;
     [SerializeField] private float _jumpingForce = 5;
     [SerializeField] private Vector2 _sizeOfGroundCheckBox = new Vector2(1, 0.5f);
+
     private InputAction movementAction;
     private PlayerInput _input;
 
     public LU_Power power; //in debug, to change the Dummy's powers, slide the script you want in this SerializeField
 
+
+    private Vector3 _spawnPos;
     private bool _isAttracting = false;
     private bool _isRepelling = false;
 
@@ -31,8 +36,15 @@ public class LU_CharacterController : MonoBehaviour
         groundCheck = transform.GetChild(0).position;
     }
 
-    private void Update()
+    private void Start()
     {
+        _spawnPos = transform.position;
+    }
+
+    private void FixedUpdate()
+
+    {
+        CheckIfOutOfBonds();
         Jump();
 
         if (_isAttracting)
@@ -53,7 +65,7 @@ public class LU_CharacterController : MonoBehaviour
     private bool IsGrounded()
     {
         groundCheck = transform.GetChild(0).position;
-        Collider2D colliderFound = Physics2D.OverlapBox(groundCheck, _sizeOfGroundCheckBox,0, groundLayer);
+        Collider2D colliderFound = Physics2D.OverlapBox(groundCheck, _sizeOfGroundCheckBox, 0, groundLayer);
         if (colliderFound == null) { return false; }
 
         return true;
@@ -66,19 +78,57 @@ public class LU_CharacterController : MonoBehaviour
 
     public void CallAttractElement(InputAction.CallbackContext context) //called on button input
     {
-        if (context.started)
-            _isAttracting = true;
+        if (context.started) { _isAttracting = true; }
 
-        if (context.canceled)
-            _isAttracting = false;
+
+        if (context.canceled) { _isAttracting = false; }
+
     }
 
     public void CallRepelElement(InputAction.CallbackContext context) //called on button input
     {
-        if (context.started)
-            _isRepelling = true;
+        if (context.started) { _isRepelling = true; }
 
-        if (context.canceled)
-            _isRepelling = false;
+
+        if (context.canceled) { _isRepelling = false; }
+
+    }
+    private void CheckIfOutOfBonds()
+    {
+        if (LU_CameraBehaviour.Left >= transform.position.x)
+        {
+            ReturnToSpawn();
+            return;
+        }
+        if (LU_CameraBehaviour.Right <= transform.position.x)
+        {
+            ReturnToSpawn();
+        }
+    }
+    public void ReturnToSpawn()
+    {
+        transform.position = _spawnPos;
+    }
+
+    public void EnableOrDisablePlayerInput()
+    {
+        _input.enabled = !_input.enabled;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<LU_CharacterController>(out LU_CharacterController anotherCharacter))
+        {
+            anotherCharacter.ReturnToSpawn();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Checkpoint"))
+        {
+            Debug.Log("Entered Checkpoint");
+            _spawnPos = collision.transform.position;
+        }
     }
 }

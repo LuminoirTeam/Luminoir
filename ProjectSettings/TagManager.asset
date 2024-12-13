@@ -7,6 +7,7 @@ TagManager:
   - Floor
   - Light
   - Shadow
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
@@ -15,10 +16,10 @@ TagManager:
   - Water
   - UI
   - Ground
+  - Inverseur
+  - light
+  - shadow
   - Variateur
-  - 
-  - 
-  - 
   - 
   - 
   - 
