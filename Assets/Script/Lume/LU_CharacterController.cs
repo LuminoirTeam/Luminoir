@@ -5,16 +5,21 @@ public class LU_CharacterController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector3 groundCheck;
+    private Vector3 wallCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask wallLayer;
     [SerializeField] private float _playerSpeed = 8;
     [SerializeField] private float _jumpingForce = 5;
     [SerializeField] private Vector2 _sizeOfGroundCheckBox = new Vector2(1, 0.5f);
+    [SerializeField] private Vector2 _sizeOfWallCheckBox = new Vector2(1f, 1f);
 
     private InputAction movementAction;
     private PlayerInput _input;
 
     private bool _isAttracting = false;
     private bool _isRepelling = false;
+
+    private bool _isClingingToWall = false;
 
     private GameObject lumisSpawn;
     private GameObject noctisSpawn;
@@ -30,7 +35,9 @@ public class LU_CharacterController : MonoBehaviour
         movementAction.Enable();
 
         rb = GetComponent<Rigidbody2D>();
-        groundCheck = transform.GetChild(0).position;
+
+        groundCheck = transform.GetChild(2).position;
+        wallCheck = transform.GetChild(3).position;
 
         _isNoctis = GetComponent<LU_SetPlayer>().isNoctis;
     }
@@ -44,6 +51,8 @@ public class LU_CharacterController : MonoBehaviour
 
         if (_isRepelling)
             power.RepelElement();
+
+        //Debug.Log(IsClingingToWall());
     }
 
     public void Jump()
@@ -63,9 +72,19 @@ public class LU_CharacterController : MonoBehaviour
         return true;
     }
 
+    private bool IsClingingToWall()
+    {
+        wallCheck = transform.GetChild(3).position;
+        Collider2D colliderFound = Physics2D.OverlapBox(wallCheck, _sizeOfWallCheckBox, 0, groundLayer);
+        if (colliderFound == null) { return false; }
+
+        return true;
+    }
+
     public void Move(InputAction.CallbackContext context)
     {
-        rb.linearVelocityX = context.ReadValue<Vector2>().x * _playerSpeed;
+        if (!IsClingingToWall())
+            rb.linearVelocityX = context.ReadValue<Vector2>().x * _playerSpeed;
     }
 
     public void CallAttractElement(InputAction.CallbackContext context) //called on button input
@@ -109,6 +128,9 @@ public class LU_CharacterController : MonoBehaviour
         {
             //anotherCharacter.ReturnToSpawn();
         }
+
+        if (collision.gameObject.layer == wallLayer)
+            rb.linearVelocityX = - rb.linearVelocityX;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
