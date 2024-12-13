@@ -34,7 +34,7 @@ public class LU_Audio : MonoBehaviour
     [SerializeField] List<AudioClip> _FXSounds = new();
 
     static Dictionary<SoundType, AudioSource> _audioChannels = new();
-    static Dictionary<string, AudioClip> _sounds = new();
+    public static Dictionary<string, AudioClip> _sounds = new();
 
 
     private void Awake()
@@ -77,6 +77,14 @@ public class LU_Audio : MonoBehaviour
         _audioChannels.Add(SoundType.environment, transform.GetChild(2).GetComponent<AudioSource>());
         _audioChannels.Add(SoundType.fx, transform.GetChild(3).GetComponent<AudioSource>());
 
+
+
+    }
+    internal void DetachFromMenu()
+    {
+        transform.GetChild(4).SetParent(transform.parent);
+        transform.SetParent(null);
+        gameObject.SetActive(true);
     }
     public static void PlaySound(SoundType soundCategory, int index)
     {
@@ -92,6 +100,26 @@ public class LU_Audio : MonoBehaviour
                 channelKey = channelKey.Replace(channelKey, "characters");
             }
             _audioChannels[soundCategory].PlayOneShot(audioToPlay);
+        }
+        else
+        {
+            Debug.LogError($"Key incorrect or audio non-existent : \n{key}");
+        }
+    }
+    public static void PlayToSource(SoundType soundCategory, int index, AudioSource sourceToUse)
+    {
+        AudioClip audioToPlay;
+        string key = $"{soundCategory}_{index}";
+        if (_sounds.TryGetValue(key, out audioToPlay))
+        {
+            string channelKey = key;
+            channelKey = channelKey.Remove(channelKey.IndexOf('_'));
+
+            if (channelKey.Contains(SoundType.noctis.ToString()) || channelKey.Contains(SoundType.noctis.ToString()))
+            {
+                channelKey = channelKey.Replace(channelKey, "characters");
+            }
+            sourceToUse.PlayOneShot(audioToPlay);
         }
         else
         {

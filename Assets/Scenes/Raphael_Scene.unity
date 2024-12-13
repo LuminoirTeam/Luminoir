@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: {fileID: 445333923}
-  player2: {fileID: 186162280}
+  player2: {fileID: 844075150}
   minZ: 10
   maxZ: 50
   zoomFactor: 1.5
@@ -401,180 +401,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &186162280 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4303925043069812653, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-  m_PrefabInstance: {fileID: 1222951860654925177}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &186162283 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4133426648340390621, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-  m_PrefabInstance: {fileID: 1222951860654925177}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186162280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faae997050810c14b83e5ea59b7fa27e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &186162290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186162280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 1eb90a23c40d79a4c8ffebb04e9245e7, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 186162283}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: Jump
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 225b7721-311c-4a40-b25e-983a0bab836d
-    m_ActionName: 'Player1/Jump[/SwitchProControllerHID/buttonSouth]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 186162283}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 24d6e735-9681-4011-a853-571443b74ad2
-    m_ActionName: 'Player1/Movement[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ba9737e5-a894-4b65-969c-fd3b8b2091a0
-    m_ActionName: 'Player1/Crouch[/SwitchProControllerHID/leftStick/down]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 186162283}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: CallAttractElement
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 186162291}
-        m_TargetAssemblyTypeName: LU_VariateurInteraction, Assembly-CSharp
-        m_MethodName: DilateVariateur
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b9758fbc-2dfc-4ae6-b71b-7582c78b7fba
-    m_ActionName: 'Player1/Attract Element[/SwitchProControllerHID/buttonWest]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 186162283}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: CallRepelElement
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 186162291}
-        m_TargetAssemblyTypeName: LU_VariateurInteraction, Assembly-CSharp
-        m_MethodName: RetractVariateur
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 97ba2d15-0b5b-40ec-b798-578131e73c25
-    m_ActionName: 'Player1/Repel Element[/SwitchProControllerHID/buttonEast]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 09292b39-1d6f-451d-82e1-dfe3ffce3e47
-    m_ActionName: 'Player1/Pause[/SwitchProControllerHID/start]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a020a9e0-6982-41bc-8216-21bab251ec47
-    m_ActionName: 'Player1/Interact[/SwitchProControllerHID/buttonNorth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1c202274-9536-47aa-b8a9-4b7f9af839df
-    m_ActionName: 'NavigationUI/Next[/SwitchProControllerHID/buttonSouth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 35be867e-8a15-4e0d-8ad3-90e5ccce5cbe
-    m_ActionName: 'NavigationUI/Previous[/SwitchProControllerHID/buttonEast]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cbf33c04-c9f3-4abf-bd33-ebf1642c2134
-    m_ActionName: 'NavigationUI/Open/Quit Menu[/SwitchProControllerHID/start]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 499e065a-3740-48e8-8468-38db92b3ae04
-    m_ActionName: 'NavigationUI/Navigate[/SwitchProControllerHID/dpad/up,/SwitchProControllerHID/dpad/down,/SwitchProControllerHID/dpad/left,/SwitchProControllerHID/dpad/right,/SwitchProControllerHID/leftStick/up,/SwitchProControllerHID/leftStick/down,/SwitchProControllerHID/leftStick/left,/SwitchProControllerHID/leftStick/right]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player1
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &186162291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 186162280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c7924498bbe687468c8bd11405bf87f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &219763460
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,340 +438,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &392401801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 392401803}
-  - component: {fileID: 392401802}
-  m_Layer: 0
-  m_Name: ControllerUINavigationHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &392401802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392401801}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 1eb90a23c40d79a4c8ffebb04e9245e7, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 2074577760}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 225b7721-311c-4a40-b25e-983a0bab836d
-    m_ActionName: 'Player1/Jump[/SwitchProControllerHID/buttonSouth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 24d6e735-9681-4011-a853-571443b74ad2
-    m_ActionName: 'Player1/Movement[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ba9737e5-a894-4b65-969c-fd3b8b2091a0
-    m_ActionName: 'Player1/Crouch[/SwitchProControllerHID/leftStick/down]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b9758fbc-2dfc-4ae6-b71b-7582c78b7fba
-    m_ActionName: 'Player1/Attract Element[/SwitchProControllerHID/buttonWest]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 97ba2d15-0b5b-40ec-b798-578131e73c25
-    m_ActionName: 'Player1/Repel Element[/SwitchProControllerHID/buttonEast]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 09292b39-1d6f-451d-82e1-dfe3ffce3e47
-    m_ActionName: 'Player1/Pause[/SwitchProControllerHID/start]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a020a9e0-6982-41bc-8216-21bab251ec47
-    m_ActionName: 'Player1/Interact[/SwitchProControllerHID/buttonNorth]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2074577760}
-        m_TargetAssemblyTypeName: UnityEngine.InputSystem.UI.InputSystemUIInputModule,
-          Unity.InputSystem
-        m_MethodName: set_submit
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8121783463781678047, guid: 1eb90a23c40d79a4c8ffebb04e9245e7, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.InputSystem.InputActionReference,
-            Unity.InputSystem
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 1c202274-9536-47aa-b8a9-4b7f9af839df
-    m_ActionName: 'NavigationUI/Next[/SwitchProControllerHID/buttonWest]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2074577760}
-        m_TargetAssemblyTypeName: UnityEngine.InputSystem.UI.InputSystemUIInputModule,
-          Unity.InputSystem
-        m_MethodName: set_cancel
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: -8772132972647454103, guid: 1eb90a23c40d79a4c8ffebb04e9245e7, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.InputSystem.InputActionReference,
-            Unity.InputSystem
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 35be867e-8a15-4e0d-8ad3-90e5ccce5cbe
-    m_ActionName: 'NavigationUI/Previous[/SwitchProControllerHID/buttonSouth]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1749228021}
-        m_TargetAssemblyTypeName: LU_UIManagement, Assembly-CSharp
-        m_MethodName: OnControllerPressPause
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1859653306}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: Select
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: cbf33c04-c9f3-4abf-bd33-ebf1642c2134
-    m_ActionName: 'NavigationUI/Open/Quit Menu[/SwitchProControllerHID/start]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2074577760}
-        m_TargetAssemblyTypeName: UnityEngine.InputSystem.UI.InputSystemUIInputModule,
-          Unity.InputSystem
-        m_MethodName: set_move
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 4585072247205678599, guid: 1eb90a23c40d79a4c8ffebb04e9245e7, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.InputSystem.InputActionReference,
-            Unity.InputSystem
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 499e065a-3740-48e8-8468-38db92b3ae04
-    m_ActionName: 'NavigationUI/Navigate[/SwitchProControllerHID/dpad/up,/SwitchProControllerHID/dpad/down,/SwitchProControllerHID/dpad/left,/SwitchProControllerHID/dpad/right]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: NavigationUI
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!4 &392401803
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392401801}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 540, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &445333923 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1296425850557146567, guid: b779b37db5503a243baa67976496d26c, type: 3}
   m_PrefabInstance: {fileID: 6776601243318948561}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &445333926 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6060666916532137482, guid: b779b37db5503a243baa67976496d26c, type: 3}
-  m_PrefabInstance: {fileID: 6776601243318948561}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 445333923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: faae997050810c14b83e5ea59b7fa27e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &445333933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 445333923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 1eb90a23c40d79a4c8ffebb04e9245e7, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 445333926}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: Jump
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 225b7721-311c-4a40-b25e-983a0bab836d
-    m_ActionName: 'Player1/Jump[/SwitchProControllerHID/buttonSouth]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 445333926}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 24d6e735-9681-4011-a853-571443b74ad2
-    m_ActionName: 'Player1/Movement[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: ba9737e5-a894-4b65-969c-fd3b8b2091a0
-    m_ActionName: 'Player1/Crouch[/SwitchProControllerHID/leftStick/down]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 445333926}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: CallAttractElement
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: b9758fbc-2dfc-4ae6-b71b-7582c78b7fba
-    m_ActionName: 'Player1/Attract Element[/SwitchProControllerHID/buttonWest]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 445333926}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: CallRepelElement
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 97ba2d15-0b5b-40ec-b798-578131e73c25
-    m_ActionName: 'Player1/Repel Element[/SwitchProControllerHID/buttonEast]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 09292b39-1d6f-451d-82e1-dfe3ffce3e47
-    m_ActionName: 'Player1/Pause[/SwitchProControllerHID/start]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a020a9e0-6982-41bc-8216-21bab251ec47
-    m_ActionName: 'Player1/Interact[/SwitchProControllerHID/buttonNorth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1c202274-9536-47aa-b8a9-4b7f9af839df
-    m_ActionName: 'NavigationUI/Next[/SwitchProControllerHID/buttonSouth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 35be867e-8a15-4e0d-8ad3-90e5ccce5cbe
-    m_ActionName: 'NavigationUI/Previous[/SwitchProControllerHID/buttonEast]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: cbf33c04-c9f3-4abf-bd33-ebf1642c2134
-    m_ActionName: 'NavigationUI/Open/Quit Menu[/SwitchProControllerHID/start]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 499e065a-3740-48e8-8468-38db92b3ae04
-    m_ActionName: 'NavigationUI/Navigate[/SwitchProControllerHID/dpad/up,/SwitchProControllerHID/dpad/down,/SwitchProControllerHID/dpad/left,/SwitchProControllerHID/dpad/right,/SwitchProControllerHID/leftStick/up,/SwitchProControllerHID/leftStick/down,/SwitchProControllerHID/leftStick/left,/SwitchProControllerHID/leftStick/right]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player1
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &543984072
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +458,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &543984073
 Transform:
   m_ObjectHideFlags: 0
@@ -1495,6 +992,11 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &844075150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4303925043069812653, guid: 5045132ee35439c429f647e740e60f26, type: 3}
+  m_PrefabInstance: {fileID: 1222951860654925177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &876349937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1076,97 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876349937}
   m_CullTransparentMesh: 1
+--- !u!1 &895066561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 895066562}
+  - component: {fileID: 895066563}
+  - component: {fileID: 895066564}
+  m_Layer: 0
+  m_Name: Discover
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &895066562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895066561}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1274750370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &895066563
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895066561}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 40, y: 10}
+  m_EdgeRadius: 0
+--- !u!114 &895066564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895066561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 749db75bb8389f64ca9974afb6bbd67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1143859940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,6 +1242,445 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143859940}
   m_CullTransparentMesh: 1
+--- !u!1 &1169042607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1169042608}
+  - component: {fileID: 1169042609}
+  m_Layer: 0
+  m_Name: Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1169042608
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169042607}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1274750370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1169042609
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169042607}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1265771882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1265771883}
+  - component: {fileID: 1265771884}
+  - component: {fileID: 1265771885}
+  m_Layer: 0
+  m_Name: SoundSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1265771883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265771882}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1274750370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1265771884
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265771882}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1265771885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265771882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567ad252a5d55e54489286f56f8f9602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1274750369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1274750370}
+  m_Layer: 0
+  m_Name: Circle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1274750370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274750369}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -28.09, y: 0.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1675768644}
+  - {fileID: 1169042608}
+  - {fileID: 895066562}
+  - {fileID: 1522515384}
+  - {fileID: 1265771883}
+  m_Father: {fileID: 1353461316}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1320899635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320899638}
+  - component: {fileID: 1320899637}
+  - component: {fileID: 1320899636}
+  m_Layer: 0
+  m_Name: InputUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1320899636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320899635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 1eb90a23c40d79a4c8ffebb04e9245e7, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 2074577760}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 225b7721-311c-4a40-b25e-983a0bab836d
+    m_ActionName: 'Player1/Jump[/SwitchProControllerHID/buttonSouth,/Keyboard/upArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 24d6e735-9681-4011-a853-571443b74ad2
+    m_ActionName: 'Player1/Movement[/SwitchProControllerHID/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ba9737e5-a894-4b65-969c-fd3b8b2091a0
+    m_ActionName: 'Player1/Crouch[/SwitchProControllerHID/leftStick/down]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b9758fbc-2dfc-4ae6-b71b-7582c78b7fba
+    m_ActionName: 'Player1/Attract Element[/SwitchProControllerHID/buttonWest,/Keyboard/q]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 97ba2d15-0b5b-40ec-b798-578131e73c25
+    m_ActionName: 'Player1/Repel Element[/SwitchProControllerHID/buttonEast,/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 09292b39-1d6f-451d-82e1-dfe3ffce3e47
+    m_ActionName: 'Player1/Pause[/SwitchProControllerHID/start]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a020a9e0-6982-41bc-8216-21bab251ec47
+    m_ActionName: 'Player1/Interact[/SwitchProControllerHID/buttonNorth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2074577760}
+        m_TargetAssemblyTypeName: UnityEngine.InputSystem.UI.InputSystemUIInputModule,
+          Unity.InputSystem
+        m_MethodName: set_submit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8121783463781678047, guid: 1eb90a23c40d79a4c8ffebb04e9245e7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.InputSystem.InputActionReference,
+            Unity.InputSystem
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1c202274-9536-47aa-b8a9-4b7f9af839df
+    m_ActionName: 'NavigationUI/Next[/SwitchProControllerHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2074577760}
+        m_TargetAssemblyTypeName: UnityEngine.InputSystem.UI.InputSystemUIInputModule,
+          Unity.InputSystem
+        m_MethodName: set_cancel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: -8772132972647454103, guid: 1eb90a23c40d79a4c8ffebb04e9245e7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.InputSystem.InputActionReference,
+            Unity.InputSystem
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 35be867e-8a15-4e0d-8ad3-90e5ccce5cbe
+    m_ActionName: 'NavigationUI/Previous[/SwitchProControllerHID/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1749228021}
+        m_TargetAssemblyTypeName: LU_UIManagement, Assembly-CSharp
+        m_MethodName: OnControllerPressPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: cbf33c04-c9f3-4abf-bd33-ebf1642c2134
+    m_ActionName: 'NavigationUI/Open/Quit Menu[/SwitchProControllerHID/start]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2074577760}
+        m_TargetAssemblyTypeName: UnityEngine.InputSystem.UI.InputSystemUIInputModule,
+          Unity.InputSystem
+        m_MethodName: set_move
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4585072247205678599, guid: 1eb90a23c40d79a4c8ffebb04e9245e7, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.InputSystem.InputActionReference,
+            Unity.InputSystem
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 499e065a-3740-48e8-8468-38db92b3ae04
+    m_ActionName: 'NavigationUI/Navigate[/SwitchProControllerHID/dpad/up,/SwitchProControllerHID/dpad/down,/SwitchProControllerHID/dpad/left,/SwitchProControllerHID/dpad/right,/SwitchProControllerHID/leftStick/up,/SwitchProControllerHID/leftStick/down,/SwitchProControllerHID/leftStick/left,/SwitchProControllerHID/leftStick/right]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: NavigationUI
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &1320899637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320899635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d3d11f5cc9bcc4a8d1447fb025e27e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menuToActivate: {fileID: 543984072}
+--- !u!4 &1320899638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320899635}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1346457580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,6 +1814,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1346457580}
   m_CullTransparentMesh: 1
+--- !u!1 &1353461314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1353461316}
+  - component: {fileID: 1353461315}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1353461315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353461314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20daaca1624ee7c45bfc3490d0d63a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1353461316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353461314}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1274750370}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1430778120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,6 +2017,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482529449}
   m_CullTransparentMesh: 1
+--- !u!1 &1522515383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522515384}
+  - component: {fileID: 1522515385}
+  - component: {fileID: 1522515386}
+  m_Layer: 0
+  m_Name: AttractorCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1522515384
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522515383}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1274750370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1522515385
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522515383}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2.5
+--- !u!114 &1522515386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522515383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6175cff9e09244b40a49a37bede47952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1577939002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2346,6 +2504,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660747755}
   m_CullTransparentMesh: 1
+--- !u!1 &1675768643
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1675768644}
+  - component: {fileID: 1675768647}
+  - component: {fileID: 1675768646}
+  m_Layer: 0
+  m_Name: GoToInventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1675768644
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675768643}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1274750370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1675768646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675768643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba7b2a3dabb1364086adc21407f5f79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1675768647
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675768643}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &1694306207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2671,7 +2910,7 @@ PrefabInstance:
     - target: {fileID: 3156665147630321255, guid: 144c708293590b742be6190afc4710b8, type: 3}
       propertyPath: _noctis
       value: 
-      objectReference: {fileID: 186162280}
+      objectReference: {fileID: 844075150}
     - target: {fileID: 4515134617529007834, guid: 144c708293590b742be6190afc4710b8, type: 3}
       propertyPath: m_Distance
       value: 3.5
@@ -2731,6 +2970,10 @@ PrefabInstance:
     - target: {fileID: 8263212623770451779, guid: 144c708293590b742be6190afc4710b8, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263212623770451779, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8396740768598244821, guid: 144c708293590b742be6190afc4710b8, type: 3}
       propertyPath: m_LocalScale.x
@@ -2919,93 +3162,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 295594590413671597, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
+    - target: {fileID: 807594335728407054, guid: 5045132ee35439c429f647e740e60f26, type: 3}
+      propertyPath: m_UIInputModule
+      value: 
+      objectReference: {fileID: 2074577760}
+    - target: {fileID: 807594335728407054, guid: 5045132ee35439c429f647e740e60f26, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 295594590413671597, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1
+    - target: {fileID: 807594335728407054, guid: 5045132ee35439c429f647e740e60f26, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4303925043069812653, guid: 5045132ee35439c429f647e740e60f26, type: 3}
       propertyPath: m_Name
       value: Noctis
-      objectReference: {fileID: 0}
-    - target: {fileID: 4303925043069812653, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
-      value: 1c202274-9536-47aa-b8a9-4b7f9af839df
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_ActionId
-      value: 35be867e-8a15-4e0d-8ad3-90e5ccce5cbe
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
-      value: cbf33c04-c9f3-4abf-bd33-ebf1642c2134
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[10].m_ActionId
-      value: 499e065a-3740-48e8-8468-38db92b3ae04
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
-      value: 'NavigationUI/Next[/SwitchProControllerHID/buttonWest]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_ActionName
-      value: 'NavigationUI/Previous[/SwitchProControllerHID/buttonSouth]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
-      value: 'NavigationUI/Open/Quit Menu[/SwitchProControllerHID/start]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
-      value: 'NavigationUI/Navigate[/SwitchProControllerHID/dpad/up,/SwitchProControllerHID/dpad/down,/SwitchProControllerHID/dpad/left,/SwitchProControllerHID/dpad/right]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 186162283}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 186162283}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 186162283}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 186162283}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Jump
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Move
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CallAttractElement
-      objectReference: {fileID: 0}
-    - target: {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CallRepelElement
       objectReference: {fileID: 0}
     - target: {fileID: 5934277834820873120, guid: 5045132ee35439c429f647e740e60f26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3047,17 +3218,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5602784645251515230, guid: 5045132ee35439c429f647e740e60f26, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4303925043069812653, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 186162290}
-    - targetCorrespondingSourceObject: {fileID: 4303925043069812653, guid: 5045132ee35439c429f647e740e60f26, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 186162291}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5045132ee35439c429f647e740e60f26, type: 3}
 --- !u!1001 &1733292771821530728
 PrefabInstance:
@@ -3171,7 +3335,7 @@ PrefabInstance:
     - target: {fileID: 3223361268518805483, guid: 20e220c0cf816c840ad3abd88cb2d419, type: 3}
       propertyPath: _noctis
       value: 
-      objectReference: {fileID: 186162280}
+      objectReference: {fileID: 844075150}
     - target: {fileID: 7016414601068124382, guid: 20e220c0cf816c840ad3abd88cb2d419, type: 3}
       propertyPath: _lumis
       value: 
@@ -3200,6 +3364,10 @@ PrefabInstance:
     - target: {fileID: 3889645762252032732, guid: b408f140744c38648881c83d645f883c, type: 3}
       propertyPath: m_Name
       value: Variateur
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889645762252032732, guid: b408f140744c38648881c83d645f883c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7192077704328622215, guid: b408f140744c38648881c83d645f883c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3324,11 +3492,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 344612134561059649, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 611862019400142715, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
+      propertyPath: _FXSounds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 611862019400142715, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
+      propertyPath: '_FXSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: b03f396acb188cd4d845ccb5dd894c33, type: 3}
+    - target: {fileID: 611862019400142715, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
+      propertyPath: '_FXSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 666bfc6e83ca66445a53893968e5a436, type: 3}
+    - target: {fileID: 611862019400142715, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
+      propertyPath: '_FXSounds.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 47e3e0299893be34c8dbd46802184237, type: 3}
+    - target: {fileID: 611862019400142715, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
+      propertyPath: '_FXSounds.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 413c58bdb7cdd66458be5f2daf7e42e1, type: 3}
     - target: {fileID: 654369550440779047, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 974655813221831014, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_Name
@@ -3336,7 +3524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 974655813221831014, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2281279477033235969, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_Pivot.x
@@ -3460,7 +3648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4427025605803072598, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5019333526948411533, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_Camera
@@ -3468,7 +3656,7 @@ PrefabInstance:
       objectReference: {fileID: 19611905}
     - target: {fileID: 5392923109158079582, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5507232933110204729, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_Transition
@@ -3512,11 +3700,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7102226245864224798, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7973753060250374391, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8077535567200033688, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_Transition
@@ -3556,11 +3744,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8196707523392367976, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8801270026105968474, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9064641488588160163, guid: 75cebffca45a6fb418a21e0497bda03c, type: 3}
       propertyPath: m_Transition
@@ -3751,50 +3939,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lumis
       objectReference: {fileID: 0}
-    - target: {fileID: 1296425850557146567, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820416664587003027, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820416664587003027, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_ActionEvents.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820416664587003027, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionId
-      value: 1c202274-9536-47aa-b8a9-4b7f9af839df
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820416664587003027, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_ActionId
-      value: 35be867e-8a15-4e0d-8ad3-90e5ccce5cbe
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820416664587003027, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_ActionEvents.Array.data[9].m_ActionId
-      value: cbf33c04-c9f3-4abf-bd33-ebf1642c2134
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820416664587003027, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_ActionEvents.Array.data[10].m_ActionId
-      value: 499e065a-3740-48e8-8468-38db92b3ae04
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820416664587003027, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_ActionEvents.Array.data[7].m_ActionName
-      value: 'NavigationUI/Next[/SwitchProControllerHID/buttonWest]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820416664587003027, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_ActionEvents.Array.data[8].m_ActionName
-      value: 'NavigationUI/Previous[/SwitchProControllerHID/buttonSouth]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820416664587003027, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_ActionEvents.Array.data[9].m_ActionName
-      value: 'NavigationUI/Open/Quit Menu[/SwitchProControllerHID/start]'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2820416664587003027, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      propertyPath: m_ActionEvents.Array.data[10].m_ActionName
-      value: 'NavigationUI/Navigate[/SwitchProControllerHID/dpad/up,/SwitchProControllerHID/dpad/down,/SwitchProControllerHID/dpad/left,/SwitchProControllerHID/dpad/right]'
-      objectReference: {fileID: 0}
     - target: {fileID: 4075481215134232776, guid: b779b37db5503a243baa67976496d26c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.49
@@ -3835,20 +3979,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2820416664587003027, guid: b779b37db5503a243baa67976496d26c, type: 3}
+    - target: {fileID: 5783136729603031598, guid: b779b37db5503a243baa67976496d26c, type: 3}
+      propertyPath: m_UIInputModule
+      value: 
+      objectReference: {fileID: 2074577760}
+    - target: {fileID: 5783136729603031598, guid: b779b37db5503a243baa67976496d26c, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5783136729603031598, guid: b779b37db5503a243baa67976496d26c, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1296425850557146567, guid: b779b37db5503a243baa67976496d26c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 445333933}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b779b37db5503a243baa67976496d26c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 19611906}
+  - {fileID: 1320899638}
   - {fileID: 5615656260270184505}
   - {fileID: 827816586}
   - {fileID: 1222951860654925177}
@@ -3860,5 +4013,5 @@ SceneRoots:
   - {fileID: 1577939004}
   - {fileID: 543984073}
   - {fileID: 2074577762}
-  - {fileID: 392401803}
   - {fileID: 4289164271189816451}
+  - {fileID: 1353461316}
