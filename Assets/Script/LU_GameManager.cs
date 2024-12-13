@@ -1,21 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class LU_GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject lumisSpawn;
-    [SerializeField] private GameObject noctisSpawn;
-    [SerializeField] private GameObject emptyPlayer;
+    [SerializeField] private GameObject _lumisSpawn;
+    [SerializeField] private GameObject _noctisSpawn;
+    [SerializeField] private GameObject _emptyPlayer;
 
     private List<PlayerInput> activePlayers = new List<PlayerInput>();
 
+    public LU_CameraBehaviour _camera;
+
     private void Awake()
     {
-        if (emptyPlayer == null)
+        if (_emptyPlayer == null)
         {
-            Debug.LogError("Le prefab 'emptyPlayer' n'est pas assigné !");
+            Debug.LogError("Le prefab '_emptyPlayer' n'est pas assigné !");
         }
     }
 
@@ -42,17 +43,19 @@ public class LU_GameManager : MonoBehaviour
         if (activePlayers.Count == 0) // Premier joueur : Lumis
         {
             spawnedPlayer = playerInput.gameObject;
-            playerInput.gameObject.transform.position = lumisSpawn.transform.position;
+            playerInput.gameObject.transform.position = _lumisSpawn.transform.position;
             playerInput.gameObject.GetComponent<LU_SetPlayer>().isNoctis = false;
             playerInput.gameObject.GetComponent<LU_SetPlayer>().SetActivePrefab();
+            _camera.player1 = playerInput.gameObject;
             Debug.Log("Joueur 1 rejoint : Lumis");
         }
         else if (activePlayers.Count == 1) // Deuxième joueur : Noctis
         {
             spawnedPlayer = playerInput.gameObject;
-            playerInput.gameObject.transform.position = noctisSpawn.transform.position;
+            playerInput.gameObject.transform.position = _noctisSpawn.transform.position;
             playerInput.gameObject.GetComponent<LU_SetPlayer>().isNoctis = true;
             playerInput.gameObject.GetComponent<LU_SetPlayer>().SetActivePrefab();
+            _camera.player2 = playerInput.gameObject;
             playerInput.defaultActionMap = "Player";
             Debug.Log("Joueur 2 rejoint : Noctis");
         }
