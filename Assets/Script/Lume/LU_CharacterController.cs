@@ -1,3 +1,7 @@
+
+using System.Collections;
+using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,39 +17,41 @@ public class LU_CharacterController : MonoBehaviour
     private InputAction movementAction;
     private PlayerInput _input;
 
-    [SerializeField] internal LU_Power _power; //The variable to acces character's power script
+    public LU_Power power; //in debug, to change the Dummy's powers, slide the script you want in this SerializeField
+
 
     private Vector3 _spawnPos;
     private bool _isAttracting = false;
     private bool _isRepelling = false;
 
-    //public bool DEBUG_isNoctis;
-
+    public InputDevice _device;
 
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
-        movementAction = _input.actions["Jump"];
-        movementAction.Enable();
+        //movementAction = _input.actions["Jump"];
+        //movementAction.Enable();
 
         rb = GetComponent<Rigidbody2D>();
         groundCheck = transform.GetChild(0).position;
     }
+
     private void Start()
     {
         _spawnPos = transform.position;
     }
 
     private void FixedUpdate()
+
     {
         CheckIfOutOfBonds();
         Jump();
 
         if (_isAttracting)
-            _power.AttractElement();
+            power.AttractElement();
 
         if (_isRepelling)
-            _power.RepelElement();
+            power.RepelElement();
     }
 
     public void Jump()
