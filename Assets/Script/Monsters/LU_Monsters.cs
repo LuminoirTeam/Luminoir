@@ -6,16 +6,20 @@ public class Monsters : MonoBehaviour
     public ParticleSystem explosionParticles;
     private SpriteRenderer spriteRenderer;
     private MonsterContainer monsterContainer;
-    private bool isShadow;
-    private bool isAlive;
+    public bool isShadow;
+    private bool _isAlive;
 
     private void Start()
     {
+        _isAlive = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
         monsterContainer = GetComponentInParent<MonsterContainer>();
         isShadow = monsterContainer.isShadow;
+    }
 
-        if (!isAlive)
+    private void Update()
+    {
+        if (!_isAlive)
         {
             Death();
         }
@@ -25,6 +29,7 @@ public class Monsters : MonoBehaviour
     {
         spriteRenderer = null;
         Instantiate(explosionParticles);
+        Destroy(explosionParticles, 5);
         StartCoroutine(DestroyTimer());
     }
 
@@ -38,20 +43,20 @@ public class Monsters : MonoBehaviour
     {
         if (isShadow && other.CompareTag("Shadow"))
         {
-            isAlive = true;
+            _isAlive = true;
         }
         else
         {
-            isAlive = false;
+            _isAlive = false;
         }
 
         if (!isShadow && other.CompareTag("Light"))
         {
-            isAlive = true;
+            _isAlive = true;
         }
         else
         {
-            isAlive = false;
+            _isAlive = false;
         }
     }
 }
