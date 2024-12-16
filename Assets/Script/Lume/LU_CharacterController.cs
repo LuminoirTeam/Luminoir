@@ -20,9 +20,13 @@ public class LU_CharacterController : MonoBehaviour
     private GameObject lumisSpawn;
     private GameObject noctisSpawn;
     private bool _isNoctis;
+    private bool _isFacingRight;
 
     public GameObject currentSpawn;
     public LU_Power power; //The variable to access character's power script
+
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
@@ -38,6 +42,19 @@ public class LU_CharacterController : MonoBehaviour
         //{
         //    power = power is LU_PowerNoctis;
         //}
+    }
+    private void Start()
+    {
+        if (!_isNoctis)
+        {
+            _animator = transform.GetChild(0).GetComponent<Animator>();
+            _spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        }
+        else
+        {
+            _animator = transform.GetChild(1).GetComponent<Animator>();
+            _spriteRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
+        }
     }
 
     private void FixedUpdate()
@@ -60,6 +77,15 @@ public class LU_CharacterController : MonoBehaviour
         }
         if (_isRepelling)
             power.RepelElement();
+
+        if (rb.linearVelocityX >= 0) {_isFacingRight = true; } //to mirror the sprite
+        else { _isFacingRight = false; }
+
+        CheckJumpForAnimation(rb.linearVelocityY);
+
+        if (_isFacingRight)
+            _spriteRenderer.flipX = false;
+        else _spriteRenderer.flipX = true;
     }
 
     public void Jump()
@@ -81,7 +107,11 @@ public class LU_CharacterController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        rb.linearVelocityX = context.ReadValue<Vector2>().x * _playerSpeed;
+        _animator.SetBool("isWalking", true);
+
+        rb.linearVelocityX = context.ReadValue<Vector2>().x * _playerSpeed; //movement
+
+        if (context.canceled) { _animator.SetBool("isWalking", false); } //anim
     }
 
     public void CallAttractElement(InputAction.CallbackContext context) //called on button input
@@ -90,7 +120,6 @@ public class LU_CharacterController : MonoBehaviour
 
 
         if (context.canceled) { _isAttracting = false; }
-
     }
 
     public void CallRepelElement(InputAction.CallbackContext context) //called on button input
@@ -99,7 +128,6 @@ public class LU_CharacterController : MonoBehaviour
 
 
         if (context.canceled) { _isRepelling = false; }
-
     }
 
     public void Interact(InputAction.CallbackContext context)
@@ -149,6 +177,25 @@ public class LU_CharacterController : MonoBehaviour
         if (collision.gameObject.CompareTag("Lever") && _tryInteract)
         {
             collision.GetComponent<Lever>().OpenDoor();
+        }
+    }
+
+    private void CheckJumpForAnimation(float yVelocity)
+    {
+        if (yVelocity > 0.01f)
+        {
+            _animator.SetBool("isJumping", true);
+            _animator.SetBool("isFalling", false);
+        }
+        else if (yVelocity < -0.01f)
+        {
+            _animator.SetBool("isJumping", true);
+            _animator.SetBool("isFalling", true);
+        }
+        else
+        {
+            _animator.SetBool("isJumping", false);
+            _animator.SetBool("isFalling", false);
         }
     }
 }
