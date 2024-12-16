@@ -51,7 +51,7 @@ MonoBehaviour:
   isShadow: 0
   shadowMonsterPrefab: {fileID: 7314308964329245929, guid: 8d2170d4fb0285441b0d60128cd9514d, type: 3}
   lightMonsterPrefab: {fileID: 7314308964329245929, guid: e59c7aae37e31fe4485e3067b123c7b9, type: 3}
-  monsterSpawn: {fileID: 8179170746438922636}
+  monsterSpawn: {fileID: 7343583593522749459}
 --- !u!1 &7343583593522749459
 GameObject:
   m_ObjectHideFlags: 0
@@ -5010,7 +5010,7 @@ PolygonCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4087
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

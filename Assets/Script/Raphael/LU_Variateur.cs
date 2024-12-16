@@ -8,8 +8,6 @@ public class LU_Variateur : MonoBehaviour
     [SerializeField] Vector2 _maxScale;
     [SerializeField] float _lightInteractionPower = 0.1f;
     [UnityEngine.Range(0f, 1f)] float percentage;
-    float min = 4;
-    float max = 20;
     public bool _retracting = false;
     public bool _dilating = false;
 
