@@ -21,7 +21,6 @@ public class LU_CharacterController : MonoBehaviour
     private GameObject noctisSpawn;
     private bool _isNoctis;
     private bool _isFacingRight;
-    private bool _isFalling;
 
     public GameObject currentSpawn;
     public LU_Power power; //The variable to access character's power script
@@ -82,7 +81,7 @@ public class LU_CharacterController : MonoBehaviour
         if (rb.linearVelocityX >= 0) {_isFacingRight = true; } //to mirror the sprite
         else { _isFacingRight = false; }
 
-        Debug.Log("Is walking: " + _animator.GetBool("isWalking"));
+        CheckJumpForAnimation(rb.linearVelocityY);
 
         if (_isFacingRight)
             _spriteRenderer.flipX = false;
@@ -175,6 +174,25 @@ public class LU_CharacterController : MonoBehaviour
         if(collision.gameObject.CompareTag("Lever") && _tryInteract)
         {
             collision.GetComponent<Lever>().OpenDoor();
+        }
+    }
+
+    private void CheckJumpForAnimation(float yVelocity)
+    {
+        if (yVelocity > 0.01f)
+        {
+            _animator.SetBool("isJumping", true);
+            _animator.SetBool("isFalling", false);
+        }
+        else if (yVelocity < -0.01f)
+        {
+            _animator.SetBool("isJumping", true);
+            _animator.SetBool("isFalling", true);
+        }
+        else
+        {
+            _animator.SetBool("isJumping", false);
+            _animator.SetBool("isFalling", false);
         }
     }
 }
