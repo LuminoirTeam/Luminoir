@@ -5,13 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class LU_MenuNavigation : MonoBehaviour
 {
-    [SerializeField] 
-    GameObject _menuToActivate;
-    void Start()
-    {
-        _menuToActivate = null;
-    }
-
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -20,6 +13,4 @@ public class LU_MenuNavigation : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
-
-
 }
