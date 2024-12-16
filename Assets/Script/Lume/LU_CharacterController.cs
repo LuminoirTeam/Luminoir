@@ -142,8 +142,11 @@ public class LU_CharacterController : MonoBehaviour
             noctisSpawn = collision.GetComponent<LU_Checkpoint>().noctisSpawn;
             lumisSpawn = collision.GetComponent <LU_Checkpoint>().lumisSpawn;
         }
+    }
 
-        if(collision.gameObject.CompareTag("Lever") && _tryInteract)
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Lever") && _tryInteract)
         {
             collision.GetComponent<Lever>().OpenDoor();
         }

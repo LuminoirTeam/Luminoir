@@ -220,37 +220,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5049257236644102555, guid: 6ae62a02a1da55341b7837fe3305336f, type: 3}
   m_PrefabInstance: {fileID: 13929417}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &25703995
+--- !u!1 &25703995 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3729003509136979848, guid: 368cb25952b440c4aae1f7bc0bfddb1e, type: 3}
+  m_PrefabInstance: {fileID: 7755497983874838734}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 25703996}
-  m_Layer: 0
-  m_Name: Spawner Noctis
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &25703996
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25703995}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &27679136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1404,7 +1378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003141586420300069, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: containMonster
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1713724095599844816, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_Name
@@ -2750,11 +2724,6 @@ Transform:
   - {fileID: 2014771073}
   m_Father: {fileID: 1461411494}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &671164584 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8263212623770451779, guid: 144c708293590b742be6190afc4710b8, type: 3}
-  m_PrefabInstance: {fileID: 416351071}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &690470644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5642,6 +5611,7 @@ Transform:
   m_Children:
   - {fileID: 648632871}
   - {fileID: 416351072}
+  - {fileID: 1527469933}
   - {fileID: 420344469}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5660,8 +5630,8 @@ MonoBehaviour:
   _lumisSpawn: {fileID: 1487085851}
   _noctisSpawn: {fileID: 25703995}
   _emptyPlayer: {fileID: 5513633521449468888, guid: 7f4003815665e174697017f260518abd, type: 3}
-  lightList:
-  - {fileID: 671164584}
+  _lightsParent: {fileID: 651812249456220271, guid: 144c708293590b742be6190afc4710b8, type: 3}
+  _shadowsParent: {fileID: 1713724095599844816, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
   _camera: {fileID: 648632873}
 --- !u!114 &1380346959
 MonoBehaviour:
@@ -6420,37 +6390,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 535730148}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1487085851
+--- !u!1 &1487085851 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6028954929608729962, guid: 368cb25952b440c4aae1f7bc0bfddb1e, type: 3}
+  m_PrefabInstance: {fileID: 7755497983874838734}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1487085852}
-  m_Layer: 0
-  m_Name: Spawner Lumis
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1487085852
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487085851}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1507783960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6616,6 +6560,104 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5049257236644102555, guid: 6ae62a02a1da55341b7837fe3305336f, type: 3}
   m_PrefabInstance: {fileID: 1523071498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1527469932
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1380346957}
+    m_Modifications:
+    - target: {fileID: 651812249456220271, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_Name
+      value: light (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156665147630321255, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: _noctis
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879926106622314006, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: containMonster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4515134617529007834, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_Distance
+      value: 10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343583593522749459, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_TagString
+      value: Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445995450327366854, guid: 144c708293590b742be6190afc4710b8, type: 3}
+      propertyPath: m_TagString
+      value: Light
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 144c708293590b742be6190afc4710b8, type: 3}
+--- !u!4 &1527469933 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5615376030973669094, guid: 144c708293590b742be6190afc4710b8, type: 3}
+  m_PrefabInstance: {fileID: 1527469932}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1530506308
 GameObject:
@@ -9424,6 +9466,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1610169804277189192, guid: 368cb25952b440c4aae1f7bc0bfddb1e, type: 3}
+      propertyPath: lumisSpawn
+      value: 
+      objectReference: {fileID: 1487085851}
+    - target: {fileID: 1610169804277189192, guid: 368cb25952b440c4aae1f7bc0bfddb1e, type: 3}
+      propertyPath: noctisSpawn
+      value: 
+      objectReference: {fileID: 25703995}
     - target: {fileID: 3229235133639315754, guid: 368cb25952b440c4aae1f7bc0bfddb1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9482,8 +9532,6 @@ SceneRoots:
   - {fileID: 1461411494}
   - {fileID: 255376531}
   - {fileID: 2108251401}
-  - {fileID: 1487085852}
-  - {fileID: 25703996}
   - {fileID: 7755497983874838734}
   - {fileID: 1597914403}
   - {fileID: 690470644}

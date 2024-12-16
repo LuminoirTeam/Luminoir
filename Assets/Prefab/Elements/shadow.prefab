@@ -4941,7 +4941,7 @@ MonoBehaviour:
   isShadow: 1
   shadowMonsterPrefab: {fileID: 7314308964329245929, guid: 8d2170d4fb0285441b0d60128cd9514d, type: 3}
   lightMonsterPrefab: {fileID: 7314308964329245929, guid: e59c7aae37e31fe4485e3067b123c7b9, type: 3}
-  monsterSpawn: {fileID: 3001281446160201894}
+  monsterSpawn: {fileID: 3128717115518358568}
 --- !u!1 &3128717115518358568
 GameObject:
   m_ObjectHideFlags: 0

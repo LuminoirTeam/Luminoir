@@ -103,7 +103,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionParticles: {fileID: 1020563502131041517, guid: c623c6c7216e7404e8cdd2b15df571d3, type: 3}
   isShadow: 0
-  isAlive: 0
 --- !u!58 &986718936145912882
 CircleCollider2D:
   m_ObjectHideFlags: 0
