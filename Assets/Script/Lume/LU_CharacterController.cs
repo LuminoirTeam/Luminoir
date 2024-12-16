@@ -5,10 +5,13 @@ public class LU_CharacterController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector3 groundCheck;
+    private Vector3 wallCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask wallLayer;
     [SerializeField] private float _playerSpeed = 8;
     [SerializeField] private float _jumpingForce = 5;
     [SerializeField] private Vector2 _sizeOfGroundCheckBox = new Vector2(1, 0.5f);
+    [SerializeField] private Vector2 _sizeOfWallCheckBox = new Vector2(1, 0.5f); //don't forget to change the value here
 
     private InputAction movementAction;
     private PlayerInput _input;
@@ -104,12 +107,21 @@ public class LU_CharacterController : MonoBehaviour
 
         return true;
     }
+    private bool IsWalled()
+    {
+        wallCheck = transform.GetChild(0).GetChild(1).position;
+        Collider2D colliderFound = Physics2D.OverlapBox(wallCheck, _sizeOfWallCheckBox, 0, wallLayer);
+        if (colliderFound == null) { return false; }
+
+        return true;
+    }
 
     public void Move(InputAction.CallbackContext context)
     {
         _animator.SetBool("isWalking", true);
 
-        rb.linearVelocityX = context.ReadValue<Vector2>().x * _playerSpeed; //movement
+        if (!IsWalled())
+            rb.linearVelocityX = context.ReadValue<Vector2>().x * _playerSpeed; //movement
 
         if (context.canceled) { _animator.SetBool("isWalking", false); } //anim
     }
