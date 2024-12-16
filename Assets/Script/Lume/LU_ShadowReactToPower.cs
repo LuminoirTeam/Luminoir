@@ -28,13 +28,9 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<LU_PowerNoctis>(out LU_PowerNoctis noctis))
+        if (collision.transform.GetChild(1).gameObject.activeSelf)
         {
-            noctis.GetComponent<LU_CharacterController>().ReturnToSpawn();
+            collision.GetComponent<LU_CharacterController>().ReturnToSpawn();
         }
-    }
-    public void SetLumis(GameObject lumis)
-    {
-        _lumis = lumis;
     }
 }

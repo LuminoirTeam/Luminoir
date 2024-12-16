@@ -10,7 +10,7 @@ public class LU_PowerLumis : LU_Power //Lumis interacts with SHADOW
     {
         rb = transform.parent.GetComponent<Rigidbody2D>();
     }
-    public override void Grappling()
+    public void Grappling()
     {
         Collider2D colliderFound = Physics2D.OverlapCircle(transform.position, _powerRadius, 1 << 9);
         if (colliderFound != null)

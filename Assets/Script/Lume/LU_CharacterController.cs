@@ -34,6 +34,10 @@ public class LU_CharacterController : MonoBehaviour
         groundCheck = transform.GetChild(0).position;
 
         _isNoctis = GetComponent<LU_SetPlayer>().isNoctis;
+        //if( _isNoctis)
+        //{
+        //    power = power is LU_PowerNoctis;
+        //}
     }
 
     private void FixedUpdate()
@@ -44,14 +48,15 @@ public class LU_CharacterController : MonoBehaviour
 
         if (_isAttracting)
         {
-            if (IsGrounded())
-            {
+            //if (IsGrounded())
+            //{
                 power.AttractElement();
-            }
-            else
-            {
-                power.Grappling();
-            }
+            //}
+            //else if (_isNoctis)
+            //{
+                
+            //    power.Grappling();
+            //}
         }
         if (_isRepelling)
             power.RepelElement();

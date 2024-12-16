@@ -8,17 +8,17 @@ public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
     Rigidbody2D rb;
     private void Start()
     {
-        rb=GetComponent<Rigidbody2D>();
+        rb= transform.parent.GetComponent<Rigidbody2D>();
     }
-    public override void Grappling()
-    {
-        Collider2D colliderFound = Physics2D.OverlapCircle(transform.position, _powerRadius, 1 << 8);
-        if (colliderFound != null)
-        {
-            rb.AddForce(colliderFound.transform.position - transform.position.normalized, ForceMode2D.Impulse);
-        }
+    //public override void Grappling()
+    //{
+    //    Collider2D colliderFound = Physics2D.OverlapCircle(transform.position, _powerRadius, 1 << 8);
+    //    if (colliderFound != null)
+    //    {
+    //        rb.AddForce(colliderFound.transform.position - transform.position.normalized, ForceMode2D.Impulse);
+    //    }
 
-    }
+    //}
     public override void AttractElement()
     {
         List<Collider2D> colliderFound = Physics2D.OverlapCircleAll(transform.position, _powerRadius, 1 << 8).ToList();
