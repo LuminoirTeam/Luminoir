@@ -8,7 +8,8 @@ public class LU_GameManager : MonoBehaviour
     [SerializeField] private GameObject _noctisSpawn;
     [SerializeField] private GameObject _emptyPlayer;
 
-    public List<GameObject> lightList = new List<GameObject>();
+    [SerializeField] private GameObject _lightsParent;
+    [SerializeField] private GameObject _shadowsParent;
 
 
     private List<PlayerInput> activePlayers = new List<PlayerInput>();
@@ -50,9 +51,9 @@ public class LU_GameManager : MonoBehaviour
             playerInput.gameObject.GetComponent<LU_SetPlayer>().isNoctis = false;
             playerInput.gameObject.GetComponent<LU_SetPlayer>().SetActivePrefab();
             _camera.player1 = playerInput.gameObject;
-            foreach(GameObject light in lightList)
+            for(int i = 0;i<_shadowsParent.transform.childCount;i++)
             {
-                light.GetComponentInChildren<LU_ShadowReactToPower>()._lumis = playerInput.gameObject;
+                _shadowsParent.transform.GetChild(i).GetComponent<LU_ShadowReactToPower>()._lumis = playerInput.gameObject;
             }
 
             Debug.Log("Joueur 1 rejoint : Lumis");
@@ -64,9 +65,9 @@ public class LU_GameManager : MonoBehaviour
             playerInput.gameObject.GetComponent<LU_SetPlayer>().isNoctis = true;
             playerInput.gameObject.GetComponent<LU_SetPlayer>().SetActivePrefab();
             _camera.player2 = playerInput.gameObject;
-            foreach (GameObject light in lightList)
+            for (int i = 0; i < _lightsParent.transform.childCount; i++)
             {
-                light.gameObject.GetComponent<LU_LightReactToPower>()._noctis = playerInput.gameObject;
+                _lightsParent.transform.GetChild(i).GetChild(0).GetComponent<LU_LightReactToPower>()._noctis = playerInput.gameObject;
             }
             playerInput.defaultActionMap = "Player";
             Debug.Log("Joueur 2 rejoint : Noctis");
