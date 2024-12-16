@@ -45,7 +45,10 @@ GameObject:
   - component: {fileID: 16008397668660647}
   - component: {fileID: 5468858485018913298}
   - component: {fileID: 2920629241352395859}
-  m_Layer: 12
+
+  - component: {fileID: 6460372099468635277}
+  m_Layer: 0
+
   m_Name: EmptyPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -304,6 +307,19 @@ MonoBehaviour:
   _sizeOfGroundCheckBox: {x: 1, y: 0.2}
   currentSpawn: {fileID: 0}
   power: {fileID: 0}
+--- !u!114 &6460372099468635277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5513633521449468888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a81e9fd78ee057f47b728ab98c05b48e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNoctis: 0
 --- !u!1001 &3286600365762783607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -356,9 +372,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Noctis_Temp
       objectReference: {fileID: 0}
-    - target: {fileID: 5513633521449468888, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
-      propertyPath: m_Layer
-      value: 12
+
+    - target: {fileID: 9050409055983290648, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -434,6 +452,10 @@ PrefabInstance:
     - target: {fileID: 5513633521449468888, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050409055983290648, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
