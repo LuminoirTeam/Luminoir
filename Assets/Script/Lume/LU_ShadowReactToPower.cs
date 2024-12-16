@@ -32,5 +32,16 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
         {
             collision.GetComponent<LU_CharacterController>().ReturnToSpawn();
         }
+        if (collision.transform.GetChild(0).gameObject.activeSelf)
+        {
+            collision.excludeLayers = 1 << 13;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.GetChild(0).gameObject.activeSelf)
+        {
+            collision.excludeLayers=~1<<13 ;
+        }
     }
 }

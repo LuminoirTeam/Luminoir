@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6797086815114971097}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 16008397668660647}
   - component: {fileID: 5468858485018913298}
   - component: {fileID: 2920629241352395859}
-  m_Layer: 13
+  m_Layer: 12
   m_Name: EmptyPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 2112
+    m_Bits: 10305
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -300,10 +300,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _playerSpeed: 8
-
   _jumpingForce: 5
-
-  _sizeOfGroundCheckBox: {x: 1, y: 0.2}
+  _sizeOfGroundCheckBox: {x: 1, y: 0.5}
   currentSpawn: {fileID: 0}
   power: {fileID: 0}
 --- !u!1001 &3286600365762783607
@@ -364,7 +362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513633521449468888, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -439,7 +437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5513633521449468888, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
       propertyPath: m_Layer
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5513633521449468888, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
       propertyPath: m_IsActive
