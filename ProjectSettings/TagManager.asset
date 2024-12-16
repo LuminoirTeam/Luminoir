@@ -9,8 +9,8 @@ TagManager:
   - Shadow
   - Checkpoint
   - Lever
-  - LightMob
-  - ShadowMob
+  - LightMonster
+  - ShadowMonster
   layers:
   - Default
   - TransparentFX
