@@ -268,10 +268,13 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 2048
   _playerSpeed: 8
   _jumpingForce: 3.2
-
   _sizeOfGroundCheckBox: {x: 1, y: 0.2}
+  _sizeOfWallCheckBox: {x: 1, y: 0.5}
 
   currentSpawn: {fileID: 0}
   power: {fileID: 0}
