@@ -4590,7 +4590,6 @@ MonoBehaviour:
   player2: {fileID: 0}
   minZ: 10
   maxZ: 50
-  zoomFactor: 1.5
   smoothing: 0.1
   isClamped: 0
 --- !u!114 &514644059
@@ -17448,7 +17447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1771618657
 Transform:
   m_ObjectHideFlags: 0
