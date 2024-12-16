@@ -28,6 +28,10 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.TryGetComponent<LU_ElementReceptor>(out LU_ElementReceptor receptor))
+        {
+            return;
+        }
         if (collision.transform.GetChild(1).gameObject.activeSelf)
         {
             collision.GetComponent<LU_CharacterController>().ReturnToSpawn();
@@ -39,6 +43,10 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (collision.TryGetComponent<LU_ElementReceptor>(out LU_ElementReceptor receptor))
+        {
+            return;
+        }
         if (collision.transform.GetChild(0).gameObject.activeSelf)
         {
             collision.excludeLayers=~1<<13 ;

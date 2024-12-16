@@ -170,7 +170,7 @@ public class LU_CharacterController : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<LU_CharacterController>(out LU_CharacterController anotherCharacter))
         {
-            //anotherCharacter.ReturnToSpawn();
+            anotherCharacter.ReturnToSpawn();
         }
     }
 
