@@ -324,7 +324,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _playerSpeed: 8
-  _jumpingForce: 3
+  _jumpingForce: 4
   _sizeOfGroundCheckBox: {x: 1, y: 0.2}
   currentSpawn: {fileID: 0}
   power: {fileID: 0}
