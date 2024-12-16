@@ -17448,7 +17448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1771618657
 Transform:
   m_ObjectHideFlags: 0
@@ -18091,7 +18091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 514644057}
-  parallexEffect: 0.5
+  parallexEffect: 0.25
 --- !u!1001 &1826379806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19004,7 +19004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 514644057}
-  parallexEffect: 0.25
+  parallexEffect: 0.125
 --- !u!1 &1891890437
 GameObject:
   m_ObjectHideFlags: 0
