@@ -98,7 +98,7 @@ public class LU_CharacterController : MonoBehaviour
 
     private bool IsGrounded()
     {
-        groundCheck = transform.GetChild(1).position;
+        groundCheck = transform.GetChild(0).GetChild(0).position;
         Collider2D colliderFound = Physics2D.OverlapBox(groundCheck, _sizeOfGroundCheckBox, 0, groundLayer);
         if (colliderFound == null) { return false; }
 
