@@ -5,7 +5,6 @@ public class Monsters : MonoBehaviour
 {
     public ParticleSystem explosionParticles;
     private SpriteRenderer spriteRenderer;
-    private MonsterContainer monsterContainer;
     public bool isShadow;
     private bool _isAlive;
 
@@ -13,32 +12,15 @@ public class Monsters : MonoBehaviour
     {
         _isAlive = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        monsterContainer = GetComponentInParent<MonsterContainer>();
-        isShadow = monsterContainer.isShadow;
+        isShadow = GetComponentInParent<MonsterContainer>().isShadow;
     }
 
     private void Update()
     {
-        _isAlive = false;
-
         if (!_isAlive)
         {
             Death();
         }
-    }
-
-    private void Death()
-    {
-        spriteRenderer = null;
-        Instantiate(explosionParticles);
-        Destroy(explosionParticles, 5);
-        StartCoroutine(DestroyTimer());
-    }
-
-    IEnumerator DestroyTimer()
-    {
-        yield return new WaitForSeconds(2);
-        Destroy(gameObject);
     }
 
     private void OnTriggerStay(Collider other)
@@ -52,5 +34,15 @@ public class Monsters : MonoBehaviour
         {
             _isAlive = true;
         }
+    }
+
+    private void Death()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(explosionParticles, gameObject.transform);
     }
 }
