@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class LU_CameraBehaviour : MonoBehaviour
@@ -8,7 +7,6 @@ public class LU_CameraBehaviour : MonoBehaviour
 
     [SerializeField] private float minZ = 10f;
     [SerializeField] private float maxZ = 50f; 
-    [SerializeField] private float zoomFactor = 1.5f; 
     [SerializeField] private float smoothing = 0.1f; 
 
     public bool isClamped = true;

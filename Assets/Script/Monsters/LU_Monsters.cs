@@ -12,7 +12,6 @@ public class Monsters : MonoBehaviour
     {
         _isAlive = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        isShadow = GetComponentInParent<MonsterContainer>().isShadow;
     }
 
     private void Update()

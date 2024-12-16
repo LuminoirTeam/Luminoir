@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionParticles: {fileID: 1020563502131041517, guid: 8f5c843676d12f44f9b6c283433cfba6, type: 3}
-  isShadow: 0
+  isShadow: 1
 --- !u!58 &6426200965012925845
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -138,4 +138,4 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 2
