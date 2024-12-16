@@ -21,8 +21,7 @@ public class LU_CharacterController : MonoBehaviour
     private GameObject noctisSpawn;
     private bool _isNoctis;
 
-    private Vector3 _spawnPos;
-
+    public GameObject currentSpawn;
     public LU_Power power; //The variable to access character's power script
 
     private void Awake()
@@ -37,10 +36,6 @@ public class LU_CharacterController : MonoBehaviour
         _isNoctis = GetComponent<LU_SetPlayer>().isNoctis;
     }
 
-    private void Start()
-    {
-        _spawnPos = transform.position;
-    }
     private void FixedUpdate()
     {
         print(_tryInteract);
