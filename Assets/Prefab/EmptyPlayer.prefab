@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6797086815114971097}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 16008397668660647}
   - component: {fileID: 5468858485018913298}
   - component: {fileID: 2920629241352395859}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: EmptyPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -133,22 +133,10 @@ MonoBehaviour:
     m_ActionName: 'Player1/Crouch[/XInputControllerWindows/leftStick/down]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1874436890632310146}
-        m_TargetAssemblyTypeName: LU_PowerLumis, Assembly-CSharp
-        m_MethodName: AttractElement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5282726130491092706}
-        m_TargetAssemblyTypeName: LU_PowerNoctis, Assembly-CSharp
-        m_MethodName: AttractElement
-        m_Mode: 1
+      - m_Target: {fileID: 2920629241352395859}
+        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
+        m_MethodName: CallAttractElement
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -161,22 +149,10 @@ MonoBehaviour:
     m_ActionName: 'Player1/Attract Element[/XInputControllerWindows/buttonWest]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1874436890632310146}
-        m_TargetAssemblyTypeName: LU_PowerLumis, Assembly-CSharp
-        m_MethodName: RepelElement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5282726130491092706}
-        m_TargetAssemblyTypeName: LU_PowerNoctis, Assembly-CSharp
-        m_MethodName: RepelElement
-        m_Mode: 1
+      - m_Target: {fileID: 2920629241352395859}
+        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
+        m_MethodName: CallRepelElement
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -275,10 +251,10 @@ CapsuleCollider2D:
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2112
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -324,7 +300,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _playerSpeed: 8
-  _jumpingForce: 4
+
+  _jumpingForce: 5
+
   _sizeOfGroundCheckBox: {x: 1, y: 0.2}
   currentSpawn: {fileID: 0}
   power: {fileID: 0}
@@ -336,6 +314,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5199580436458444822}
     m_Modifications:
+    - target: {fileID: -1960091735364352107, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+      propertyPath: _powerRadius
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5199580436458444822, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -380,22 +362,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Noctis_Temp
       objectReference: {fileID: 0}
+    - target: {fileID: 5513633521449468888, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
---- !u!114 &5282726130491092706 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -1960091735364352107, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
-  m_PrefabInstance: {fileID: 3286600365762783607}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6996348511828257455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de14cf25f8871cb4cb42851f8d591784, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6996348511828257455 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5513633521449468888, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
@@ -414,6 +389,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5199580436458444822}
     m_Modifications:
+    - target: {fileID: 3009349139344500241, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
+      propertyPath: _powerRadius
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5199580436458444822, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -459,6 +438,10 @@ PrefabInstance:
       value: Lumis_Temp
       objectReference: {fileID: 0}
     - target: {fileID: 5513633521449468888, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513633521449468888, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -468,17 +451,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
---- !u!114 &1874436890632310146 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3009349139344500241, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
-  m_PrefabInstance: {fileID: 3728995277622176659}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9170543848926603339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b92e5f99362b99449f2d88b40edbe3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &8928548617131291525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5199580436458444822, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}

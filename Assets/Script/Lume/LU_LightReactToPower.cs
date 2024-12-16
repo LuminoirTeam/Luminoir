@@ -36,9 +36,9 @@ public class LU_LightReactToPower : LU_PowerInteraction
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<LU_PowerLumis>(out LU_PowerLumis lumis))
+        if (collision.transform.GetChild(0).gameObject.activeSelf)
         {
-            lumis.GetComponent<LU_CharacterController>().ReturnToSpawn();
+            collision.GetComponent<LU_CharacterController>().ReturnToSpawn();
         }
     }
 }

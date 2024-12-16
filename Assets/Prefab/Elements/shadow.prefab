@@ -50,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e210a2f14c81514dbe62d813dfb8318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lumis: {fileID: 5513633521449468888, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
-  _shadowMoveSpeed: 0.2
+  _lumis: {fileID: 0}
+  _shadowMoveSpeed: 1.5
 --- !u!198 &2010015167407960980
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4791,7 +4791,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
