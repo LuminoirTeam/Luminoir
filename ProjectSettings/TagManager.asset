@@ -9,8 +9,8 @@ TagManager:
   - Shadow
   - Checkpoint
   - Lever
-  - LightMob
-  - ShadowMob
+  - LightMonster
+  - ShadowMonster
   layers:
   - Default
   - TransparentFX
@@ -25,7 +25,7 @@ TagManager:
   - Variateur
   - Wall
   - players
-  - 
+  - Fence
   - 
   - 
   - 
