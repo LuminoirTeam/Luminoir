@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: d3e4e6544951f2c439831be0428d7c68
+guid: ba0296d42d6fd604689740dabf9a3e7c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5785329236163853876
-    second: noctis-idle0004_0
+      213: 5491233263397595280
+    second: noctis-jumpstraight0006_0
+  - first:
+      213: -6737924382508578677
+    second: noctis-jumpstraight0006_1
+  - first:
+      213: -1674249145114891329
+    second: noctis-jumpstraight0006_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: noctis-idle0004_0
+      name: noctis-jumpstraight0006_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1080
-        height: 755
+        x: 57
+        y: 862
+        width: 6
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43e7a3ec94e994050800000000000000
-      internalID: 5785329236163853876
+      spriteID: 0986f9b2f87c43c40800000000000000
+      internalID: 5491233263397595280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noctis-jumpstraight0006_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 133
+        width: 1015
+        height: 875
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b88022129751e72a0800000000000000
+      internalID: -6737924382508578677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noctis-jumpstraight0006_2
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 703
+        width: 9
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbbece7e54fd3c8e0800000000000000
+      internalID: -1674249145114891329
       vertices: []
       indices: 
       edges: []
@@ -134,8 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      noctis-idle0004_0: 5785329236163853876
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

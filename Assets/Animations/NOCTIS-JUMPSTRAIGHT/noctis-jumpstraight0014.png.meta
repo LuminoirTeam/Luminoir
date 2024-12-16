@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d3e4e6544951f2c439831be0428d7c68
+guid: 7bc01ed83e0d8c54283b48f0a003f88f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5785329236163853876
-    second: noctis-idle0004_0
+      213: 84347955027207468
+    second: noctis-jumpstraight0014_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: noctis-idle0004_0
+      name: noctis-jumpstraight0014_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43e7a3ec94e994050800000000000000
-      internalID: 5785329236163853876
+      spriteID: c256de8a40aab2100800000000000000
+      internalID: 84347955027207468
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      noctis-idle0004_0: 5785329236163853876
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: d3e4e6544951f2c439831be0428d7c68
+guid: 483b936e19a69324aae26ec62a0fee59
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5785329236163853876
-    second: noctis-idle0004_0
+      213: 6734746001171037781
+    second: noctis-jumpstraight0005_0
+  - first:
+      213: 4073921915948854667
+    second: noctis-jumpstraight0005_1
+  - first:
+      213: 5057516855447864113
+    second: noctis-jumpstraight0005_2
+  - first:
+      213: 9099169445292051623
+    second: noctis-jumpstraight0005_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: noctis-idle0004_0
+      name: noctis-jumpstraight0005_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1080
-        height: 755
+        x: 504
+        y: 1038
+        width: 247
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43e7a3ec94e994050800000000000000
-      internalID: 5785329236163853876
+      spriteID: 55e384c4ecf967d50800000000000000
+      internalID: 6734746001171037781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noctis-jumpstraight0005_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 706
+        width: 6
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8d6fc2e56a798830800000000000000
+      internalID: 4073921915948854667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noctis-jumpstraight0005_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 1015
+        height: 876
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 133458eb8c8ef2640800000000000000
+      internalID: 5057516855447864113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noctis-jumpstraight0005_3
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 547
+        width: 36
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac88b9a66eb64e70800000000000000
+      internalID: 9099169445292051623
       vertices: []
       indices: 
       edges: []
@@ -134,8 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      noctis-idle0004_0: 5785329236163853876
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
