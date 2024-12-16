@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6797086815114971097}
+
   m_Layer: 12
+
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,8 +47,10 @@ GameObject:
   - component: {fileID: 16008397668660647}
   - component: {fileID: 5468858485018913298}
   - component: {fileID: 2920629241352395859}
+
   - component: {fileID: -6905188873181799062}
   m_Layer: 12
+
   m_Name: EmptyPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -133,35 +137,11 @@ MonoBehaviour:
     m_ActionId: ba9737e5-a894-4b65-969c-fd3b8b2091a0
     m_ActionName: 'Player1/Crouch[/XInputControllerWindows/leftStick/down]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2920629241352395859}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: CallAttractElement
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: b9758fbc-2dfc-4ae6-b71b-7582c78b7fba
     m_ActionName: 'Player1/Attract Element[/XInputControllerWindows/buttonWest]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2920629241352395859}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: CallRepelElement
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 97ba2d15-0b5b-40ec-b798-578131e73c25
     m_ActionName: 'Player1/Repel Element[/XInputControllerWindows/buttonEast]'
   - m_PersistentCalls:
@@ -169,19 +149,7 @@ MonoBehaviour:
     m_ActionId: 09292b39-1d6f-451d-82e1-dfe3ffce3e47
     m_ActionName: 'Player1/Pause[/XInputControllerWindows/start]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2920629241352395859}
-        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
-        m_MethodName: Interact
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: a020a9e0-6982-41bc-8216-21bab251ec47
     m_ActionName: 'Player1/Interact[/XInputControllerWindows/buttonNorth]'
   - m_PersistentCalls:
@@ -371,19 +339,74 @@ PrefabInstance:
       value: Noctis
       objectReference: {fileID: 0}
     - target: {fileID: 5513633521449468888, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
-      propertyPath: m_Layer
-      value: 12
+
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050409055983290648, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+      propertyPath: m_Size.x
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050409055983290648, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+      propertyPath: m_Size.y
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050409055983290648, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3baddc16b07700640aa0f4dda9b1b609, type: 3}
+    - target: {fileID: 9050409055983290648, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050409055983290648, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050409055983290648, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050409055983290648, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5513633521449468888, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2343610361084275792}
   m_SourcePrefab: {fileID: 100100000, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
 --- !u!1 &6996348511828257455 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5513633521449468888, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
   m_PrefabInstance: {fileID: 3286600365762783607}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &2343610361084275792
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6996348511828257455}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 823d04c83a7b3004cb2b7c893c08d064, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &7328701594279129441 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5199580436458444822, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
@@ -442,18 +465,27 @@ PrefabInstance:
       value: Lumis
       objectReference: {fileID: 0}
     - target: {fileID: 5513633521449468888, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
+
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5513633521449468888, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
+
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9050409055983290648, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5368459462143944800, guid: be86ec2207a62cf45b8b05216248dba8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7496773791346459382, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5513633521449468888, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4559144177389629846}
   m_SourcePrefab: {fileID: 100100000, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
 --- !u!4 &8928548617131291525 stripped
 Transform:
@@ -465,3 +497,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5513633521449468888, guid: 68c8c35ea1819d244b1a68f15a9114f3, type: 3}
   m_PrefabInstance: {fileID: 3728995277622176659}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &4559144177389629846
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9170543848926603339}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4a8a09bceec7937489e98a6531dd3576, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
