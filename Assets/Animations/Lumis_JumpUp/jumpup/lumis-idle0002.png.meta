@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8ceb36c225a5d01449d62efdcf38c49f
+guid: 73c9b5470c5d35b43bc59984e7de94f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3580041439715161185
-    second: lumis-idle0005_0
+      213: -2626904158719684230
+    second: lumis-idle0002_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lumis-idle0005_0
+      name: lumis-idle0002_0
       rect:
         serializedVersion: 2
-        x: 330
-        y: 6
-        width: 439
-        height: 896
+        x: 343
+        y: 0
+        width: 413
+        height: 774
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1647667b8bcdea130800000000000000
-      internalID: 3580041439715161185
+      spriteID: a715488e59c5b8bd0800000000000000
+      internalID: -2626904158719684230
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lumis-idle0005_0: 3580041439715161185
+      lumis-idle0002_0: -2626904158719684230
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
