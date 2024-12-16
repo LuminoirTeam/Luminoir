@@ -19,6 +19,8 @@ public class Monsters : MonoBehaviour
 
     private void Update()
     {
+        _isAlive = false;
+
         if (!_isAlive)
         {
             Death();
@@ -45,18 +47,10 @@ public class Monsters : MonoBehaviour
         {
             _isAlive = true;
         }
-        else
-        {
-            _isAlive = false;
-        }
 
         if (!isShadow && other.CompareTag("Light"))
         {
             _isAlive = true;
-        }
-        else
-        {
-            _isAlive = false;
         }
     }
 }
