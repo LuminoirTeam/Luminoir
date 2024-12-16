@@ -33,4 +33,8 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
             noctis.GetComponent<LU_CharacterController>().ReturnToSpawn();
         }
     }
+    public void SetLumis(GameObject lumis)
+    {
+        _lumis = lumis;
+    }
 }
