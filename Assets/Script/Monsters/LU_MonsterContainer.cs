@@ -8,7 +8,7 @@ public class MonsterContainer : MonoBehaviour
     public GameObject shadowMonsterPrefab;
     public GameObject lightMonsterPrefab;
 
-    public GameObject monsterSpawn;
+    public Transform monsterSpawn;
 
     public void Start()
     {
@@ -16,11 +16,13 @@ public class MonsterContainer : MonoBehaviour
         {
             if (isShadow)
             {
-                Instantiate(shadowMonsterPrefab, monsterSpawn.transform);
+                Instantiate(shadowMonsterPrefab);
+                shadowMonsterPrefab.transform.position = monsterSpawn.position;
             }
             else
             {
-                Instantiate(lightMonsterPrefab, monsterSpawn.transform);
+                Instantiate(lightMonsterPrefab, monsterSpawn);
+                lightMonsterPrefab.transform.position = monsterSpawn.position;
             }
         }
     }
