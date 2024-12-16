@@ -8,6 +8,8 @@ public class LU_GameManager : MonoBehaviour
     [SerializeField] private GameObject _noctisSpawn;
     [SerializeField] private GameObject _emptyPlayer;
 
+    public List<GameObject> lightList = new List<GameObject>();
+
     private List<PlayerInput> activePlayers = new List<PlayerInput>();
 
     public LU_CameraBehaviour _camera;
@@ -47,6 +49,7 @@ public class LU_GameManager : MonoBehaviour
             playerInput.gameObject.GetComponent<LU_SetPlayer>().isNoctis = false;
             playerInput.gameObject.GetComponent<LU_SetPlayer>().SetActivePrefab();
             _camera.player1 = playerInput.gameObject;
+            GetComponentInChildren<LU_ShadowReactToPower>()._lumis = playerInput.gameObject;
             Debug.Log("Joueur 1 rejoint : Lumis");
         }
         else if (activePlayers.Count == 1) // Deuxième joueur : Noctis
@@ -56,6 +59,10 @@ public class LU_GameManager : MonoBehaviour
             playerInput.gameObject.GetComponent<LU_SetPlayer>().isNoctis = true;
             playerInput.gameObject.GetComponent<LU_SetPlayer>().SetActivePrefab();
             _camera.player2 = playerInput.gameObject;
+            foreach (GameObject light in lightList)
+            {
+                light.gameObject.GetComponent<LU_LightReactToPower>()._noctis = playerInput.gameObject;
+            }
             playerInput.defaultActionMap = "Player";
             Debug.Log("Joueur 2 rejoint : Noctis");
         }

@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 public class LU_ShadowReactToPower : LU_PowerInteraction
 {
-    [SerializeField] GameObject _lumis;
+    public GameObject _lumis;
     [SerializeField] float _shadowMoveSpeed = 0.2f;
     
     Rigidbody2D _rb;
