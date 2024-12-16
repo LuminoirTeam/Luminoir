@@ -1,8 +1,8 @@
 using UnityEngine;
 
 public class LU_LightReactToPower : LU_PowerInteraction
-{
-    [SerializeField] GameObject _noctis;
+{   
+    public GameObject _noctis;
     Rigidbody2D _attractorRb;
     [SerializeField] float _lightMoveSpeed = 1.5f;
 
@@ -34,11 +34,11 @@ public class LU_LightReactToPower : LU_PowerInteraction
         _attractorRb.AddForce(directionAttractor.normalized * _lightMoveSpeed, ForceMode2D.Impulse);
     }
 
-    protected void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<LU_PowerLumis>(out LU_PowerLumis lumis))
+        if (collision.transform.GetChild(0).gameObject.activeSelf)
         {
-            lumis.GetComponent<LU_CharacterController>().ReturnToSpawn();
+            collision.GetComponent<LU_CharacterController>().ReturnToSpawn();
         }
     }
 }

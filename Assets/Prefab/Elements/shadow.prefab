@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2631641311483292916}
   - component: {fileID: 7685679903487916159}
   - component: {fileID: 2113439955288943187}
+  - component: {fileID: 1003141586420300069}
   m_Layer: 9
   m_Name: shadow
   m_TagString: Shadow
@@ -33,7 +34,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 3001281446160201894}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7400842293281317088
@@ -48,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e210a2f14c81514dbe62d813dfb8318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lumis: {fileID: 1296425850557146567, guid: b779b37db5503a243baa67976496d26c, type: 3}
-  _shadowMoveSpeed: 0.2
+  _lumis: {fileID: 0}
+  _shadowMoveSpeed: 1.5
 --- !u!198 &2010015167407960980
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4789,7 +4791,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -4803,7 +4805,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -4923,3 +4925,51 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1003141586420300069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713724095599844816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4538f953dc5e2a9408ec9cfea346587b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  containMonster: 0
+  isShadow: 1
+  shadowMonsterPrefab: {fileID: 7314308964329245929, guid: 8d2170d4fb0285441b0d60128cd9514d, type: 3}
+  lightMonsterPrefab: {fileID: 7314308964329245929, guid: e59c7aae37e31fe4485e3067b123c7b9, type: 3}
+  monsterSpawn: {fileID: 3001281446160201894}
+--- !u!1 &3128717115518358568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3001281446160201894}
+  m_Layer: 0
+  m_Name: spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3001281446160201894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3128717115518358568}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 187111988874156710}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

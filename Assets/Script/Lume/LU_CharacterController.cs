@@ -15,6 +15,7 @@ public class LU_CharacterController : MonoBehaviour
 
     private bool _isAttracting = false;
     private bool _isRepelling = false;
+    private bool _tryInteract = false;
 
     private GameObject lumisSpawn;
     private GameObject noctisSpawn;
@@ -38,6 +39,10 @@ public class LU_CharacterController : MonoBehaviour
         groundCheck = transform.GetChild(0).position;
 
         _isNoctis = GetComponent<LU_SetPlayer>().isNoctis;
+        //if( _isNoctis)
+        //{
+        //    power = power is LU_PowerNoctis;
+        //}
     }
     private void Start()
     {
@@ -55,11 +60,22 @@ public class LU_CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        print(_tryInteract);
+
         Jump();
 
         if (_isAttracting)
-            power.AttractElement();
-
+        {
+            //if (IsGrounded())
+            //{
+                power.AttractElement();
+            //}
+            //else if (_isNoctis)
+            //{
+                
+            //    power.Grappling();
+            //}
+        }
         if (_isRepelling)
             power.RepelElement();
 
@@ -115,6 +131,13 @@ public class LU_CharacterController : MonoBehaviour
         if (context.canceled) { _isRepelling = false; }
     }
 
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.started) { _tryInteract = true; }
+
+        if (context.canceled) { _tryInteract = false; }
+    }
+
     public void ReturnToSpawn()
     {
         if (_isNoctis)
@@ -145,9 +168,13 @@ public class LU_CharacterController : MonoBehaviour
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
             Debug.Log("Entered Checkpoint");
-            currentSpawn = collision.gameObject;
-            noctisSpawn = currentSpawn.GetComponent<LU_Checkpoint>().noctisSpawn;
-            lumisSpawn = currentSpawn.GetComponent <LU_Checkpoint>().lumisSpawn;
+            noctisSpawn = collision.GetComponent<LU_Checkpoint>().noctisSpawn;
+            lumisSpawn = collision.GetComponent <LU_Checkpoint>().lumisSpawn;
+        }
+
+        if(collision.gameObject.CompareTag("Lever") && _tryInteract)
+        {
+            collision.GetComponent<Lever>().OpenDoor();
         }
     }
 }

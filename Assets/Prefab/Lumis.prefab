@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9050409055983290648}
   - component: {fileID: 3009349139344500241}
   m_Layer: 0
-  m_Name: Lumis_Temp
+  m_Name: Lumis
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b92e5f99362b99449f2d88b40edbe3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _powerRadius: 0.5
+  _powerRadius: 2
 --- !u!1 &7496773791346459382
 GameObject:
   m_ObjectHideFlags: 0

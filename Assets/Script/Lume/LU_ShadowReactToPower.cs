@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 public class LU_ShadowReactToPower : LU_PowerInteraction
 {
-    [SerializeField] GameObject _lumis;
+    public GameObject _lumis;
     [SerializeField] float _shadowMoveSpeed = 0.2f;
     
     Rigidbody2D _rb;
@@ -27,11 +26,11 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
         _rb.AddForce(direction.normalized * _shadowMoveSpeed, ForceMode2D.Impulse);
     }
 
-    protected void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<LU_PowerNoctis>(out LU_PowerNoctis noctis))
+        if (collision.transform.GetChild(1).gameObject.activeSelf)
         {
-            noctis.GetComponent<LU_CharacterController>().ReturnToSpawn();
+            collision.GetComponent<LU_CharacterController>().ReturnToSpawn();
         }
     }
 }
