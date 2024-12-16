@@ -9254,9 +9254,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1610169804277189192, guid: 368cb25952b440c4aae1f7bc0bfddb1e, type: 3}
+      propertyPath: lumisSpawn
+      value: 
+      objectReference: {fileID: 1551197021}
+    - target: {fileID: 1610169804277189192, guid: 368cb25952b440c4aae1f7bc0bfddb1e, type: 3}
       propertyPath: noctisSpawn
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1279891708}
     - target: {fileID: 3229235133639315754, guid: 368cb25952b440c4aae1f7bc0bfddb1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9460,7 +9464,8 @@ MonoBehaviour:
   _lumisSpawn: {fileID: 1551197021}
   _noctisSpawn: {fileID: 1279891708}
   _emptyPlayer: {fileID: 5513633521449468888, guid: 7f4003815665e174697017f260518abd, type: 3}
-  lightList: []
+  _lightsParent: {fileID: 1595595995}
+  _shadowsParent: {fileID: 1022295854}
   _camera: {fileID: 980219342}
 --- !u!4 &2110743418
 Transform:
