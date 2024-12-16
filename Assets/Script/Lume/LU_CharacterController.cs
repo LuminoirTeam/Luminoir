@@ -43,8 +43,16 @@ public class LU_CharacterController : MonoBehaviour
         Jump();
 
         if (_isAttracting)
-            power.AttractElement();
-
+        {
+            if (IsGrounded())
+            {
+                power.AttractElement();
+            }
+            else
+            {
+                power.Grappling();
+            }
+        }
         if (_isRepelling)
             power.RepelElement();
     }
@@ -126,9 +134,8 @@ public class LU_CharacterController : MonoBehaviour
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
             Debug.Log("Entered Checkpoint");
-            currentSpawn = collision.gameObject;
-            noctisSpawn = currentSpawn.GetComponent<LU_Checkpoint>().noctisSpawn;
-            lumisSpawn = currentSpawn.GetComponent <LU_Checkpoint>().lumisSpawn;
+            noctisSpawn = collision.GetComponent<LU_Checkpoint>().noctisSpawn;
+            lumisSpawn = collision.GetComponent <LU_Checkpoint>().lumisSpawn;
         }
 
         if(collision.gameObject.CompareTag("Lever") && _tryInteract)

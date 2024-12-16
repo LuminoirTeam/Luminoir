@@ -10,6 +10,7 @@ public class LU_GameManager : MonoBehaviour
 
     public List<GameObject> lightList = new List<GameObject>();
 
+
     private List<PlayerInput> activePlayers = new List<PlayerInput>();
 
     public LU_CameraBehaviour _camera;
@@ -49,7 +50,11 @@ public class LU_GameManager : MonoBehaviour
             playerInput.gameObject.GetComponent<LU_SetPlayer>().isNoctis = false;
             playerInput.gameObject.GetComponent<LU_SetPlayer>().SetActivePrefab();
             _camera.player1 = playerInput.gameObject;
-            GetComponentInChildren<LU_ShadowReactToPower>()._lumis = playerInput.gameObject;
+            foreach(GameObject light in lightList)
+            {
+                light.GetComponentInChildren<LU_ShadowReactToPower>()._lumis = playerInput.gameObject;
+            }
+
             Debug.Log("Joueur 1 rejoint : Lumis");
         }
         else if (activePlayers.Count == 1) // Deuxième joueur : Noctis
