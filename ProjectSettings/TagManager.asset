@@ -11,6 +11,8 @@ TagManager:
   - Lever
   - LightMonster
   - ShadowMonster
+  - ShadowMob
+  - LightMob
   layers:
   - Default
   - TransparentFX
@@ -26,7 +28,7 @@ TagManager:
   - Wall
   - players
   - Fence
-  - 
+  - Receptor
   - 
   - 
   - 

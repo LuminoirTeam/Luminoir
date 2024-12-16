@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2367307933457972850}
   - component: {fileID: -4998123488807675651}
   - component: {fileID: 1883678130503437869}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: LightReceptor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,6 +136,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0f1be76d32c4535498e39a50e91bccee, type: 3}
       propertyPath: m_Name
       value: Lightbutton
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0f1be76d32c4535498e39a50e91bccee, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
