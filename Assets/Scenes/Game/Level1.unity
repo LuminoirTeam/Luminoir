@@ -4919,13 +4919,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 0}
   player2: {fileID: 0}
-
-  minZ: 20
-  maxZ: 80
-  zoomFactor: 1.5
-
+  minZ: 10
+  maxZ: 50
   smoothing: 0.1
-  isClamped: 0
+  isClamped: 1
 --- !u!114 &514644059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5996,6 +5993,14 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1370673739}
+    - target: {fileID: 1883678130503437869, guid: 8587c45f906e9594995c72ddfe686e64, type: 3}
+      propertyPath: m_Radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883678130503437869, guid: 8587c45f906e9594995c72ddfe686e64, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 32503
+      objectReference: {fileID: 0}
     - target: {fileID: 2367307933457972850, guid: 8587c45f906e9594995c72ddfe686e64, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -6640,6 +6645,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 195441212}
     m_Modifications:
+    - target: {fileID: -7898682313613887359, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7898682313613887359, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
+      propertyPath: m_Size.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 187111988874156710, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.86
@@ -6780,7 +6793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2631641311483292916, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 12279
+      value: 28663
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8274,6 +8287,14 @@ PrefabInstance:
     - target: {fileID: 2432654090058342855, guid: 01bf269d25616ab47be8d52dfc2927fb, type: 3}
       propertyPath: m_Name
       value: ShadowReceptor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945801297639059808, guid: 01bf269d25616ab47be8d52dfc2927fb, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 32247
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945801297639059808, guid: 01bf269d25616ab47be8d52dfc2927fb, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8019908740800625254, guid: 01bf269d25616ab47be8d52dfc2927fb, type: 3}
       propertyPath: m_LocalScale.x
@@ -10856,7 +10877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2631641311483292916, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 12279
+      value: 28663
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11902,6 +11923,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 195441212}
     m_Modifications:
+    - target: {fileID: -7898682313613887359, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 30647
+      objectReference: {fileID: 0}
     - target: {fileID: 187111988874156710, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.082897
@@ -11948,7 +11973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2631641311483292916, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 12279
+      value: 28663
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12258,6 +12283,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5049257236644102555, guid: 6ae62a02a1da55341b7837fe3305336f, type: 3}
   m_PrefabInstance: {fileID: 1583568669}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1255393184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 366207423299180554, guid: 0e1f400cfcf33c04a842cfe72c271949, type: 3}
+  m_PrefabInstance: {fileID: 449322996}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1257566190
 PrefabInstance:
@@ -12812,6 +12842,10 @@ PrefabInstance:
     - target: {fileID: 1713724095599844816, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_Name
       value: shadow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631641311483292916, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 28663
       objectReference: {fileID: 0}
     - target: {fileID: 7685679903487916159, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -16158,6 +16192,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 959791605}
     m_Modifications:
+    - target: {fileID: -6932784500498643472, guid: 01bf269d25616ab47be8d52dfc2927fb, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 1255393184}
     - target: {fileID: 2432654090058342855, guid: 01bf269d25616ab47be8d52dfc2927fb, type: 3}
       propertyPath: m_Name
       value: ShadowReceptor
@@ -17102,7 +17140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2631641311483292916, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 12279
+      value: 28663
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20426,7 +20464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2631641311483292916, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 12279
+      value: 28663
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20802,7 +20840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2631641311483292916, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 12279
+      value: 28663
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22002,7 +22040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2631641311483292916, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
-      value: 12279
+      value: 28663
       objectReference: {fileID: 0}
     - target: {fileID: 7685679903487916159, guid: ecec8db20b7a55e418c670dbfd794eea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
