@@ -270,7 +270,9 @@ MonoBehaviour:
     m_Bits: 64
   _playerSpeed: 8
   _jumpingForce: 3.2
-  _sizeOfGroundCheckBox: {x: 1, y: 0.5}
+
+  _sizeOfGroundCheckBox: {x: 1, y: 0.2}
+
   currentSpawn: {fileID: 0}
   power: {fileID: 0}
 --- !u!114 &-6905188873181799062
