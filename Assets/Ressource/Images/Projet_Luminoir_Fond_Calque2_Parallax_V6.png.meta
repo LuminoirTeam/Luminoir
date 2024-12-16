@@ -145,6 +145,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -447,7 +460,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_0: -7875728338730153668
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_1: 6559769847317692456
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_10: -4350838778870195543
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_11: 7797017551176917829
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_12: 1188258856438111442
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_2: -9101948651888171653
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_3: 7372572056240414611
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_4: -1946699835734317875
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_5: -5009456542118288004
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_6: -1977044441319787058
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_7: 4615742424134161876
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_8: -1379102089105768135
+      Projet_Luminoir_Fond_Calque2_Parallax_V6_9: 9176128135767259315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -16,12 +16,12 @@ public class MonsterContainer : MonoBehaviour
         {
             if (isShadow)
             {
-                GameObject shadowClone = Instantiate(shadowMonsterPrefab, gameObject.transform);
+                GameObject shadowClone = Instantiate(shadowMonsterPrefab);
                 shadowClone.transform.position = monsterSpawn.transform.position;
             }
             else
             {
-                GameObject lightClone = Instantiate(lightMonsterPrefab, gameObject.transform);
+                GameObject lightClone = Instantiate(lightMonsterPrefab);
                 lightClone.transform.position = monsterSpawn.transform.position;
             }
         }
