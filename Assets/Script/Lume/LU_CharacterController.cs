@@ -118,7 +118,7 @@ public class LU_CharacterController : MonoBehaviour
     {
         _animator.SetBool("isWalking", true);
 
-        if (!IsWalled())
+        if (!IsWalled() || IsGrounded())
             rb.linearVelocityX = context.ReadValue<Vector2>().x * _playerSpeed; //movement
 
         if (context.canceled) { _animator.SetBool("isWalking", false); } //anim
@@ -149,6 +149,7 @@ public class LU_CharacterController : MonoBehaviour
 
     public void ReturnToSpawn()
     {
+        rb.linearVelocity = Vector2.zero;
         transform.position=currentSpawn;
     }
 
@@ -176,6 +177,7 @@ public class LU_CharacterController : MonoBehaviour
                 return;
             }
             currentSpawn = collision.GetComponent<LU_Checkpoint>().lumisSpawn;
+            collision.GetComponent<LU_Checkpoint>()._activationParticles.Play();
         }
     }
 
