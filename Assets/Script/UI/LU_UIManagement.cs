@@ -23,6 +23,9 @@ public class LU_UIManagement : MonoBehaviour
 
     private void Start()
     {
+        if (_menuCanvas == null)
+            return;
+
         if (SceneManager.GetActiveScene().name == "Main Menu")
             _isOnMainMenu = true;
 
