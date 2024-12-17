@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class LU_GameManager : MonoBehaviour
 {
@@ -21,7 +22,13 @@ public class LU_GameManager : MonoBehaviour
         if (_emptyPlayer == null)
         {
             Debug.LogError("Le prefab '_emptyPlayer' n'est pas assigné !");
+
         }
+    }
+
+    private void Start()
+    {
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void OnPlayerJoined(PlayerInput playerInput)
