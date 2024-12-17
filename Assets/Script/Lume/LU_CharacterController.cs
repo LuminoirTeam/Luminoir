@@ -177,6 +177,7 @@ public class LU_CharacterController : MonoBehaviour
                 return;
             }
             currentSpawn = collision.GetComponent<LU_Checkpoint>().lumisSpawn;
+            collision.GetComponent<LU_Checkpoint>()._activationParticles.Play();
         }
     }
 
