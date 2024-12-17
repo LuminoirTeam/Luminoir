@@ -8,7 +8,7 @@ public class Lever : MonoBehaviour
 
     private void Start()
     {
-        leverAnimator = GetComponent<Animator>();
+        leverAnimator = GetComponentInChildren<Animator>();
     }
 
     public void OpenDoor()
