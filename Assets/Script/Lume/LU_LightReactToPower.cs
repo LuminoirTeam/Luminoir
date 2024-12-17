@@ -36,9 +36,14 @@ public class LU_LightReactToPower : LU_PowerInteraction
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.GetChild(0).gameObject.activeSelf)
+        if (collision.TryGetComponent<LU_CharacterController>(out LU_CharacterController character))
         {
-            collision.GetComponent<LU_CharacterController>().ReturnToSpawn();
+            if (collision.transform.GetChild(0).gameObject.activeSelf)
+            {
+                character.ReturnToSpawn();
+            }
         }
+        
+
     }
 }
