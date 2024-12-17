@@ -120,7 +120,7 @@ public class LU_CharacterController : MonoBehaviour
     {
         _animator.SetBool("isWalking", true);
 
-        if (!IsWalled())
+        if (!IsWalled() || IsGrounded())
             rb.linearVelocityX = context.ReadValue<Vector2>().x * _playerSpeed; //movement
 
         if (context.canceled) { _animator.SetBool("isWalking", false); } //anim
@@ -159,6 +159,8 @@ public class LU_CharacterController : MonoBehaviour
         {
             transform.position = lumisSpawn.transform.position;
         }
+
+        rb.linearVelocity = Vector2.zero;
     }
 
     public void EnableOrDisablePlayerInput()
