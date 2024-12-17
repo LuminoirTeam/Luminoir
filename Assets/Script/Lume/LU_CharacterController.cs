@@ -29,6 +29,9 @@ public class LU_CharacterController : MonoBehaviour
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
 
+    private ParticleSystem _particleRepel;
+    private ParticleSystem _particleAttract;
+
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
@@ -50,11 +53,17 @@ public class LU_CharacterController : MonoBehaviour
         {
             _animator = transform.GetChild(0).GetComponent<Animator>();
             _spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+
+            _particleRepel = transform.GetChild(0).GetChild(3).GetComponent<ParticleSystem>();
+            _particleAttract = transform.GetChild(0).GetChild(2).GetComponent<ParticleSystem>();
         }
         else
         {
             _animator = transform.GetChild(1).GetComponent<Animator>();
             _spriteRenderer = transform.GetChild(1).GetComponent<SpriteRenderer>();
+
+            _particleRepel = transform.GetChild(1).GetChild(3).GetComponent<ParticleSystem>();
+            _particleAttract = transform.GetChild(1).GetChild(2).GetComponent<ParticleSystem>();
         }
     }
 
@@ -77,7 +86,10 @@ public class LU_CharacterController : MonoBehaviour
             //}
         }
         if (_isRepelling)
+        {
             power.RepelElement();
+
+        }
 
         if (rb.linearVelocityX >= 0) {_isFacingRight = true; } //to mirror the sprite
         else { _isFacingRight = false; }
@@ -126,18 +138,18 @@ public class LU_CharacterController : MonoBehaviour
 
     public void CallAttractElement(InputAction.CallbackContext context) //called on button input
     {
-        if (context.started) { _isAttracting = true; }
+        if (context.started) { _isAttracting = true; _particleAttract.Play(); }
 
 
-        if (context.canceled) { _isAttracting = false; }
+        if (context.canceled) { _isAttracting = false; _particleAttract.Stop(); }
     }
 
     public void CallRepelElement(InputAction.CallbackContext context) //called on button input
     {
-        if (context.started) { _isRepelling = true; }
+        if (context.started) { _isRepelling = true; _particleRepel.Play(); }
 
 
-        if (context.canceled) { _isRepelling = false; }
+        if (context.canceled) { _isRepelling = false; _particleRepel.Stop(); }
     }
 
     public void Interact(InputAction.CallbackContext context)
