@@ -39,7 +39,7 @@ public class LU_UIManagement : MonoBehaviour
     public void UIButton_Start()
     {
         _isOnMainMenu = false;
-        SceneManager.LoadScene(SceneManager.GetSceneByBuildIndex(nextSceneBuildIndex).name);
+        SceneManager.LoadScene(nextSceneBuildIndex);
     }
 
     public void UIButton_Quit()
