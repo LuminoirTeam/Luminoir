@@ -20,12 +20,10 @@ public class LU_CharacterController : MonoBehaviour
     private bool _isRepelling = false;
     private bool _tryInteract = false;
 
-    private GameObject lumisSpawn;
-    private GameObject noctisSpawn;
     private bool _isNoctis;
     private bool _isFacingRight;
 
-    public GameObject currentSpawn;
+    public Vector3 currentSpawn;
     public LU_Power power; //The variable to access character's power script
 
     private Animator _animator;
@@ -151,14 +149,7 @@ public class LU_CharacterController : MonoBehaviour
 
     public void ReturnToSpawn()
     {
-        if (_isNoctis)
-        {
-            transform.position = noctisSpawn.transform.position;
-        }
-        else
-        {
-            transform.position = lumisSpawn.transform.position;
-        }
+        transform.position=currentSpawn;
     }
 
     public void EnableOrDisablePlayerInput()
@@ -179,8 +170,12 @@ public class LU_CharacterController : MonoBehaviour
         if (collision.gameObject.CompareTag("Checkpoint"))
         {
             Debug.Log("Entered Checkpoint");
-            noctisSpawn = collision.GetComponent<LU_Checkpoint>().noctisSpawn;
-            lumisSpawn = collision.GetComponent <LU_Checkpoint>().lumisSpawn;
+            if (_isNoctis)
+            {
+                currentSpawn = collision.GetComponent<LU_Checkpoint>().noctisSpawn;
+                return;
+            }
+            currentSpawn = collision.GetComponent<LU_Checkpoint>().lumisSpawn;
         }
     }
 
