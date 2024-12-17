@@ -4,6 +4,12 @@ using UnityEngine;
 public class Lever : MonoBehaviour
 {
     [SerializeField] private List<GameObject> doorList;
+    public Animator leverAnimator;
+
+    private void Start()
+    {
+        leverAnimator = GetComponent<Animator>();
+    }
 
     public void OpenDoor()
     {
@@ -11,6 +17,7 @@ public class Lever : MonoBehaviour
             foreach (GameObject door in doorList)
             {
                 door.GetComponentInChildren<DoorOpening>().OpenDoor();
+                leverAnimator.SetBool("Activated", true);
             }
         }
     }

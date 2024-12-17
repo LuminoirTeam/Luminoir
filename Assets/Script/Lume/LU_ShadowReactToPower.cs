@@ -40,6 +40,13 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
         {
             collision.excludeLayers = 1 << 13;
         }
+        if (collision.TryGetComponent<LU_CharacterController>(out LU_CharacterController character))
+        {
+            if (collision.transform.GetChild(1).gameObject.activeSelf)
+            {
+                character.ReturnToSpawn();
+            }
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -51,5 +58,6 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
         {
             collision.excludeLayers=~1<<13 ;
         }
+
     }
 }
