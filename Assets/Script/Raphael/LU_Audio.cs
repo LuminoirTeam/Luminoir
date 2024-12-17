@@ -39,7 +39,7 @@ public class LU_Audio : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         _audioChannels.Clear();
         _sounds.Clear();
         for (int i = 0; i < _musics.Count; i++)

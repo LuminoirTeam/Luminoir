@@ -27,6 +27,8 @@ public class LU_HUDManager : MonoBehaviour
     {
         InitHUD();
         Time.timeScale = 1;
+
+        LU_Audio.PlaySound(SoundType.musics, 0, 1);
     }
 
     void Update()

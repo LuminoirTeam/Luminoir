@@ -23,11 +23,15 @@ public class LU_UIManagement : MonoBehaviour
 
     private void Start()
     {
+        LU_Audio.PlaySound(SoundType.musics, 0, 1);
+
         if (_menuCanvas == null)
             return;
 
         if (SceneManager.GetActiveScene().name == "Main Menu")
+        {
             _isOnMainMenu = true;
+        }
 
         _isPaused = false;
         if (_hasPauseMenu)
@@ -94,5 +98,4 @@ public class LU_UIManagement : MonoBehaviour
             Time.timeScale = 1;
         }
     }
-
 }
