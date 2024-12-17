@@ -13550,6 +13550,10 @@ PrefabInstance:
       propertyPath: _menuCanvas
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5448747376560680880, guid: 411827b5c8624f14bbcc2e0153bec396, type: 3}
+      propertyPath: nextSceneBuildIndex
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
