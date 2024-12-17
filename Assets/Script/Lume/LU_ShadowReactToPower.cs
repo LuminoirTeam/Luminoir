@@ -28,36 +28,27 @@ public class LU_ShadowReactToPower : LU_PowerInteraction
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<LU_ElementReceptor>(out LU_ElementReceptor receptor))
-        {
-            return;
-        }
-        if (collision.transform.GetChild(1).gameObject.activeSelf)
-        {
-            collision.GetComponent<LU_CharacterController>().ReturnToSpawn();
-        }
-        if (collision.transform.GetChild(0).gameObject.activeSelf)
-        {
-            collision.excludeLayers = 1 << 13;
-        }
         if (collision.TryGetComponent<LU_CharacterController>(out LU_CharacterController character))
         {
             if (collision.transform.GetChild(1).gameObject.activeSelf)
             {
                 character.ReturnToSpawn();
+                return;
+            }
+            if (collision.transform.GetChild(0).gameObject.activeSelf)
+            {
+                collision.excludeLayers = 1 << 13;
             }
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<LU_ElementReceptor>(out LU_ElementReceptor receptor))
+        if (collision.TryGetComponent<LU_CharacterController>(out LU_CharacterController character))
         {
-            return;
+            if (collision.transform.GetChild(0).gameObject.activeSelf)
+            {
+                collision.excludeLayers = ~1 << 13;
+            }
         }
-        if (collision.transform.GetChild(0).gameObject.activeSelf)
-        {
-            collision.excludeLayers=~1<<13 ;
-        }
-
     }
 }

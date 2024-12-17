@@ -38,7 +38,7 @@ public class LU_LightReactToPower : LU_PowerInteraction
     {
         if (collision.TryGetComponent<LU_CharacterController>(out LU_CharacterController character))
         {
-            if (collision.transform.GetChild(1).gameObject.activeSelf)
+            if (collision.transform.GetChild(0).gameObject.activeSelf)
             {
                 character.ReturnToSpawn();
             }
