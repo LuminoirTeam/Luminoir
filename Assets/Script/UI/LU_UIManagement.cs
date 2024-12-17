@@ -8,7 +8,7 @@ public class LU_UIManagement : MonoBehaviour
 {
     [Header("Canvas References")]
     [SerializeField] private GameObject _menuCanvas; 
-        //this is only used on the play scene, there won't be any bugs if it's unassigned in any other scene
+        //this is only used on the play scene
     [Space]
 
     [Header("Bools")]
@@ -17,6 +17,9 @@ public class LU_UIManagement : MonoBehaviour
 
     private void Start()
     {
+        if (_menuCanvas == null)
+            return;
+
         if (SceneManager.GetActiveScene().name == "Main Menu")
             _isOnMainMenu = true;
 
