@@ -174,6 +174,7 @@ public class LU_CharacterController : MonoBehaviour
             if (_isNoctis)
             {
                 currentSpawn = collision.GetComponent<LU_Checkpoint>().noctisSpawn;
+                collision.GetComponent<LU_Checkpoint>()._activationParticles.Play();
                 return;
             }
             currentSpawn = collision.GetComponent<LU_Checkpoint>().lumisSpawn;
