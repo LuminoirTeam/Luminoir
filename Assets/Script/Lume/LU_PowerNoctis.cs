@@ -6,9 +6,11 @@ using UnityEngine;
 public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
 {
     Rigidbody2D rb;
+    LU_PlayAudioInQueue _audio;
     private void Start()
     {
         rb= transform.parent.GetComponent<Rigidbody2D>();
+        _audio = transform.GetChild(4).GetComponent<LU_PlayAudioInQueue>();
     }
     //public override void Grappling()
     //{
@@ -24,7 +26,17 @@ public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
         List<Collider2D> colliderFound = Physics2D.OverlapCircleAll(transform.position, _powerRadius, 1 << 8).ToList();
         foreach (Collider2D collider in colliderFound)
         {
-            collider.gameObject.GetComponent<LU_LightReactToPower>().MoveTowards();
+            if(collider.TryGetComponent<LU_LightReactToPower>(out LU_LightReactToPower light))
+            {
+                light.MoveTowards();
+                return;
+            }
+            if(collider.TryGetComponent<LU_Variateur>(out LU_Variateur variateur))
+            {
+                variateur.RetractLight();
+                return;
+            }
+                
         }
     }
 
@@ -33,7 +45,16 @@ public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
         List<Collider2D> colliderFound = Physics2D.OverlapCircleAll(transform.position, _powerRadius, 1 << 8).ToList();
         foreach (Collider2D collider in colliderFound)
         {
-            collider.gameObject.GetComponent<LU_LightReactToPower>().MoveAwayFrom();
+            if (collider.TryGetComponent<LU_LightReactToPower>(out LU_LightReactToPower light))
+            {
+                light.MoveAwayFrom();
+                return;
+            }
+            if (collider.TryGetComponent<LU_Variateur>(out LU_Variateur variateur))
+            {
+                variateur.DilateLight();
+                return;
+            }
         }
     }
     public float GetPowerRadius()

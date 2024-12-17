@@ -161,6 +161,14 @@ public class LU_CharacterController : MonoBehaviour
 
     public void ReturnToSpawn()
     {
+        if (_isNoctis)
+        {
+            LU_Audio.PlaySound(SoundType.noctis, 0);
+        }
+        else
+        {
+            LU_Audio.PlaySound(SoundType.lumis, 0);
+        }
         rb.linearVelocity = Vector2.zero;
         transform.position=currentSpawn;
     }
