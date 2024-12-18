@@ -18,18 +18,6 @@ public class LU_Variateur : MonoBehaviour
         _lightSource.transform.localScale = new Vector3(_minScale.x, _minScale.y, 1);
     }
 
-    private void Update()
-    {
-        if (_retracting)
-        {
-            RetractLight();
-        }
-        if (_dilating) 
-        {
-            DilateLight();
-        }
-    }
-
     public void RetractLight()
     {
         // ((input - min) * 100) / (max - min)
