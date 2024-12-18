@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4deb7373766f9442b207ce222a4e314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneBuildIndex: 3
+  nextSceneBuildIndex: 0
   _menuCanvas: {fileID: 0}
   _hasPauseMenu: 0
   _isPaused: 0
