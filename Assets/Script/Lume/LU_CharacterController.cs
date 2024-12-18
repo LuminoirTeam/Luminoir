@@ -32,6 +32,8 @@ public class LU_CharacterController : MonoBehaviour
     private ParticleSystem _particleRepel;
     private ParticleSystem _particleAttract;
 
+    [SerializeField]
+
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
@@ -42,10 +44,6 @@ public class LU_CharacterController : MonoBehaviour
         groundCheck = transform.GetChild(0).position;
 
         _isNoctis = GetComponent<LU_SetPlayer>().isNoctis;
-        //if( _isNoctis)
-        //{
-        //    power = power is LU_PowerNoctis;
-        //}
     }
     private void Start()
     {
@@ -75,15 +73,9 @@ public class LU_CharacterController : MonoBehaviour
 
         if (_isAttracting)
         {
-            //if (IsGrounded())
-            //{
-                power.AttractElement();
-            //}
-            //else if (_isNoctis)
-            //{
-                
-            //    power.Grappling();
-            //}
+
+            power.AttractElement();
+
         }
         if (_isRepelling)
         {
@@ -91,7 +83,7 @@ public class LU_CharacterController : MonoBehaviour
 
         }
 
-        if (rb.linearVelocityX >= 0) {_isFacingRight = true; } //to mirror the sprite
+        if (rb.linearVelocityX >= 0) { _isFacingRight = true; } //to mirror the sprite
         else { _isFacingRight = false; }
 
         CheckJumpForAnimation(rb.linearVelocityY);
@@ -162,7 +154,7 @@ public class LU_CharacterController : MonoBehaviour
     public void ReturnToSpawn()
     {
         rb.linearVelocity = Vector2.zero;
-        transform.position=currentSpawn;
+        transform.position = currentSpawn;
     }
 
     public void EnableOrDisablePlayerInput()
