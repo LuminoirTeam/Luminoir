@@ -168,6 +168,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 499e065a-3740-48e8-8468-38db92b3ae04
     m_ActionName: 'NavigationUI/Navigate[/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2920629241352395859}
+        m_TargetAssemblyTypeName: LU_CharacterController, Assembly-CSharp
+        m_MethodName: ReturnToSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 68c10ed6-7ecc-4087-a0a5-3db1aa1d8920
+    m_ActionName: 'Player/Retry[/SwitchProControllerHID/select,/XInputControllerWindows/select]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -342,7 +358,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Noctis
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1137801866627035243, guid: 6c549303608b90f4683d62d5460441b0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
