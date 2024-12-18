@@ -12,7 +12,7 @@ public class LU_HUDManager : MonoBehaviour
     [SerializeField] private LU_UIManagement _uiManager; [Space]
 
     [Header("Timer")]
-    public float CountdownTime = 300f; // 5 minutes in seconds
+    private float CountdownTime = 300f; // 5 minutes in seconds
 
     private float _countupTime = 0f;
     public bool countdownActive = false;
