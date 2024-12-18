@@ -58,7 +58,6 @@ public class LU_UIManagement : MonoBehaviour
     {
         _isPaused = false;
         TogglePause();
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

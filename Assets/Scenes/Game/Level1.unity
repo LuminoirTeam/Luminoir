@@ -14167,7 +14167,7 @@ PrefabInstance:
     - target: {fileID: 5448747376560680880, guid: 411827b5c8624f14bbcc2e0153bec396, type: 3}
       propertyPath: _menuCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2051391451}
     - target: {fileID: 5448747376560680880, guid: 411827b5c8624f14bbcc2e0153bec396, type: 3}
       propertyPath: nextSceneBuildIndex
       value: 2
@@ -24051,6 +24051,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1380910561721181166, guid: 07b60e5bb844f674c8f53235197c3b6a, type: 3}
   m_PrefabInstance: {fileID: 2050692619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2051391451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5936130165950914376, guid: 9d2b298f8fcbab74183712a1436d5b56, type: 3}
+  m_PrefabInstance: {fileID: 26285358}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2071555969
 PrefabInstance:
