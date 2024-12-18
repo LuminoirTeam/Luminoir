@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5615376030973669094}
-  - component: {fileID: 3879926106622314006}
   m_Layer: 8
   m_Name: light
   m_TagString: Light
@@ -35,23 +34,6 @@ Transform:
   - {fileID: 8179170746438922636}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3879926106622314006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651812249456220271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4538f953dc5e2a9408ec9cfea346587b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  containMonster: 0
-  isShadow: 0
-  shadowMonsterPrefab: {fileID: 7314308964329245929, guid: 8d2170d4fb0285441b0d60128cd9514d, type: 3}
-  lightMonsterPrefab: {fileID: 7314308964329245929, guid: e59c7aae37e31fe4485e3067b123c7b9, type: 3}
-  monsterSpawn: {fileID: 7343583593522749459}
 --- !u!1 &7343583593522749459
 GameObject:
   m_ObjectHideFlags: 0

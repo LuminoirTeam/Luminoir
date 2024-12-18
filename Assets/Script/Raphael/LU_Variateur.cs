@@ -15,7 +15,7 @@ public class LU_Variateur : MonoBehaviour
     {
         _lightSource = transform.parent.GetChild(1).GetChild(0).gameObject;
         _lightAttractor = _lightSource.transform.parent.GetChild(1).gameObject;
-        _lightSource.transform.localScale = new Vector3(_minScale.x, _minScale.y, 1);
+        //_lightSource.transform.localScale = new Vector3(_minScale.x, _minScale.y, 1);
     }
 
     public void RetractLight()
