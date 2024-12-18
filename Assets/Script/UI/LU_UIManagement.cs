@@ -41,6 +41,11 @@ public class LU_UIManagement : MonoBehaviour
         _isOnMainMenu = false;
         SceneManager.LoadScene(nextSceneBuildIndex);
     }
+    
+    public void UIButton_Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 
     public void UIButton_Quit()
     {

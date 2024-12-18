@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2e498195-c1a4-44bd-84e6-424ca1c5f23a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LuminoirGit/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LuminoirGit/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Checkpoint.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Checkpoint.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game/Level1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ressource/Raphael/A button.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressource/Raphael/A button.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ressource/Raphael/B button.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressource/Raphael/B button.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ressource/Raphael/X button.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressource/Raphael/X button.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ressource/Raphael/Y button.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressource/Raphael/Y button.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lume UI/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lume UI/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Lume UI/Main Menu.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Lume UI/Main Menu.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/UI/LU_UIManagement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/UI/LU_UIManagement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +37,8 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Feat-LevelFix&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Feat-UIRefacto&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -62,6 +69,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -72,6 +82,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -90,6 +103,7 @@
       <workItem from="1733734470075" duration="1534000" />
       <workItem from="1734354075558" duration="151000" />
       <workItem from="1734354379240" duration="2467000" />
+      <workItem from="1734513818224" duration="1690000" />
     </task>
     <servers />
   </component>
