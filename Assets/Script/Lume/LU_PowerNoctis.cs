@@ -27,6 +27,7 @@ public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
         {
             collider.gameObject.GetComponent<LU_LightReactToPower>().MoveTowards();
         }
+        DilateVariateur();
     }
 
     public override void RepelElement()
@@ -36,6 +37,7 @@ public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
         {
             collider.gameObject.GetComponent<LU_LightReactToPower>().MoveAwayFrom();
         }
+        RetractVariateur();
     }
 
     public void RetractVariateur()
@@ -48,7 +50,7 @@ public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
         }
     }
 
-    public void EnableDilateVariateur()
+    public void DilateVariateur()
     {
 
         colliderFound.Clear();
