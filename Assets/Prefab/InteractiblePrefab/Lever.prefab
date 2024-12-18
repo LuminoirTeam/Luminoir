@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorList: []
   leverAnimator: {fileID: 8455782920001672056}
+  testLever: 0
 --- !u!58 &-7291138768448650465
 CircleCollider2D:
   m_ObjectHideFlags: 0
