@@ -4904,6 +4904,7 @@ GameObject:
   - component: {fileID: 9050409055983290648}
   - component: {fileID: -1960091735364352107}
   - component: {fileID: 7102253677002625339}
+  - component: {fileID: 1137801866627035243}
   m_Layer: 0
   m_Name: Noctis
   m_TagString: Player
@@ -5020,6 +5021,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1137801866627035243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5513633521449468888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c7924498bbe687468c8bd11405bf87f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6933193947962068400
 GameObject:
   m_ObjectHideFlags: 0

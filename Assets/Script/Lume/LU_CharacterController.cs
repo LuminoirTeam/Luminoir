@@ -32,6 +32,8 @@ public class LU_CharacterController : MonoBehaviour
     private ParticleSystem _particleRepel;
     private ParticleSystem _particleAttract;
 
+    [SerializeField]
+
     private void Awake()
     {
         _input = GetComponent<PlayerInput>();
@@ -42,10 +44,7 @@ public class LU_CharacterController : MonoBehaviour
         groundCheck = transform.GetChild(0).position;
 
         _isNoctis = GetComponent<LU_SetPlayer>().isNoctis;
-        //if( _isNoctis)
-        //{
-        //    power = power is LU_PowerNoctis;
-        //}
+
     }
     private void Start()
     {
@@ -75,9 +74,13 @@ public class LU_CharacterController : MonoBehaviour
 
         if (_isAttracting)
         {
-            //if (IsGrounded())
-            //{
-                power.AttractElement();
+            if (_isNoctis)
+            {
+ //               (LU_PowerNoctis) power.
+                
+                
+            }
+            power.AttractElement();
             //}
             //else if (_isNoctis)
             //{

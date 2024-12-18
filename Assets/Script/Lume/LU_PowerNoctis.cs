@@ -6,6 +6,7 @@ using UnityEngine;
 public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
 {
     Rigidbody2D rb;
+    List<Collider2D> colliderFound= new();
     private void Start()
     {
         rb= transform.parent.GetComponent<Rigidbody2D>();
@@ -35,6 +36,38 @@ public class LU_PowerNoctis : LU_Power //Noctis interacts with LIGHT
         {
             collider.gameObject.GetComponent<LU_LightReactToPower>().MoveAwayFrom();
         }
+    }
+
+    public void RetractVariateur()
+    {
+        colliderFound.Clear();
+        colliderFound = Physics2D.OverlapCircleAll(transform.position, _powerRadius, 1 << 10).ToList();
+        foreach (Collider2D collider in colliderFound)
+        {
+            collider.gameObject.GetComponent<LU_Variateur>()._retracting = true;
+        }
+
+        foreach (Collider2D collider in colliderFound)
+        {
+            collider.gameObject.GetComponent<LU_Variateur>()._retracting = false;
+        }
+    }
+
+    public void DilateVariateur()
+    {
+
+        colliderFound.Clear();
+        colliderFound = Physics2D.OverlapCircleAll(transform.position, _powerRadius, 1 << 10).ToList();
+        foreach (Collider2D collider in colliderFound)
+        {
+            collider.gameObject.GetComponent<LU_Variateur>()._dilating = true;
+        }
+
+        foreach (Collider2D collider in colliderFound)
+        {
+            collider.gameObject.GetComponent<LU_Variateur>()._dilating = false;
+        }
+
     }
     public float GetPowerRadius()
     {
